@@ -333,21 +333,24 @@ def scrape_orient_archive(items):
 
 
 def scrape_tissot(items):
-    """Collect only individual Tissot Singapore product pages linked from the novelties page."""
-    base = "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html"
-    try:
-        soup = page(base)
-    except Exception as e:
-        print(f"WARN Tissot Singapore catalogue: {e}")
-        return
+    """Expand Tissot coverage using both Singapore new arrivals and the full official catalogue."""
+    catalogues = [
+        "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
+        "https://www.tissotwatches.com/en-sg/collection.html",
+    ]
     links = []
-    for a in soup.select('a[href*="/en-sg/"]'):
-        href = absurl(a.get("href"), base)
-        if (href and re.search(r"/T[A-Z0-9]{8,}\.html(?:$|[?#])", href, re.I)
-                and href not in links):
-            links.append(href)
-    print(f"INFO Tissot: found {len(links)} individual product links")
-    for href in links[:50]:
+    for base in catalogues:
+        try:
+            soup = page(base)
+        except Exception as e:
+            print(f"WARN Tissot catalogue {base}: {e}")
+            continue
+        for a in soup.select('a[href*="/en-sg/"]'):
+            href = absurl(a.get("href"), base)
+            if href and re.search(r"/T[A-Z0-9]{8,}\.html(?:$|[?#])", href, re.I) and href not in links:
+                links.append(href)
+    print(f"INFO Tissot: found {len(links)} individual product links across new arrivals and full catalogue")
+    for href in links[:180]:
         try:
             detail = page(href)
             h = detail.find("h1")
@@ -356,15 +359,64 @@ def scrape_tissot(items):
                 continue
             body = clean(detail.get_text(" ", strip=True))
             price = price_sgd(body)
-            # Avoid treating a generic collection price as a product price.
-            refs = re.findall(r"\b[A-Z0-9]{2,5}-\d{3}-\d{2}-\d{3}-\d{2}\\b", body)
+            refs = re.findall(r"\b[A-Z0-9]{2,5}-\d{3}-\d{2}-\d{3}-\d{2}\b", body)
             img = meta_image(detail, href)
             limited = bool(re.search(r"special edition|limited edition", name + " " + body, re.I))
             add(items, "Tissot", name, href, img, date_iso(body), refs[0] if refs else None,
                 price, True, limited, edition_qty(body), release_description(name, "Tissot", True),
-                ["Singapore product page"] + (["Limited edition"] if limited else []))
+                ["Singapore catalogue product"] + (["Limited edition"] if limited else []))
         except Exception as e:
             print(f"WARN Tissot product {href}: {e}")
+
+
+def scrape_orient_catalogues(items):
+    """Add individual Orient and Orient Star models from official collection pages."""
+    bases = [
+        ("Orient", "https://orient-watch.com/en/orient/"),
+        ("Orient Star", "https://orient-watch.com/en/orientstar/"),
+        ("Orient", "https://orient-watch.com/en/orient/collection/contemporary/"),
+        ("Orient Star", "https://orient-watch.com/en/orientstar/collection/contemporary/"),
+        ("Orient Star", "https://orient-watch.com/en/orientstar/collection/classic/"),
+        ("Orient Star", "https://orient-watch.com/en/orientstar/collection/sports/"),
+    ]
+    seen = set()
+    for expected_brand, base in bases:
+        try:
+            soup = page(base)
+        except Exception as e:
+            print(f"WARN {expected_brand} catalogue {base}: {e}")
+            continue
+        for a in soup.select("a[href]"):
+            href = absurl(a.get("href"), base)
+            if not href or "orient-watch.com/en/" not in href or href in seen:
+                continue
+            # Detail pages end in a model reference, e.g. RE-BQ0001G or RA-BB0201S.
+            match = re.search(r"/(RE-[A-Z0-9]{5,}|RA-[A-Z0-9]{5,})/?(?:[?#].*)?$", href, re.I)
+            if not match:
+                continue
+            ref = match.group(1).upper()
+            brand = "Orient Star" if ref.startswith("RE-") else "Orient"
+            if brand != expected_brand:
+                continue
+            seen.add(href)
+            try:
+                detail = page(href)
+                h = detail.find("h1")
+                name = clean(h.get_text(" ", strip=True)) if h else ""
+                if not valid_watch_title(name):
+                    name = f"{brand} {ref}"
+                body = clean(detail.get_text(" ", strip=True))
+                if len(body) < 40:
+                    continue
+                title = name if brand.lower() in name.lower() else f"{brand} {name}"
+                limited = bool(re.search(r"limited edition|limited to\s+[\d,]+\s+pieces", title + " " + body, re.I))
+                image = model_image(detail, href, {"ref": ref, "name": title}) or meta_image(detail, href)
+                add(items, brand, title, href, image, date_iso(body), ref, None, False,
+                    limited, edition_qty(body), release_description(title, brand),
+                    ["Official product catalogue"] + (["Limited edition"] if limited else []))
+            except Exception as e:
+                print(f"WARN {brand} product {href}: {e}")
+    print(f"INFO Orient catalogues: processed {len(seen)} model pages")
 
 def scrape_citizen_singapore(items):
     # Use only explicitly listed official local pages; do not infer local availability from global news.
@@ -428,7 +480,7 @@ def repair_missing_images(items):
     catalogue_urls = {
         "Orient": ["https://orient-watch.com/en/orient/"],
         "Orient Star": ["https://orient-watch.com/en/orientstar/"],
-        "Tissot": ["https://www.tissotwatches.com/en-sg/collection/selections/novelties.html"],
+        "Tissot": ["https://www.tissotwatches.com/en-sg/collection/selections/novelties.html", "https://www.tissotwatches.com/en-sg/collection.html"],
     }
     catalogue_cache = {}
     tissot_product_cache = {}
@@ -522,7 +574,7 @@ def repair_missing_images(items):
 def main():
     items = seed_existing()
     successful = 0
-    for fn in (scrape_citizen_archive, scrape_orient_archive, scrape_tissot, scrape_citizen_singapore):
+    for fn in (scrape_citizen_archive, scrape_orient_archive, scrape_orient_catalogues, scrape_tissot, scrape_citizen_singapore):
         before = len(items)
         try:
             fn(items)
