@@ -34,9 +34,9 @@
     <div><h2 id="sectionTitle">Release catalogue</h2><p id="sectionSubtitle">Explore watches and narrow down your next favourite.</p></div>
     <div class="tabs" role="tablist" aria-label="Catalogue view">
       <button class="tab active" data-view="all">All watches</button>
-      <button class="tab" data-view="regular">Regular watches</button>
-      <button class="tab" data-view="new">New & upcoming</button>
-      <button class="tab" data-view="limited">Limited editions</button>
+      <button class="tab" data-view="regular">Regular watches <span id="regularTabCount">(0)</span></button>
+      <button class="tab" data-view="new">New & upcoming <span id="newTabCount">(0)</span></button>
+      <button class="tab" data-view="limited">Limited editions <span id="limitedTabCount">(0)</span></button>
       <button class="tab" data-view="saved">My watchlist <span id="savedTabCount">(0)</span></button>
     </div>
   </div>
@@ -66,7 +66,7 @@ function render(){
  const q=$("search").value.toLowerCase().trim(), brand=$("brand").value, av=$("availability").value, mov=$("movement").value, sort=$("sort").value;
  let list=watches.filter(w=>(view!=="saved"||saved.has(w.id))&&(view!=="limited"||w.limited===true)&&(view!=="regular"||w.limited!==true)&&(!q||[w.brand,w.name,w.ref,w.dial,w.tags.join(" ")].join(" ").toLowerCase().includes(q))&&(!brand||w.brand===brand)&&(!av||w.status===av)&&(!mov||w.movement===mov));
  if(sort==="price-low")list.sort((a,b)=>(a.price??Number.MAX_SAFE_INTEGER)-(b.price??Number.MAX_SAFE_INTEGER)); else if(sort==="price-high")list.sort((a,b)=>(b.price??-1)-(a.price??-1)); else if(sort==="name")list.sort((a,b)=>a.name.localeCompare(b.name)); else list.sort((a,b)=>(b.date||b.checked_at||"").localeCompare(a.date||a.checked_at||""));
- $("totalCount").textContent=watches.length;$("savedCount").textContent=saved.size;$("limitedCount").textContent=watches.filter(w=>w.limited===true).length;$("savedTabCount").textContent=`(${saved.size})`;
+ const limitedTotal=watches.filter(w=>w.limited===true).length;const regularTotal=watches.filter(w=>w.limited!==true).length;$("totalCount").textContent=watches.length;$("savedCount").textContent=saved.size;$("limitedCount").textContent=limitedTotal;$("savedTabCount").textContent=`(${saved.size})`;$("regularTabCount").textContent=`(${regularTotal})`;$("limitedTabCount").textContent=`(${limitedTotal})`;$("newTabCount").textContent=`(${watches.length})`;
  $("sectionTitle").textContent=view==="saved"?"My watchlist":view==="new"?"New & upcoming":view==="limited"?"Limited edition releases":view==="regular"?"Regular watches":"Release catalogue";
  $("sectionSubtitle").textContent=view==="saved"?"Models you saved on this device.":view==="new"?"Latest dated official-source listings; source dates are shown only when published.":view==="limited"?"Limited, numbered and special-edition watches. Quantities appear only when an official source states them.":view==="regular"?"Non-limited watch releases and new models, kept separate from special editions.":"Explore official watch releases and new model listings from all four brands.";
  const host=$("cards");
