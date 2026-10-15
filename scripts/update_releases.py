@@ -80,7 +80,7 @@ def image_url_from_tag(tag, base):
 def meta_image(soup, base):
     # Prefer explicitly declared social/product artwork, then structured metadata,
     # then relevant responsive/lazy-loaded images. Reject common site chrome.
-    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar|header_mega|gravity=center|history-mobile|zoomincursorwithoutbg|/360\\.svg|gift-finder-mobile|/header/", re.I)
+    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar|header_mega|gravity=center|history-mobile|zoomincursorwithoutbg|/360\\.svg|gift-finder-mobile|mouse_img_75th|kv_01_sp|/header/", re.I)
     for attrs in ({"property": "og:image"}, {"name": "twitter:image"}, {"property": "og:image:url"}):
         t = soup.find("meta", attrs=attrs)
         if t and t.get("content"):
@@ -605,7 +605,7 @@ def repair_missing_images(items):
                             tissot_product_cache[href] = None
                     detail = tissot_product_cache[href]
                     if detail is not None:
-                        recovered = meta_image(detail, href) or model_image(detail, href, rec)
+                        recovered = model_image(detail, href, rec) or meta_image(detail, href)
                         if recovered:
                             break
             # Exact-reference image alt text takes precedence on collection pages.
