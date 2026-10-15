@@ -128,6 +128,48 @@ def make_id(brand, name, source):
     return hashlib.sha1(f"{brand}|{name}|{source}".encode()).hexdigest()[:14]
 
 
+
+def release_description(name, brand, sg_listing=False):
+    """Write a short human-readable summary; never store scraped navigation text."""
+    title = clean(name).replace("|", " ")
+    title = re.sub(r"^\\d{1,2}(?:st|nd|rd|th)?\\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+20\\d{2}\\s*", "", title, flags=re.I)
+    if re.search(r"NK5020-58L", title, re.I):
+        return "The Zenshin 60 pairs a lightweight Super Titanium case and integrated bracelet with a brushed, gradient light-blue dial and small-seconds subdial. Its automatic Calibre 8322 offers about 60 hours of power reserve, sapphire crystal and 100 m water resistance."
+    if re.search(r"NJ0200-50E", title, re.I):
+        return "The limited-edition TSUYOSA “Time Slip” has a compact 37 mm stainless-steel case and integrated bracelet, a textured black dial with rose-gold-tone details, and a magnified date display. It uses the automatic Calibre 8210 and is water-resistant to 50 m."
+    if re.search(r"PC1017-88Y", title, re.I):
+        return "The Sakura limited edition features a 34 mm pink-gold-tone case and bracelet, a mother-of-pearl dial with a soft pink gradation, and a cherry-blossom-shaped open-heart aperture. Its automatic Calibre 8229 is paired with sapphire crystal and 100 m water resistance; worldwide production is limited to 1,900 pieces."
+    if re.search(r"Damascus Steel and Forged Carbon", title, re.I):
+        return "This Series 8 limited edition combines Damascus steel and forged carbon in a distinctive contemporary design. The announced edition is limited to 1,300 pieces worldwide; check the official release for full specifications and local availability."
+    if re.search(r"Tosa Washi Paper|Indigo Washi|Washi Dials", title, re.I):
+        return "This The CITIZEN limited edition highlights a Japanese washi-paper dial with a distinctive textured finish. Selected models in the range use high-accuracy Eco-Drive technology; refer to the official announcement for the exact model specification and edition details."
+    if re.search(r"Green Flash|Aurora", title, re.I):
+        return "A Citizen Attesa 50th-anniversary limited edition inspired by the green flash and aurora. See the official announcement for movement and dial details; Singapore availability has not been confirmed."
+    if re.search(r"RAINELL", title, re.I):
+        return "Citizen expands the RAINELL collection with new designs, including a limited-edition model featuring sparkling diamonds. Refer to the official release for individual model details and regional availability."
+    if re.search(r"TSUYOSA Shore", title, re.I):
+        return "This TSUYOSA Shore limited edition draws on a retro-inspired design theme. Check the official release for the model’s specific design details, launch timing and Singapore availability."
+    if re.search(r"Yacht Racing|PROMASTER", title, re.I):
+        return "A sport-focused Citizen PROMASTER release designed around practical timing and outdoor use. Consult the official announcement for the model-specific functions, specifications and regional release details."
+    if re.search(r"LIGHT in BLACK", title, re.I):
+        return "Part of Citizen’s Eco-Drive 50th-anniversary LIGHT in BLACK series, this model uses a dark, light-inspired design theme. Check the official release for model-specific specifications and availability."
+    if re.search(r"Star Wars|Mandalorian|Beskar", title, re.I):
+        return "A Citizen ATTESA collaboration inspired by Star Wars and The Mandalorian, with design details referencing Beskar. See the official release for the full specification and edition information."
+    if re.search(r"75th Anniversary|75th anniversary", title, re.I):
+        return "An Orient Star release celebrating the brand’s 75th anniversary with a special-edition design. Check the official announcement for individual references, production quantities and Singapore availability."
+    if re.search(r"Autumn/Winter 2026|2026 AW", title, re.I):
+        return f"{brand}’s Autumn/Winter 2026 announcement introduces new models for the season. Individual references, specifications and Singapore availability vary by model; use the official release for details."
+    if re.search(r"Flusso", title, re.I):
+        return "Orient introduces Flusso, a modern reinterpretation of its distinctive SK-inspired design. Check the official announcement for available variations and model specifications."
+    if re.search(r"TSUYOSA 60", title, re.I):
+        return "The TSUYOSA 60 collection brings a sport-casual automatic design with a contemporary dial and integrated-bracelet look. Consult the official announcement for the exact reference and specifications."
+    if sg_listing:
+        return f"{title} is listed in the official {brand} Singapore catalogue. Check the linked product page for current specifications and local availability."
+    clean_title = re.sub(r"^\\d{1,2}(?:st|nd|rd|th)?\\s+", "", title)
+    clean_title = re.sub(r"^20\\d{2}\\s+", "", clean_title)
+    return f"{clean_title.rstrip('. ')}. Refer to the official source for full specifications, launch details and Singapore availability."
+
+
 def add(items, brand, name, source, image=None, date=None, ref=None, price=None,
         sg_listing=False, limited=False, quantity=None, description="", tags=None,
         movement="Not specified", dial="See official source", size="See official source"):
@@ -193,7 +235,7 @@ def scrape_citizen_archive(items):
                     if m: d = f"{m.group(1)}-{m.group(2)}-{m.group(3)}"
                 img = meta_image(detail, href)
                 add(items, "Citizen", title, href, img, d, refs[0] if refs else None, None,
-                    False, limited, q, body[:560], ["Official announcement"] + (["Limited edition"] if limited else []))
+                    False, limited, q, release_description(title, "Citizen"), ["Official announcement"] + (["Limited edition"] if limited else []))
             except Exception as e:
                 print(f"WARN Citizen detail {href}: {e}")
 
@@ -229,7 +271,7 @@ def scrape_orient_archive(items):
             d = date_iso(body)
             # Anchor href paths sometimes use numeric IDs; use the first visible date only.
             add(items, brand, title, href, meta_image(detail, href), d, None, None,
-                False, limited, q, body[:560], ["Official announcement"] + (["Limited edition"] if limited else []))
+                False, limited, q, release_description(title, brand), ["Official announcement"] + (["Limited edition"] if limited else []))
         except Exception as e:
             print(f"WARN Orient detail {href}: {e}")
 
@@ -262,7 +304,7 @@ def scrape_tissot(items):
             img = meta_image(detail, href)
             limited = bool(re.search(r"special edition|limited edition", name + " " + body, re.I))
             add(items, "Tissot", name, href, img, date_iso(body), refs[0] if refs else None,
-                price, True, limited, edition_qty(body), body[:560],
+                price, True, limited, edition_qty(body), release_description(name, "Tissot", True),
                 ["Singapore product page"] + (["Limited edition"] if limited else []))
         except Exception as e:
             print(f"WARN Tissot product {href}: {e}")
@@ -294,7 +336,7 @@ def scrape_citizen_singapore(items):
                 refs = re.findall(r"\b[A-Z]{1,10}[- ]?[A-Z]?\d{2,5}-\d{2}[A-Z]?\b", body)
                 limited = bool(re.search(r"limited[- ]edition", name + " " + body, re.I))
                 add(items, "Citizen", name, href, meta_image(detail, href), date_iso(body), refs[0] if refs else None,
-                    price, True, limited, edition_qty(body), body[:560], ["Official Singapore page"])
+                    price, True, limited, edition_qty(body), release_description(name, "Citizen", True), ["Official Singapore page"])
             except Exception as e:
                 print(f"WARN Citizen SG detail {href}: {e}")
 
