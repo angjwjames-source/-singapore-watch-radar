@@ -458,12 +458,7 @@ def tissot_product_page_for(rec):
         (("prx 41 mm quartz", "prx 41mm quartz"), "https://www.tissotwatches.com/en-sg/T1374171104100.html"),
         (("prx 40 mm automatic", "prx 40 automatic"), "https://www.tissotwatches.com/en-sg/T1374071105100.html"),
         (("pr100 40 mm quartz", "pr100 40mm quartz"), "https://www.tissotwatches.com/en-sg/T1504171109100.html"),
-        (("gentleman 38 mm automatic", "gentleman 38mm automatic"), "https://www.tissotwatches.com/en-sg/men/selections/novelties.html"),
         (("ballade 30 mm automatic", "ballade 30mm automatic"), "https://www.tissotwatches.com/en-sg/T1562081103300.html"),
-        (("pr100 tour de france 40 mm", "pr100 tour de france"), "https://www.tissotwatches.com/en-sg/men/selections/novelties.html"),
-        (("pr100 cycling 40 mm", "pr100 cycling"), "https://www.tissotwatches.com/en-sg/men/selections/novelties.html"),
-        (("pinarello 43.14 mm", "pinarello 43.14"), "https://www.tissotwatches.com/en-sg/men/selections/novelties.html"),
-        (("supersport 42 mm quartz", "supersport 42mm quartz"), "https://www.tissotwatches.com/en-sg/men/selections/novelties.html"),
     ]
     for needles, url in mappings:
         if any(needle in name for needle in needles):
@@ -486,6 +481,10 @@ def product_page_for(rec):
     if brand == "Orient" and ref.startswith("RA-BB02"):
         return "https://orient-watch.com/en/orient/collection/contemporary/flusso/" + ref + "/"
     return None
+
+
+def brand_is_tissot_listing(rec):
+    return rec.get("brand") == "Tissot" and "/collection/selections/novelties.html" in str(rec.get("source", ""))
 
 
 def repair_missing_images(items):
@@ -548,8 +547,9 @@ def repair_missing_images(items):
 
     for rec in items.values():
         img = rec.get("image")
-        bad_image = re.compile(r"dummy|placeholder|menu-push|sprite|watch-fallback|header_mega|gravity=center|history-mobile|/header/", re.I)
-        if img and not rec.get("image_fallback") and not bad_image.search(img):
+        bad_image = re.compile(r"dummy|placeholder|menu-push|sprite|watch-fallback|header_mega|gravity=center|history-mobile|/header/|zoomincursorwithoutbg|/360\\.svg|gift-finder-mobile", re.I)
+        tissot_listing_record = brand_is_tissot_listing(rec)
+        if img and not rec.get("image_fallback") and not bad_image.search(img) and not tissot_listing_record:
             continue
         brand = rec.get("brand")
         ref = clean(rec.get("ref", ""))
