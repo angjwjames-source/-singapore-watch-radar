@@ -415,44 +415,106 @@ def product_page_for(rec):
 
 
 def repair_missing_images(items):
-    """Recover actual model/release photography from official product or announcement pages."""
-    cache = {}
+    """Recover actual model/release photography from official product and catalogue pages."""
     fallback = {
         "Citizen": "assets/watch-fallback-citizen.svg",
         "Tissot": "assets/watch-fallback-tissot.svg",
         "Orient": "assets/watch-fallback-orient.svg",
         "Orient Star": "assets/watch-fallback-orient-star.svg",
     }
+    # Catalogue pages expose exact model thumbnails even when product pages block
+    # automated requests or omit social-image metadata.
+    catalogue_urls = {
+        "Orient": ["https://orient-watch.com/en/orient/"],
+        "Orient Star": ["https://orient-watch.com/en/orientstar/"],
+        "Tissot": ["https://www.tissotwatches.com/en-sg/collection/selections/novelties.html"],
+    }
+    catalogue_cache = {}
+    tissot_product_cache = {}
+
+    def get_soup(url):
+        if url not in catalogue_cache:
+            try:
+                catalogue_cache[url] = page(url)
+            except Exception as e:
+                print(f"WARN image recovery {url}: {e}")
+                catalogue_cache[url] = None
+        return catalogue_cache[url]
+
+    def tissot_detail_for(rec, listing):
+        """Find the individual Tissot product card best matching the release name."""
+        if listing is None:
+            return None
+        target = clean(rec.get("name", "")).lower()
+        target_tokens = [t for t in re.findall(r"[a-z0-9]+", target) if len(t) > 2 and t not in {"tissot", "automatic", "quartz", "new", "mm"}]
+        ranked = []
+        for a in listing.select('a[href*="/en-sg/"]'):
+            href = absurl(a.get("href"), "https://www.tissotwatches.com")
+            if not href or "/collection/" in href or not re.search(r"\.html$", href):
+                continue
+            card = a
+            for _ in range(4):
+                if card.parent:
+                    card = card.parent
+                text_card = clean(card.get_text(" ", strip=True))
+                if len(text_card) > len(clean(a.get_text(" ", strip=True))) + 8:
+                    break
+            label = clean(a.get_text(" ", strip=True) + " " + text_card)
+            label_l = label.lower()
+            score = sum(1 for token in target_tokens if token in label_l)
+            if score:
+                ranked.append((score, href))
+        if not ranked:
+            return None
+        ranked.sort(reverse=True)
+        # Only use a link when it has a meaningful match to the model name.
+        if ranked[0][0] < max(1, min(2, len(target_tokens))):
+            return None
+        return ranked[0][1]
+
     for rec in items.values():
         img = rec.get("image")
         if img and not rec.get("image_fallback") and not re.search(r"dummy|placeholder|menu-push|sprite|watch-fallback", img, re.I):
             continue
+        brand = rec.get("brand")
         product = product_page_for(rec)
         sources = [product, rec.get("source")]
+        # For model references, the official brand catalogue is a useful alternate
+        # when a product detail endpoint is blocked.
+        sources.extend(catalogue_urls.get(brand, []))
         recovered = None
         for source in [x for x in sources if x]:
-            # Product-page image selection must be record-specific, so cache only page HTML,
-            # not the selected image URL, for pages that could list multiple watches.
-            try:
-                soup = page(source)
-            except Exception as e:
-                print(f"WARN image recovery {source}: {e}")
+            soup = get_soup(source)
+            if soup is None:
                 continue
+            if brand == "Tissot" and source in catalogue_urls["Tissot"]:
+                href = tissot_detail_for(rec, soup)
+                if href:
+                    if href not in tissot_product_cache:
+                        try:
+                            tissot_product_cache[href] = page(href)
+                        except Exception as e:
+                            print(f"WARN Tissot product image {href}: {e}")
+                            tissot_product_cache[href] = None
+                    detail = tissot_product_cache[href]
+                    if detail is not None:
+                        recovered = meta_image(detail, href) or model_image(detail, href, rec)
+                        if recovered:
+                            break
+            # Exact-reference image alt text takes precedence on collection pages.
             found = model_image(soup, source, rec)
             if found:
                 recovered = found
-                # A broad collection/news page may only provide a page hero. Prefer a
-                # model-specific hit whenever the image itself contains this reference.
-                if rec.get("ref") and rec["ref"].lower() in found.lower():
+                if rec.get("ref") and rec["ref"].lower().replace("-", "") in found.lower().replace("-", ""):
                     break
                 if source == product:
                     break
         if recovered:
             rec["image"] = recovered
             rec.pop("image_fallback", None)
-            rec["image_source"] = "official page image"
+            rec["image_source"] = "official product or catalogue page"
         else:
-            rec["image"] = fallback.get(rec.get("brand"), "assets/watch-fallback.svg")
+            rec["image"] = fallback.get(brand, "assets/watch-fallback.svg")
             rec["image_fallback"] = True
 
 
