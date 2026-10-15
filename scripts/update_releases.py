@@ -179,45 +179,11 @@ def scrape_orient_archive(items):
 
 
 def scrape_tissot(items):
-    url = "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html"
-    try:
-        soup = page(url)
-    except Exception as e:
-        print(f"WARN Tissot Singapore catalogue: {e}")
-        return
-    for a in soup.select("a[href]"):
-        href = absurl(a.get("href"), url)
-        if not href or "tissotwatches.com/en-sg/" not in href:
-            continue
-        node = a
-        best = None
-        for _ in range(5):
-            if node is None: break
-            text = clean(node.get_text(" ", strip=True))
-            if re.search(r"S\$\s*[\d,]+", text) and ("/products/" in href or "/collection/" in href):
-                best = node
-                break
-            node = node.parent
-        if not best:
-            continue
-        card_text = clean(best.get_text(" ", strip=True))
-        price = price_sgd(card_text)
-        imgs = best.find_all("img")
-        image = None
-        for im in imgs:
-            image = absurl(im.get("src") or im.get("data-src") or im.get("data-lazy-src") or im.get("srcset", "").split(" ")[0], url)
-            if image: break
-        name = clean(a.get("aria-label") or a.get("title") or a.get_text(" ", strip=True))
-        if name.lower() in {"", "image"}:
-            name = clean(card_text)
-        name = re.sub(r"\bS\$\s*[\d,]+(?:\.\d{2})?\b", "", name)
-        name = re.sub(r"^(New|Special Edition|New Special Edition)\s*[•·-]?\s*", "", name, flags=re.I)
-        if len(name) < 4: continue
-        limited = bool(re.search(r"special edition|limited edition", card_text, re.I))
-        add(items, "Tissot", name, href, image, None, None, price, True, limited, None,
-            "Current listing from the official Tissot Singapore novelties catalogue. Check product page for exact reference and stock.",
-            ["Singapore price", "Official new style"])
-
+    """Conservative placeholder until model-level Tissot extraction is verified."""
+    # The novelties landing page includes navigation links and pagination controls.
+    # Scraping it as a product catalogue previously generated false watch names and prices.
+    # Do not publish any Tissot records unless a verified individual-product parser is available.
+    print("INFO Tissot: skipped broad catalogue scrape to prevent false listings")
 
 def scrape_citizen_singapore(items):
     # Use only explicitly listed official local pages; do not infer local availability from global news.
