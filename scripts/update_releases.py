@@ -53,25 +53,33 @@ def date_iso(text):
 
 
 def meta_image(soup, base):
+    # Prefer explicit social/product artwork. A random first page image is often
+    # a logo, navigation thumbnail, or unrelated watch and must not be shown.
     for attrs in ({"property": "og:image"}, {"name": "twitter:image"}):
         t = soup.find("meta", attrs=attrs)
         if t and t.get("content"):
             candidate = absurl(t["content"], base)
-            if candidate and not re.search(r"dummy|placeholder|logo|menu-push", candidate, re.I):
+            if candidate and not re.search(r"dummy|placeholder|logo|menu-push|sprite|banner", candidate, re.I):
                 return candidate
+    candidates = []
     for img in soup.find_all("img"):
         src = img.get("src") or img.get("data-src") or img.get("data-lazy-src")
         alt = clean(img.get("alt", ""))
-        if src and not src.startswith("data:"):
-            candidate = absurl(src, base)
-            if candidate and not re.search(r"dummy|placeholder|logo|menu-push", candidate, re.I) and not re.search(r"logo|menu|banner|icon", alt, re.I):
-                return candidate
-    return None
+        if not src or src.startswith("data:") or re.search(r"logo|menu|banner|icon|arrow|flag|search", alt, re.I):
+            continue
+        candidate = absurl(src, base)
+        if candidate and not re.search(r"dummy|placeholder|logo|menu-push|sprite|banner|icon", candidate, re.I):
+            if re.search(r"watch|timepiece|model|collection|limited|attesa|promaster|series 8|orient|tissot", alt, re.I):
+                candidates.append(candidate)
+    return candidates[0] if candidates else None
 
 
 def valid_watch_title(title):
     title = clean(title)
     if len(title) < 8:
+        return False
+    # Exclude non-watch corporate announcements and generic navigation labels.
+    if re.search(r"\b(award|sponsorship|sponsor|guarantee|warranty|customers using|dedicated apps|innovation|corporate|financial results|page number|skip to main content)\b", title, re.I):
         return False
     blocked = {"brand", "skip to main content", "skip to footer content", "page number 1",
                "page number 2", "read more", "news", "orient", "orient star", "citizen", "tissot"}
@@ -288,10 +296,27 @@ def main():
         price = rec.get("price")
         if price is not None and (not isinstance(price, (int, float)) or price <= 0 or price > 100000):
             rec["price"] = None
-        key = (clean(rec.get("brand", "")).lower(), clean(rec.get("name", "")).lower(), clean(rec.get("ref", "")).lower())
+        # Deduplicate a model discovered through both a press release and a catalogue.
+        ref = clean(rec.get("ref", "")).lower()
+        key = (clean(rec.get("brand", "")).lower(), ref) if ref else (
+            clean(rec.get("brand", "")).lower(), clean(rec.get("name", "")).lower())
         old = cleaned.get(key)
-        if old is None or (not old.get("image") and rec.get("image")):
+        if old is None:
             cleaned[key] = rec
+        else:
+            old_name, new_name = clean(old.get("name", "")), clean(rec.get("name", ""))
+            old_headline = len(old_name) > 95 or bool(re.match(r"^\d{1,2}\s", old_name))
+            new_headline = len(new_name) > 95 or bool(re.match(r"^\d{1,2}\s", new_name))
+            if (old_headline and not new_headline) or (not old.get("image") and rec.get("image")):
+                merged = dict(old)
+                merged.update({k: v for k, v in rec.items() if v not in (None, "", [])})
+                if not new_headline:
+                    merged["name"] = new_name
+                cleaned[key] = merged
+            else:
+                for field in ("image", "price", "ref", "date"):
+                    if not old.get(field) and rec.get(field):
+                        old[field] = rec[field]
     records = sorted(cleaned.values(), key=lambda x: (x.get("date") or "", x.get("brand", ""), x.get("name", "")), reverse=True)
     data = {"last_checked_at": NOW, "source_count": successful, "data_mode": "scheduled-source-sync", "releases": records}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
