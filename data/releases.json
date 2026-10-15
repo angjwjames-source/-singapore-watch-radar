@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-10-15T18:50:28+00:00",
+  "last_checked_at": "2026-10-15T18:58:38+00:00",
   "source_count": 4,
   "data_mode": "scheduled-source-sync",
   "releases": [
@@ -45,14 +45,14 @@
       "edition": "1,300 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260924/index.html",
       "sourceName": "Citizen official source",
-      "image": "https://img.chrono24.com/images/uhren/48802774-fvxesm2fi732woxk1nd8vxkh-ExtraLarge.jpg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "image": "assets/watch-fallback-citizen.svg",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN Series 8 New Limited-edition Model with Damascus Steel and Forged Carbon| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN Series 8 New Limited-ed",
       "tags": [
         "Official announcement",
         "Limited edition"
       ],
-      "image_source": "Chrono24 professional dealer listing"
+      "image_fallback": true
     },
     {
       "id": "b9488e1e66a1ad",
@@ -70,14 +70,14 @@
       "edition": "350 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260917/index.html",
       "sourceName": "Citizen official source",
-      "image": "https://citizen.jp/img/goods/5/TCT_AQ4106-00B_00_EC.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "image": "assets/watch-fallback-citizen.svg",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "The CITIZEN Two New Eco-Drive Tosa Washi Paper Models with Annual Accuracy of ±5 Seconds| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Two New Eco",
       "tags": [
         "Official announcement",
         "Limited edition"
       ],
-      "image_source": "Citizen Japan official product page"
+      "image_fallback": true
     },
     {
       "id": "orient-star-re-br0001n",
@@ -148,7 +148,7 @@
       "source": "https://orient-watch.com/en/news/detail/en-118.html",
       "sourceName": "Orient Star official source",
       "image": "assets/watch-fallback-orient-star.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "Orient Star Announces New Products for Autumn/Winter 2026 (2026 AW)| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store Orient W",
       "tags": [
         "Official announcement",
@@ -173,7 +173,7 @@
       "source": "https://orient-watch.com/en/news/detail/en-115.html",
       "sourceName": "Orient Star official source",
       "image": "assets/watch-fallback-orient-star.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "Orient Announces New Products for Autumn/Winter 2026 (2026 AW)| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store Orient Watche",
       "tags": [
         "Official announcement"
@@ -247,7 +247,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260909/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN ATTESA Eco-Drive 50th Anniversary Edition Inspired by the Green Flash and Aurora| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTESA Eco-Driv",
       "tags": [
         "Official announcement",
@@ -272,7 +272,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260901/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN PROMASTER Eco-Drive 50th Anniversary SKYHAWK and TSUNO CHRONO Limited-edition Models| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN PROMASTER E",
       "tags": [
         "Official announcement",
@@ -297,7 +297,7 @@
       "source": "https://orient-watch.com/en/news/detail/en-111.html",
       "sourceName": "Orient Star official source",
       "image": "assets/watch-fallback-orient-star.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "Orient Star Announces New Models Including 75th Anniversary Limited Editions| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store",
       "tags": [
         "Official announcement",
@@ -347,7 +347,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260723_1/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "New Additions to the RAINELL Collection Including a Limited-edition Model with Sparkling Diamonds| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS New Additions",
       "tags": [
         "Official announcement",
@@ -372,7 +372,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260723_2/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN TSUYOSA Shore New Limited-Edition Model Inspired by a Journey Back in Time| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN TSUYOSA Shore New Lim",
       "tags": [
         "Official announcement",
@@ -397,7 +397,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260702/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "The CITIZEN New Limited-Edition Indigo Washi Paper Dial Model with Captivating Mist-like Patterns| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Ne",
       "tags": [
         "Official announcement",
@@ -421,14 +421,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://www.citizenwatch-global.com/news/2026/20260610/index.html",
       "sourceName": "Citizen official source",
-      "image": "https://shop.theclockhouse.jp/cdn/shop/files/cc4107-80h_2.jpg?v=1780524980&width=900",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "image": "assets/watch-fallback-citizen.svg",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN ATTESA New Limited-Edition Recrystallised Titanium Model with Striking All-Black Design| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTESA N",
       "tags": [
         "Official announcement",
         "Limited edition"
       ],
-      "image_source": "The Clock House official retailer listing"
+      "image_fallback": true
     },
     {
       "id": "20ea8614f949ec",
@@ -447,7 +447,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260604/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "The CITIZEN Limited-edition model with indigo washi paper dial in the “victory colour”| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Limited-editi",
       "tags": [
         "Official announcement",
@@ -472,7 +472,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260521/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN PROMASTER New Wave Tracker Light-powered Eco-Drive Combination Watch for Yacht Racing| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN PROMASTER",
       "tags": [
         "Official announcement"
@@ -496,7 +496,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260514/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "Eco-Drive 50th Anniversary LIGHT in BLACK Models Inspired by Light and Time| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS Eco-Drive 50th Anniversary LIGHT in",
       "tags": [
         "Official announcement",
@@ -521,7 +521,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260428/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "Citizen ATTESA Star Wars™ “The Mandalorian” Beskar| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS Citizen ATTESA Star Wars™ “The Mandalorian” Beskar News 2026",
       "tags": [
         "Official announcement",
@@ -546,7 +546,7 @@
       "source": "https://citizen.com.sg/products/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2026/01/product_overview_series-8_202601.jpg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "Products - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technology",
       "tags": [
         "Official Singapore page"
@@ -569,7 +569,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260319_2/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "The CITIZEN Eco-Drive 50th Anniversary Edition model with hand-dyed green Japanese paper dial| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Eco-Dr",
       "tags": [
         "Official announcement",
@@ -594,7 +594,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260319_3/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "Eco-Drive 50th Anniversary Limited Model Eco-Drive PHOTON| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS Eco-Drive 50th Anniversary Limited Model Eco-Drive PHO",
       "tags": [
         "Official announcement",
@@ -619,7 +619,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260220_2/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "First-ever TSUYOSA x seconde/seconde/ collaboration model and new TSUYOSA models| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS First-ever TSUYOSA x seconde/se",
       "tags": [
         "Official announcement",
@@ -644,7 +644,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260220_1/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN Series 8 New slim models featuring a globally trendy case size| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN Series 8 New slim models featurin",
       "tags": [
         "Official announcement",
@@ -669,7 +669,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260204/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN ATTESA The total lunar eclipse inspired “Shades of Red”, when the sun, Earth, and moon align| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATT",
       "tags": [
         "Official announcement",
@@ -694,7 +694,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20251016/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN ATTESA Platinum Shine Collection with First Duratect Platinum Recrystallized Titanium Model| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTE",
       "tags": [
         "Official announcement",
@@ -719,7 +719,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20251003/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "The CITIZEN Limited-Edition 30th Anniversary Models with New Mechanical and Eco-Drive Models| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Limited",
       "tags": [
         "Official announcement",
@@ -744,7 +744,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250925/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN Series 8 Limited-edition models inspired by cityscapes| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN Series 8 Limited-edition models inspired",
       "tags": [
         "Official announcement",
@@ -769,7 +769,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250911/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN ATTESA New Limited Edition Model featuring a beautifully shining full sapphire bezel| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTESA New",
       "tags": [
         "Official announcement",
@@ -794,7 +794,7 @@
       "source": "https://citizen.com.sg/product/jv2000-51l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/08/jv2000-51l_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "JV2000-51L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -817,7 +817,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250903_2/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "The CITIZEN Limited-Edition 30th Anniversary Models with Washi Dials| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Limited-Edition 30th Anniversar",
       "tags": [
         "Official announcement",
@@ -842,7 +842,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250903_3/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "New CITIZEN TSUYOSA 60| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS New CITIZEN TSUYOSA 60 News 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2",
       "tags": [
         "Official announcement"
@@ -862,11 +862,11 @@
       "status": "confirmed",
       "sg_status": "Official Singapore catalogue listing",
       "limited": false,
-      "edition": "Limited edition; quantity not stated",
+      "edition": "",
       "source": "https://citizen.com.sg/product/em1133-85l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/08/em1133-85l_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "EM1133-85L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -889,7 +889,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250819/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN ATTESA Limited-edition models inspired by the new JAXA HTV-X cargo transporter| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTESA Limited-ed",
       "tags": [
         "Official announcement",
@@ -914,7 +914,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250703/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "The CITIZEN Limited-edition 30th anniversary model with a Murakamo shibori dyeing washi paper dial| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN L",
       "tags": [
         "Official announcement",
@@ -939,7 +939,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250624/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "The CITIZEN Limited-edition 30th anniversary model with a washi paper dial in traditional indigo| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Lim",
       "tags": [
         "Official announcement",
@@ -1239,7 +1239,7 @@
       "source": "https://citizen.com.sg/product/pc1017-88y/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/02/pc1017-88y_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "PC1017-88Y - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1262,7 +1262,7 @@
       "source": "https://citizen.com.sg/product/nk5020-58l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/nk5020-58l_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "NK5020-58L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1285,7 +1285,7 @@
       "source": "https://citizen.com.sg/product/nj0200-50e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/nj0200-50e_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "NJ0200-50E - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1308,7 +1308,7 @@
       "source": "https://citizen.com.sg/product/nj0191-83a/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/02/nj0191-83a_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "NJ0191-83A - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1331,7 +1331,7 @@
       "source": "https://citizen.com.sg/product/nh9136-02l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/03/nh9136-02l_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "NH9136-02L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1354,7 +1354,7 @@
       "source": "https://citizen.com.sg/product/nc1000-51e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2023/08/nc1000-51e_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "NC1000-51E - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1377,7 +1377,7 @@
       "source": "https://citizen.com.sg/product/nb6060-58x/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/02/nb6060-58x_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "NB6060-58X - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1400,7 +1400,7 @@
       "source": "https://citizen.com.sg/product/nb6059-57p/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/02/nb6059-57p_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "NB6059-57P - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1423,7 +1423,7 @@
       "source": "https://citizen.com.sg/product/nb6051-59l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/03/nb6051-59l_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "NB6051-59L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1446,7 +1446,7 @@
       "source": "https://citizen.com.sg/product/nb6036-52n/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/09/nb6036-52n_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "NB6036-52N - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1469,7 +1469,7 @@
       "source": "https://citizen.com.sg/product/nb6033-51e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/12/nb6033-51e_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "NB6033-51E - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1492,7 +1492,7 @@
       "source": "https://citizen.com.sg/product/jp2008-06e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/jp2008-06e_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "JP2008-06E - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1515,7 +1515,7 @@
       "source": "https://citizen.com.sg/product/ew5624-54y/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/02/ew5624-54y_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "EW5624-54Y - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1538,7 +1538,7 @@
       "source": "https://citizen.com.sg/product/eo2027-09l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/eo2027-09l_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "EO2027-09L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1561,7 +1561,7 @@
       "source": "https://citizen.com.sg/product/em1163-09x/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/12/em1163-09x_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "EM1163-09X - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1584,7 +1584,7 @@
       "source": "https://citizen.com.sg/product/em1099-57l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/08/em1099-57l_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "EM1099-57L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1607,7 +1607,7 @@
       "source": "https://citizen.com.sg/product/em0990-81a/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/em0990-81a_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "EM0990-81A - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1630,7 +1630,7 @@
       "source": "https://citizen.com.sg/product/eg7114-53d/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/eg7114-53d_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "EG7114-53D - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1653,7 +1653,7 @@
       "source": "https://citizen.com.sg/product/cc4105-69e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/03/cc4105-69e_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CC4105-69E - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1676,7 +1676,7 @@
       "source": "https://citizen.com.sg/product/cc4075-50l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/04/cc4075-50l_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CC4075-50L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1699,7 +1699,7 @@
       "source": "https://citizen.com.sg/product/cc4074-61w/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/10/cc4074-61w_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CC4074-61W - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1722,7 +1722,7 @@
       "source": "https://citizen.com.sg/product/cc3097-52l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/09/cc3097-52l_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CC3097-52L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1745,7 +1745,7 @@
       "source": "https://citizen.com.sg/product/cb3046-76e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/08/cb3046-76e_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CB3046-76E - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1768,7 +1768,7 @@
       "source": "https://citizen.com.sg/product/ca4691-59x/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/ca4691-59x_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CA4691-59X - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1791,7 +1791,7 @@
       "source": "https://citizen.com.sg/product/by1010-81z/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/by1010-81z_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "BY1010-81Z - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1814,7 +1814,7 @@
       "source": "https://citizen.com.sg/product/bu0082-06p/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/bu0082-06p_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "BU0082-06P - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1837,7 +1837,7 @@
       "source": "https://citizen.com.sg/product/bn1025-08l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/05/bn1025-08l_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "BN1025-08L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1860,7 +1860,7 @@
       "source": "https://citizen.com.sg/product/av0106-01l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/av0106-01l_f_shot_md.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "AV0106-01L - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1883,7 +1883,7 @@
       "source": "https://citizen.com.sg/product/aq4106-18x/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/10/aq4106-18x_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "AQ4106-18X - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1906,7 +1906,7 @@
       "source": "https://citizen.com.sg/product/aq4100-65h/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/10/aq4100-65h_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "AQ4100-65H - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
@@ -1929,7 +1929,7 @@
       "source": "https://citizen.com.sg/product/aq4100-06w/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2022/05/aq4100-06w_f_shot.png",
-      "checked_at": "2026-10-15T18:50:28+00:00",
+      "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "AQ4100-06W - Japanese Watch Technology Products The CITIZEN NC0210-11A NC1000-51E AQ4106-18X AQ4100-06W AQ4100-65H Series 8 NB6051-59L NB6060-58X NB6033-51E NB6036-52N NB6059-57P Eco-Drive SATELLITE WAVE-GPS CC4105-69E CC4075-50L CC4067-66E CC3097-52L CC4074-61W PROMASTER EO2027-09L JP2008-06E BN1025-08L JV2000-51L AV0106-01L CITIZEN L EM1099-57L EM1133-85L EM0990-81A EW5624-54Y EM1163-09X Eco-Drive CA4691-59X CB3046-76E BY1010-81Z BU0082-06P EG7114-53D Mechanical NK5020-58L NJ0200-50E NH9136-02L PC1017-88Y NJ0191-83A Watch Search About Citizen Technolog",
       "tags": [
         "Official Singapore page"
