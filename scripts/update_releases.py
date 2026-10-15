@@ -234,7 +234,7 @@ def scrape_tissot(items):
             body = clean(detail.get_text(" ", strip=True))
             price = price_sgd(body)
             # Avoid treating a generic collection price as a product price.
-            refs = re.findall(r"\\b[A-Z0-9]{2,5}-\\d{3}-\\d{2}-\\d{3}-\\d{2}\\b", body)
+            refs = re.findall(r"\b[A-Z0-9]{2,5}-\\d{3}-\\d{2}-\\d{3}-\\d{2}\\b", body)
             img = meta_image(detail, href)
             limited = bool(re.search(r"special edition|limited edition", name + " " + body, re.I))
             add(items, "Tissot", name, href, img, date_iso(body), refs[0] if refs else None,
