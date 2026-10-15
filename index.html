@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101916">
+<title>Singapore Watch Radar</title>
+<style>
+:root{--bg:#f4f5f1;--panel:#fff;--ink:#17211d;--muted:#6b7770;--line:#e0e5df;--green:#214c3b;--green2:#dcebe1;--gold:#b68a43;--shadow:0 8px 30px #18271c0b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1240px;margin:auto;padding:0 28px 60px}.topbar{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:16px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.4px}.logo{height:38px;width:38px;border-radius:12px;background:var(--green);color:#fff;display:grid;place-items:center;font-size:20px}.brand small{display:block;font-size:10px;letter-spacing:2px;color:var(--muted);font-weight:700}.top-actions{display:flex;align-items:center;gap:10px}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 12px;background:white;color:var(--muted);font-size:12px}.pill strong{color:var(--green)}.hero{margin:30px 0 22px;padding:32px;border-radius:24px;background:#13251d;color:white;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:280px;height:280px;border:1px solid #ffffff18;border-radius:50%;right:5%;top:-125px;box-shadow:0 0 0 28px #ffffff08,0 0 0 58px #ffffff05}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:10px;color:#b6d1bd;font-weight:800}.hero h1{font-size:clamp(30px,5vw,49px);line-height:1.08;letter-spacing:-1.8px;margin:10px 0 12px;max-width:680px}.hero p{color:#d0ddd4;max-width:630px;margin:0 0 22px}.hero-stats{display:flex;gap:28px;flex-wrap:wrap}.stat{border-left:1px solid #ffffff32;padding-left:13px}.stat b{font-size:21px;display:block}.stat span{font-size:11px;color:#b8c9be}.notice{background:#fff8e8;border:1px solid #f0dfb5;color:#745b27;padding:11px 14px;border-radius:12px;font-size:12px;margin:16px 0 22px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:24px 0 14px}.section-head h2{font-size:22px;letter-spacing:-.7px;margin:0}.section-head p{margin:3px 0 0;color:var(--muted);font-size:13px}.tabs{display:flex;gap:8px;flex-wrap:wrap}.tab{border:1px solid var(--line);background:#fff;padding:9px 14px;border-radius:999px;font-size:13px;color:#59665e}.tab.active{background:var(--green);color:#fff;border-color:var(--green)}.filters{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr auto;gap:10px;padding:14px;background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:16px}.field{min-width:0}.field label{display:block;font-size:10px;letter-spacing:1.1px;text-transform:uppercase;font-weight:800;color:var(--muted);margin:0 0 5px}.field input,.field select{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:10px;background:#fbfcfa;color:var(--ink);outline:none}.field input:focus,.field select:focus{border-color:#6c9b7d}.clear{align-self:end;padding:10px 13px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.watch-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}.watch-visual{height:220px;background:#f2f4f0;position:relative;display:grid;place-items:center;overflow:hidden}.watch-photo{width:100%;height:100%;object-fit:contain;background:#fff}.photo-missing{color:#77847b;font-size:12px;padding:20px;text-align:center}.watch-visual:before{content:"";position:absolute;width:180px;height:180px;border:1px solid #ffffff9c;border-radius:50%;box-shadow:0 0 0 20px #ffffff30,0 0 0 42px #ffffff24}.watch-face{width:95px;height:95px;border-radius:50%;z-index:1;background:radial-gradient(circle at 35% 30%,#6e8d87,#18352d 70%);border:7px solid #b5bdb6;box-shadow:0 6px 18px #15251c45;position:relative}.watch-face:before{content:"";position:absolute;left:50%;top:12px;width:2px;height:30px;background:#f2e8c9;transform-origin:bottom;transform:rotate(28deg)}.watch-face:after{content:"";position:absolute;left:50%;top:50%;width:27px;height:2px;background:#f2e8c9;transform-origin:left;transform:rotate(-30deg)}.watch-face .dot{position:absolute;width:5px;height:5px;border-radius:50%;background:#f2e8c9;left:50%;top:50%;transform:translate(-50%,-50%)}.watch-visual.blue{background:linear-gradient(135deg,#e3eaf0,#c8d8e4)}.watch-visual.blue .watch-face{background:radial-gradient(circle at 35% 30%,#83a9c4,#16354f 72%)}.watch-visual.cream{background:linear-gradient(135deg,#f0ece2,#ddd2bc)}.watch-visual.cream .watch-face{background:radial-gradient(circle at 35% 30%,#d7c8a8,#5b4b35 72%)}.watch-visual.silver{background:linear-gradient(135deg,#e9e9e6,#c9ceca)}.watch-visual.silver .watch-face{background:radial-gradient(circle at 35% 30%,#a5b5ad,#253d34 72%)}.watch-visual.black{background:linear-gradient(135deg,#d7d9d5,#b8bfba)}.watch-visual.black .watch-face{background:radial-gradient(circle at 35% 30%,#505653,#111815 72%)}.watch-visual.purple{background:linear-gradient(135deg,#eee5ed,#d8c8dc)}.watch-visual.purple .watch-face{background:radial-gradient(circle at 35% 30%,#b7a3bf,#42334d 72%)}.brand-chip{position:absolute;top:12px;left:12px;background:#ffffffd9;border-radius:6px;padding:5px 7px;font-size:9px;letter-spacing:1px;font-weight:900}.save{position:absolute;right:12px;top:12px;border:0;background:#ffffffd9;width:34px;height:34px;border-radius:50%;font-size:18px;color:#46564b}.save.saved{background:var(--green);color:white}.card-body{padding:15px;display:flex;flex-direction:column;gap:9px;flex:1}.model-line{display:flex;justify-content:space-between;align-items:start;gap:8px}.model-line h3{font-size:17px;letter-spacing:-.35px;line-height:1.25;margin:0}.status{font-size:10px;font-weight:800;padding:5px 7px;border-radius:6px;white-space:nowrap;background:#edf0ed;color:#58655d}.status.verified{background:#dcebe1;color:#245b3d}.status.unconfirmed{background:#fff1d6;color:#8a6524}.status.global{background:#e6ebf6;color:#405d91}.meta{color:var(--muted);font-size:12px}.price{font-size:20px;font-weight:800;letter-spacing:-.5px}.price small{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:0}.tags{display:flex;gap:5px;flex-wrap:wrap}.tag{font-size:10px;background:#f1f3ef;color:#5a675f;padding:5px 7px;border-radius:6px}.card-bottom{border-top:1px solid var(--line);padding-top:11px;margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px}.source{font-size:11px;color:var(--green);font-weight:700;text-decoration:none}.source:hover{text-decoration:underline}.details{font-size:11px;color:var(--muted)}.empty{grid-column:1/-1;text-align:center;padding:50px 20px;background:white;border:1px dashed #cbd5cc;border-radius:16px;color:var(--muted)}.empty b{display:block;color:var(--ink);font-size:17px;margin-bottom:4px}.footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);margin-top:32px;padding-top:18px;color:var(--muted);font-size:11px}.footer a{color:var(--green)}.watchlist-note{font-size:12px;color:var(--muted);margin:10px 0 0}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#17251d;color:white;padding:11px 16px;border-radius:12px;font-size:13px;box-shadow:0 8px 30px #0002;opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.field.search{grid-column:1/-1}.clear{align-self:end}.hero{padding:26px}.hero:after{right:-100px}}
+@media(max-width:580px){.shell{padding:0 15px 40px}.topbar{height:65px}.brand{font-size:14px}.logo{width:34px;height:34px}.top-actions .pill{display:none}.hero{margin-top:18px;padding:23px 20px;border-radius:18px}.hero h1{font-size:34px}.hero-stats{gap:17px}.stat b{font-size:18px}.section-head{align-items:start;flex-direction:column}.cards{grid-template-columns:1fr}.watch-visual{height:185px}.filters{padding:11px;gap:9px}.field input,.field select{font-size:13px;padding:10px 8px}.footer{flex-direction:column}.hero:after{opacity:.45}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand"><div class="logo">◷</div><div>WATCH RADAR<small>SINGAPORE EDITION</small></div></div>
+    <div class="top-actions"><span class="pill">Coverage <strong>Global + SG</strong></span><span class="pill" id="updatedLabel">Starter catalogue</span></div>
+  </header>
+  <section class="hero">
+    <div class="eyebrow">Independent watch release tracker</div>
+    <h1>New watches.<br>On your radar.</h1>
+    <p>Discover releases from Citizen, Orient, Orient Star and Tissot. Compare launch information, check Singapore availability and save the models you want to keep an eye on.</p>
+    <div class="hero-stats">
+      <div class="stat"><b id="totalCount">0</b><span>Models in catalogue</span></div>
+      <div class="stat"><b id="savedCount">0</b><span>On your watchlist</span></div>
+      <div class="stat"><b>4</b><span>Brands tracked</span></div>
+    </div>
+  </section>
+  <div class="notice" id="dataNotice"><strong>Live data:</strong> Initial release records are sourced from official announcements and listings. Scheduled refreshes require publishing this project with its GitHub Actions workflow enabled. Global announcements and Singapore availability are tracked separately.</div>
+  <div class="section-head">
+    <div><h2 id="sectionTitle">Release catalogue</h2><p id="sectionSubtitle">Explore watches and narrow down your next favourite.</p></div>
+    <div class="tabs" role="tablist" aria-label="Catalogue view">
+      <button class="tab active" data-view="all">All watches</button>
+      <button class="tab" data-view="new">New & upcoming</button>
+      <button class="tab" data-view="limited">Limited editions</button>
+      <button class="tab" data-view="saved">My watchlist <span id="savedTabCount">(0)</span></button>
+    </div>
+  </div>
+  <section class="filters" aria-label="Filter watches">
+    <div class="field search"><label for="search">Search</label><input id="search" type="search" placeholder="Model, collection, reference…"></div>
+    <div class="field"><label for="brand">Brand</label><select id="brand"><option value="">All brands</option><option>Citizen</option><option>Orient</option><option>Orient Star</option><option>Tissot</option></select></div>
+    <div class="field"><label for="availability">Singapore status</label><select id="availability"><option value="">All statuses</option><option value="confirmed">Confirmed locally</option><option value="unconfirmed">Not confirmed</option><option value="global">Global announcement</option></select></div>
+    <div class="field"><label for="movement">Movement</label><select id="movement"><option value="">All movements</option><option>Automatic</option><option>Quartz</option><option>Solar</option><option>Eco-Drive</option></select></div>
+    <button class="clear" id="clearFilters">Reset</button>
+  </section>
+  <div class="field" style="max-width:220px;margin:0 0 14px"><label for="sort">Sort by</label><select id="sort"><option value="recent">Release date: newest</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Model name</option></select></div>
+  <main class="cards" id="cards" aria-live="polite"></main>
+  <p class="watchlist-note">Your watchlist is saved in this browser on this device. It is not synced across devices in this starter version.</p>
+  <footer class="footer"><span>Singapore Watch Radar · Independent personal project</span><span>Prices are shown only when found on an official Singapore listing. Always confirm local pricing, stock and warranty with the retailer.</span></footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+let watches = [];
+
+const $=id=>document.getElementById(id);
+let view="all";
+let saved=new Set(JSON.parse(localStorage.getItem("swr-saved")||"[]"));
+const money=n=>n==null?"Price not listed":n.toLocaleString("en-SG",{style:"currency",currency:"SGD",maximumFractionDigits:0});
+const statusText=s=>s==="confirmed"?"SG confirmed":s==="global"?"Global listing":"SG unconfirmed";
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function render(){
+ const q=$("search").value.toLowerCase().trim(), brand=$("brand").value, av=$("availability").value, mov=$("movement").value, sort=$("sort").value;
+ let list=watches.filter(w=>(view!=="saved"||saved.has(w.id))&&(view!=="limited"||w.limited===true)&&(!q||[w.brand,w.name,w.ref,w.dial,w.tags.join(" ")].join(" ").toLowerCase().includes(q))&&(!brand||w.brand===brand)&&(!av||w.status===av)&&(!mov||w.movement===mov));
+ if(sort==="price-low")list.sort((a,b)=>(a.price??Number.MAX_SAFE_INTEGER)-(b.price??Number.MAX_SAFE_INTEGER)); else if(sort==="price-high")list.sort((a,b)=>(b.price??-1)-(a.price??-1)); else if(sort==="name")list.sort((a,b)=>a.name.localeCompare(b.name)); else list.sort((a,b)=>(b.date||b.checked_at||"").localeCompare(a.date||a.checked_at||""));
+ $("totalCount").textContent=watches.length;$("savedCount").textContent=saved.size;$("savedTabCount").textContent=`(${saved.size})`;
+ $("sectionTitle").textContent=view==="saved"?"My watchlist":view==="new"?"New & upcoming":view==="limited"?"Limited edition releases":"Release catalogue";
+ $("sectionSubtitle").textContent=view==="saved"?"Models you saved on this device.":view==="new"?"Latest dated official-source listings; source dates are shown only when published.":view==="limited"?"A dedicated view for limited, numbered and special-edition watches. Quantities appear only when an official source states them.":"Explore watches and narrow down your next favourite.";
+ const host=$("cards");
+ if(!list.length){host.innerHTML='<div class="empty"><b>No watches found</b>Try changing your filters, or save a model to build your watchlist.</div>';return}
+ host.innerHTML=list.map(w=>`<article class="watch-card">
+  <div class="watch-visual">${w.image?`<img class="watch-photo" src="${escapeHTML(w.image)}" alt="${escapeHTML(w.name)} watch photo" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove();this.parentElement.insertAdjacentHTML('afterbegin','<div class=\"photo-missing\">Official image could not be loaded</div>')">`:`<div class="photo-missing">No official image was found in the source</div>`}<span class="brand-chip">${escapeHTML(w.brand.toUpperCase())}</span><button class="save ${saved.has(w.id)?"saved":""}" data-save="${w.id}" aria-label="${saved.has(w.id)?"Remove from":"Add to"} watchlist">${saved.has(w.id)?"♥":"♡"}</button></div>
+  <div class="card-body"><div class="model-line"><h3>${escapeHTML(w.name)}</h3><span class="status ${w.status}">${statusText(w.status)}</span></div>
+  <div class="meta">${escapeHTML(w.ref)} · ${w.date?`Announcement ${new Date(w.date+"T12:00:00").toLocaleDateString("en-SG",{day:"numeric",month:"short",year:"numeric"})}`:`Checked ${w.checked_at?new Date(w.checked_at).toLocaleDateString("en-SG",{day:"numeric",month:"short",year:"numeric"}):"recently"}`}</div>
+  <div class="price">${w.price==null?"See source for price":money(w.price)} <small>${w.price==null?"not quoted as a single price":"official SG listing"}</small></div>
+  ${w.limited?`<div class="tags"><span class="tag" style="background:#f5e8cf;color:#7a5720">✦ Limited edition tracker</span><span class="tag">${escapeHTML(w.edition||"Edition details to verify")}</span></div>`:""}
+  <div class="tags">${[w.movement,w.dial,w.size,...w.tags.slice(0,1)].map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join("")}</div>
+  <div class="meta">${escapeHTML(w.description||"Official-source release listing. Check source for current availability and specifications.")}</div>
+  <div class="card-bottom"><a class="source" href="${w.source}" target="_blank" rel="noopener noreferrer">${escapeHTML(w.sourceName||"Official source")} ↗</a><span class="details">${escapeHTML(w.sg_status||"Global listing")}</span></div></div></article>`).join("");
+}
+function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1900)}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{view=b.dataset.view;document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));render()}));
+["search","brand","availability","movement","sort"].forEach(id=>$(id).addEventListener(id==="search"?"input":"change",render));
+$("clearFilters").addEventListener("click",()=>{$("search").value="";$("brand").value="";$("availability").value="";$("movement").value="";$("sort").value="recent";render()});
+$("cards").addEventListener("click",e=>{const b=e.target.closest("[data-save]");if(!b)return;const id=b.dataset.save;if(saved.has(id)){saved.delete(id);toast("Removed from your watchlist")}else{saved.add(id);toast("Added to your watchlist")}localStorage.setItem("swr-saved",JSON.stringify([...saved]));render()});
+async function loadLiveData(){
+ try{
+  const response=await fetch("data/releases.json?ts="+Date.now(),{cache:"no-store"});
+  if(!response.ok) throw new Error("Feed not available yet");
+  const feed=await response.json();
+  watches=Array.isArray(feed.releases)?feed.releases:[];
+  const checked=feed.last_checked_at?new Date(feed.last_checked_at):null;
+  $("updatedLabel").textContent=checked?"Checked "+checked.toLocaleString("en-SG",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):"Waiting for first sync";
+  $("dataNotice").innerHTML=`<strong>Source sync:</strong> ${watches.length} real listings collected from official brand sources. Last checked ${checked?checked.toLocaleString("en-SG"):"not yet recorded"}. Photos and prices are shown only when found on the source page. Singapore stock is marked confirmed only when the source supports it.`;
+  render();
+ }catch(err){
+  watches=[]; $("updatedLabel").textContent="Feed not connected";
+  $("dataNotice").innerHTML='<strong>Feed not connected yet:</strong> No feed could be loaded in this context. Run the site from a web server or GitHub Pages so it can read data/releases.json. The bundled snapshot includes real official-source records; scheduled refreshes require GitHub Actions to be enabled.';
+  render();
+ }
+}
+render();loadLiveData();
+</script>
+</body>
+</html>
