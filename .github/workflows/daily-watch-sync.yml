@@ -24,7 +24,7 @@ jobs:
           python-version: '3.12'
       - name: Install parser dependencies
         run: pip install -r requirements.txt
-      - name: Collect official release listings
+      - name: Collect official release listings and recover model images
         run: python scripts/update_releases.py
       - name: Commit changed feed
         run: |
