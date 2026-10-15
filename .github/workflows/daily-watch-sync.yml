@@ -33,7 +33,24 @@ jobs:
           git add data/releases.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh official watch release feed'
-            git push
+            # Another workflow or a manual change may update main while scraping.
+            # Rebase onto the latest main and retry the push instead of failing
+            # with a non-fast-forward rejection.
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                git rebase --abort
+                echo "Rebase conflict while publishing refreshed feed." >&2
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              echo "Push attempt $attempt failed; retrying after fetching main."
+              sleep 2
+            done
+            echo "Unable to publish refreshed feed after 5 attempts." >&2
+            exit 1
           else
             echo 'No feed changes to commit.'
           fi
