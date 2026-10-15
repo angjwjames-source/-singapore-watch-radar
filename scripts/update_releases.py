@@ -12,7 +12,7 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
-UA = "SingaporeWatchRadar/1.1 (daily public release index)"
+UA = "SingaporeWatchRadar/1.2 (daily public release index)"
 S = requests.Session()
 S.headers.update({"User-Agent": UA, "Accept-Language": "en-SG,en;q=0.9"})
 NOW = datetime.now(timezone.utc).isoformat(timespec="seconds")
