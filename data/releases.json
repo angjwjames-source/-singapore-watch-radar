@@ -45,13 +45,14 @@
       "edition": "1,300 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260924/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN Series 8 New Limited-edition Model with Damascus Steel and Forged Carbon| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN Series 8 New Limited-ed",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "b9488e1e66a1ad",
@@ -69,13 +70,14 @@
       "edition": "350 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260917/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "The CITIZEN Two New Eco-Drive Tosa Washi Paper Models with Annual Accuracy of ±5 Seconds| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Two New Eco",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "orient-star-re-br0001n",
@@ -94,14 +96,15 @@
       "edition": "130 pieces worldwide",
       "source": "https://orient-watch.com/en/news/detail/en-118.html",
       "sourceName": "Orient Star official announcement",
-      "image": null,
+      "image": "assets/watch-fallback-orient-star.svg",
       "checked_at": "2026-10-16T09:00:00+08:00",
       "description": "Official press release states 130 pieces worldwide. Singapore allocation and price are not confirmed.",
       "tags": [
         "Limited edition",
         "75th anniversary",
         "Skeleton"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "price": null,
@@ -112,7 +115,7 @@
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "edition": "",
-      "image": null,
+      "image": "assets/watch-fallback-orient-star.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "id": "orient-star-aw26-lineup",
       "brand": "Orient Star",
@@ -125,7 +128,8 @@
       "tags": [
         "New collection",
         "Regular watches"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "996bb823bd7ca7",
@@ -143,13 +147,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://orient-watch.com/en/news/detail/en-118.html",
       "sourceName": "Orient Star official source",
-      "image": null,
+      "image": "assets/watch-fallback-orient-star.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "Orient Star Announces New Products for Autumn/Winter 2026 (2026 AW)| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store Orient W",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "ffe6b344501114",
@@ -167,12 +172,13 @@
       "edition": "",
       "source": "https://orient-watch.com/en/news/detail/en-115.html",
       "sourceName": "Orient Star official source",
-      "image": null,
+      "image": "assets/watch-fallback-orient-star.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "Orient Announces New Products for Autumn/Winter 2026 (2026 AW)| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store Orient Watche",
       "tags": [
         "Official announcement"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "price": null,
@@ -183,7 +189,7 @@
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "edition": "",
-      "image": null,
+      "image": "assets/watch-fallback-orient.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "id": "orient-flusso-2026",
       "brand": "Orient",
@@ -196,7 +202,8 @@
       "tags": [
         "New model",
         "Regular watches"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "price": null,
@@ -207,7 +214,7 @@
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "edition": "",
-      "image": null,
+      "image": "assets/watch-fallback-orient.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "id": "orient-aw26-lineup",
       "brand": "Orient",
@@ -220,7 +227,8 @@
       "tags": [
         "New collection",
         "Regular watches"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "e82649cd75247f",
@@ -238,13 +246,14 @@
       "edition": "1,500 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260909/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN ATTESA Eco-Drive 50th Anniversary Edition Inspired by the Green Flash and Aurora| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTESA Eco-Driv",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "526da7e00adb56",
@@ -262,13 +271,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://www.citizenwatch-global.com/news/2026/20260901/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN PROMASTER Eco-Drive 50th Anniversary SKYHAWK and TSUNO CHRONO Limited-edition Models| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN PROMASTER E",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "744ce755f34226",
@@ -286,13 +296,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://orient-watch.com/en/news/detail/en-111.html",
       "sourceName": "Orient Star official source",
-      "image": null,
+      "image": "assets/watch-fallback-orient-star.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "Orient Star Announces New Models Including 75th Anniversary Limited Editions| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "price": null,
@@ -303,7 +314,7 @@
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "edition": "See official source for model quantities",
-      "image": null,
+      "image": "assets/watch-fallback-orient-star.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "id": "orient-star-75th-limited-models",
       "brand": "Orient Star",
@@ -316,7 +327,8 @@
       "tags": [
         "Limited edition",
         "75th anniversary"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "c12cb2aff7083b",
@@ -334,13 +346,14 @@
       "edition": "3,500 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260723_1/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "New Additions to the RAINELL Collection Including a Limited-edition Model with Sparkling Diamonds| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS New Additions",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "bfb8c4ec54d948",
@@ -358,13 +371,14 @@
       "edition": "12,000 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260723_2/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN TSUYOSA Shore New Limited-Edition Model Inspired by a Journey Back in Time| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN TSUYOSA Shore New Lim",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "8717183f55839b",
@@ -382,13 +396,14 @@
       "edition": "200 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260702/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "The CITIZEN New Limited-Edition Indigo Washi Paper Dial Model with Captivating Mist-like Patterns| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Ne",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "16cef5ce797a05",
@@ -406,13 +421,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://www.citizenwatch-global.com/news/2026/20260610/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN ATTESA New Limited-Edition Recrystallised Titanium Model with Striking All-Black Design| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTESA N",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "20ea8614f949ec",
@@ -430,13 +446,14 @@
       "edition": "400 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260604/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "The CITIZEN Limited-edition model with indigo washi paper dial in the “victory colour”| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Limited-editi",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "843e6bc491fe7f",
@@ -454,12 +471,13 @@
       "edition": "",
       "source": "https://www.citizenwatch-global.com/news/2026/20260521/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN PROMASTER New Wave Tracker Light-powered Eco-Drive Combination Watch for Yacht Racing| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN PROMASTER",
       "tags": [
         "Official announcement"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "69dcfcdb2ca6d3",
@@ -477,13 +495,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://www.citizenwatch-global.com/news/2026/20260514/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "Eco-Drive 50th Anniversary LIGHT in BLACK Models Inspired by Light and Time| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS Eco-Drive 50th Anniversary LIGHT in",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "209c0f7ff649a6",
@@ -501,13 +520,14 @@
       "edition": "1,400 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260428/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "Citizen ATTESA Star Wars™ “The Mandalorian” Beskar| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS Citizen ATTESA Star Wars™ “The Mandalorian” Beskar News 2026",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "81bdc596ea617e",
@@ -548,13 +568,14 @@
       "edition": "650 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260319_2/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "The CITIZEN Eco-Drive 50th Anniversary Edition model with hand-dyed green Japanese paper dial| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Eco-Dr",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "0b6a648f8cc7f6",
@@ -572,13 +593,14 @@
       "edition": "5,000 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260319_3/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "Eco-Drive 50th Anniversary Limited Model Eco-Drive PHOTON| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS Eco-Drive 50th Anniversary Limited Model Eco-Drive PHO",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "e1e8fb0f0544b9",
@@ -596,13 +618,14 @@
       "edition": "3,600 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260220_2/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "First-ever TSUYOSA x seconde/seconde/ collaboration model and new TSUYOSA models| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS First-ever TSUYOSA x seconde/se",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "d08a3c314d6182",
@@ -620,13 +643,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://www.citizenwatch-global.com/news/2026/20260220_1/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN Series 8 New slim models featuring a globally trendy case size| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN Series 8 New slim models featurin",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "cd4111cf41a760",
@@ -644,13 +668,14 @@
       "edition": "2,200 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260204/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN ATTESA The total lunar eclipse inspired “Shades of Red”, when the sun, Earth, and moon align| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATT",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "b10573a45925cf",
@@ -668,13 +693,14 @@
       "edition": "2,500 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2025/20251016/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN ATTESA Platinum Shine Collection with First Duratect Platinum Recrystallized Titanium Model| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTE",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "b45c64c1456b04",
@@ -692,13 +718,14 @@
       "edition": "500 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2025/20251003/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "The CITIZEN Limited-Edition 30th Anniversary Models with New Mechanical and Eco-Drive Models| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Limited",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "d460ab2ed8087e",
@@ -716,13 +743,14 @@
       "edition": "1,200 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2025/20250925/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN Series 8 Limited-edition models inspired by cityscapes| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN Series 8 Limited-edition models inspired",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "5c298ddedf2d8b",
@@ -740,13 +768,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://www.citizenwatch-global.com/news/2025/20250911/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN ATTESA New Limited Edition Model featuring a beautifully shining full sapphire bezel| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTESA New",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "baad342389072c",
@@ -787,13 +816,14 @@
       "edition": "400 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2025/20250903_2/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "The CITIZEN Limited-Edition 30th Anniversary Models with Washi Dials| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Limited-Edition 30th Anniversar",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "57ba104422f2c3",
@@ -811,12 +841,13 @@
       "edition": "",
       "source": "https://www.citizenwatch-global.com/news/2025/20250903_3/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "New CITIZEN TSUYOSA 60| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS New CITIZEN TSUYOSA 60 News 2026 2025 2024 2023 2022 2021 2020 2019 2018 2017 2016 2015 2",
       "tags": [
         "Official announcement"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "1f60b391707342",
@@ -857,13 +888,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://www.citizenwatch-global.com/news/2025/20250819/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "CITIZEN ATTESA Limited-edition models inspired by the new JAXA HTV-X cargo transporter| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTESA Limited-ed",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "235885162667c6",
@@ -881,13 +913,14 @@
       "edition": "300 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2025/20250703/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "The CITIZEN Limited-edition 30th anniversary model with a Murakamo shibori dyeing washi paper dial| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN L",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "ecc7e32a133333",
@@ -905,13 +938,14 @@
       "edition": "550 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2025/20250624/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "assets/watch-fallback-citizen.svg",
       "checked_at": "2026-10-15T18:50:28+00:00",
       "description": "The CITIZEN Limited-edition 30th anniversary model with a washi paper dial in traditional indigo| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Lim",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-supersport-nba",
@@ -929,13 +963,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-supersport-42",
@@ -953,13 +988,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Regular watch"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-pinarello",
@@ -977,13 +1013,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-prx-quartz-41",
@@ -1001,13 +1038,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Regular watch"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-prx-auto-40",
@@ -1025,13 +1063,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Regular watch"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-prc100-solar-34",
@@ -1049,13 +1088,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Regular watch"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-prx-tour-de-france",
@@ -1073,13 +1113,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-pr100-cycling",
@@ -1097,13 +1138,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Limited edition"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-pr100-quartz-40",
@@ -1121,13 +1163,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Regular watch"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-gentleman-38",
@@ -1145,13 +1188,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Regular watch"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "tissot-ballade-30",
@@ -1169,13 +1213,14 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": null,
+      "image": "assets/watch-fallback-tissot.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
         "Singapore listing",
         "Regular watch"
-      ]
+      ],
+      "image_fallback": true
     },
     {
       "id": "8ad8e13a7e9169",
