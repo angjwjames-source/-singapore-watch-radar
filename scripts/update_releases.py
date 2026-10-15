@@ -383,11 +383,15 @@ def scrape_orient_catalogues(items):
     """Add individual Orient and Orient Star models from official collection pages."""
     bases = [
         ("Orient", "https://orient-watch.com/en/orient/"),
-        ("Orient Star", "https://orient-watch.com/en/orientstar/"),
         ("Orient", "https://orient-watch.com/en/orient/collection/contemporary/"),
+        ("Orient", "https://orient-watch.com/en/orient/collection/classic/"),
+        ("Orient", "https://orient-watch.com/en/orient/collection/sports/"),
+        ("Orient", "https://orient-watch.com/en/orient/collection/"),
+        ("Orient Star", "https://orient-watch.com/en/orientstar/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/contemporary/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/classic/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/sports/"),
+        ("Orient Star", "https://orient-watch.com/en/orientstar/collection/"),
     ]
     seen = set()
     for expected_brand, base in bases:
