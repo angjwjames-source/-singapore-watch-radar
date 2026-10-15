@@ -275,6 +275,35 @@ def scrape_citizen_singapore(items):
                 print(f"WARN Citizen SG detail {href}: {e}")
 
 
+def repair_missing_images(items):
+    """Try official source pages for real images, then use a clearly labelled local fallback."""
+    cache = {}
+    fallback = {
+        "Citizen": "assets/watch-fallback-citizen.svg",
+        "Tissot": "assets/watch-fallback-tissot.svg",
+        "Orient": "assets/watch-fallback-orient.svg",
+        "Orient Star": "assets/watch-fallback-orient-star.svg",
+    }
+    for rec in items.values():
+        img = rec.get("image")
+        if img and not re.search(r"dummy|placeholder|menu-push|sprite", img, re.I):
+            continue
+        source = rec.get("source")
+        if source:
+            if source not in cache:
+                try:
+                    cache[source] = meta_image(page(source), source)
+                except Exception as e:
+                    print(f"WARN image recovery {source}: {e}")
+                    cache[source] = None
+            if cache[source]:
+                rec["image"] = cache[source]
+                rec.pop("image_fallback", None)
+                continue
+        rec["image"] = fallback.get(rec.get("brand"), "assets/watch-fallback.svg")
+        rec["image_fallback"] = True
+
+
 def main():
     items = seed_existing()
     successful = 0
@@ -317,6 +346,16 @@ def main():
                 for field in ("image", "price", "ref", "date"):
                     if not old.get(field) and rec.get(field):
                         old[field] = rec[field]
+    fallback = {
+        "Citizen": "assets/watch-fallback-citizen.svg",
+        "Tissot": "assets/watch-fallback-tissot.svg",
+        "Orient": "assets/watch-fallback-orient.svg",
+        "Orient Star": "assets/watch-fallback-orient-star.svg",
+    }
+    for rec in cleaned.values():
+        if not rec.get("image"):
+            rec["image"] = fallback.get(rec.get("brand"), "assets/watch-fallback.svg")
+            rec["image_fallback"] = True
     records = sorted(cleaned.values(), key=lambda x: (x.get("date") or "", x.get("brand", ""), x.get("name", "")), reverse=True)
     data = {"last_checked_at": NOW, "source_count": successful, "data_mode": "scheduled-source-sync", "releases": records}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
