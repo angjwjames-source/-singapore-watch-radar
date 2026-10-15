@@ -544,6 +544,13 @@ def product_page_for(rec):
     if not ref:
         return None
     if brand == "Citizen":
+        # Prefer official global model pages for Citizen references.
+        if re.match(r"^AQ4", ref, re.I):
+            return "https://www.citizenwatch-global.com/the-citizen/lineup/5sec/" + ref.upper() + ".html"
+        if re.match(r"^NC02", ref, re.I):
+            return "https://www.citizenwatch-global.com/the-citizen/lineup/mechanical/product/index.html?id=" + ref.upper()
+        if re.match(r"^NB[0-9]", ref, re.I):
+            return "https://www.citizenwatch-global.com/series8/sc/index.html"
         return "https://www.citizenwatch.com/us/en/product/" + ref
     if brand == "Orient Star" and ref == "RE-BR0001N":
         return "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/" + ref + "/"
