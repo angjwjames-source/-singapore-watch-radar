@@ -275,6 +275,19 @@ def scrape_citizen_singapore(items):
                 print(f"WARN Citizen SG detail {href}: {e}")
 
 
+def product_page_for(rec):
+    """Return a model-specific official product page when a reference is known."""
+    ref = clean(rec.get("ref", ""))
+    brand = rec.get("brand", "")
+    if not ref:
+        return None
+    if brand == "Citizen":
+        return "https://www.citizenwatch.com/us/en/product/" + ref
+    if brand == "Orient Star" and ref == "RE-BR0001N":
+        return "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/" + ref + "/"
+    return None
+
+
 def repair_missing_images(items):
     """Try official source pages for real images, then use a clearly labelled local fallback."""
     cache = {}
@@ -288,18 +301,34 @@ def repair_missing_images(items):
         img = rec.get("image")
         if img and not rec.get("image_fallback") and not re.search(r"dummy|placeholder|menu-push|sprite|watch-fallback", img, re.I):
             continue
-        source = rec.get("source")
-        if source:
+        # Prefer a model-specific product page over a broad announcement page.
+        sources = [product_page_for(rec), rec.get("source")]
+        recovered = None
+        for source in [x for x in sources if x]:
             if source not in cache:
                 try:
-                    cache[source] = meta_image(page(source), source)
+                    soup = page(source)
+                    recovered_image = meta_image(soup, source)
+                    if not recovered_image and source == product_page_for(rec):
+                        for im in soup.find_all("img"):
+                            raw = im.get("src") or im.get("data-src") or im.get("data-lazy-src")
+                            alt = clean(im.get("alt", ""))
+                            candidate = absurl(raw, source)
+                            if candidate and not re.search(r"logo|menu|banner|icon|arrow|flag|search|sprite|placeholder", candidate + " " + alt, re.I):
+                                recovered_image = candidate
+                                break
+                    cache[source] = recovered_image
                 except Exception as e:
                     print(f"WARN image recovery {source}: {e}")
                     cache[source] = None
             if cache[source]:
-                rec["image"] = cache[source]
-                rec.pop("image_fallback", None)
-                continue
+                recovered = cache[source]
+                break
+        if recovered:
+            rec["image"] = recovered
+            rec.pop("image_fallback", None)
+            rec["image_source"] = "model-specific official product page"
+            continue
         rec["image"] = fallback.get(rec.get("brand"), "assets/watch-fallback.svg")
         rec["image_fallback"] = True
 
@@ -336,11 +365,16 @@ def main():
             old_name, new_name = clean(old.get("name", "")), clean(rec.get("name", ""))
             old_headline = len(old_name) > 95 or bool(re.match(r"^\d{1,2}\s", old_name))
             new_headline = len(new_name) > 95 or bool(re.match(r"^\d{1,2}\s", new_name))
-            if (old_headline and not new_headline) or (not old.get("image") and rec.get("image")):
+            if (old_headline and not new_headline) or (not old.get("image") and rec.get("image")) or (old.get("image_fallback") and rec.get("image") and not rec.get("image_fallback")):
                 merged = dict(old)
                 merged.update({k: v for k, v in rec.items() if v not in (None, "", [])})
                 if not new_headline:
                     merged["name"] = new_name
+                if rec.get("image") and not rec.get("image_fallback"):
+                    merged["image"] = rec["image"]
+                    merged.pop("image_fallback", None)
+                    if rec.get("image_source"):
+                        merged["image_source"] = rec["image_source"]
                 cleaned[key] = merged
             else:
                 for field in ("image", "price", "ref", "date"):
