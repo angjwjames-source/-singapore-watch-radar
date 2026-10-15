@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-10-15T19:31:10+00:00",
+  "last_checked_at": "2026-10-15T19:37:00+00:00",
   "source_count": 5,
   "data_mode": "scheduled-source-sync",
   "releases": [
@@ -46,7 +46,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260924/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260924/images/260924_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "This Series 8 limited edition combines Damascus steel and forged carbon in a distinctive contemporary design. The announced edition is limited to 1,300 pieces worldwide; check the official release for full specifications and local availability.",
       "tags": [
         "Official announcement",
@@ -70,7 +70,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260917/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260917/images/260917_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with a distinctive textured finish. Selected models in the range use high-accuracy Eco-Drive technology; refer to the official announcement for the exact model specification and edition details.",
       "tags": [
         "Official announcement",
@@ -207,7 +207,7 @@
       "edition": "130 pieces worldwide",
       "source": "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/RE-BR0001N/",
       "sourceName": "Orient Star official product page",
-      "image": "https://orient-watch.com/cnt_common/images/header/orient_star/header_mega01_01.webp",
+      "image": "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/RE-BR0001N/product_en_file/file/RE-BR0001N_main.webp",
       "checked_at": "2026-10-16T09:00:00+08:00",
       "description": "Orient Star’s 75th-anniversary flagship skeleton watch explores the theme of time and space through an openworked mechanical movement. The hand-wound Calibre F9B82 offers over 72 hours of power reserve and +10/-4 seconds-per-day accuracy. Its 40 mm stainless-steel case is 9.5 mm thick, with sapphire crystal, a goat-leather strap and 30 m water resistance. Limited to 130 pieces worldwide, with a planned December 2026 launch.",
       "tags": [
@@ -215,7 +215,7 @@
         "72+ hour power reserve",
         "130 pieces worldwide"
       ],
-      "image_source": "official product or catalogue page"
+      "image_source": "official model-specific image"
     },
     {
       "price": null,
@@ -226,7 +226,7 @@
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "edition": "",
-      "image": "https://orient-watch.com/cnt_common/images/header/orient_star/header_mega01_01.webp",
+      "image": "https://orient-watch.com/images/orient_star_top/mouse_img_75th.webp",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "id": "orient-star-aw26-lineup",
       "brand": "Orient Star",
@@ -258,13 +258,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://orient-watch.com/en/news/detail/en-118.html",
       "sourceName": "Orient Star official source",
-      "image": "https://orient-watch.com/cnt_common/images/header/orient_master/header_mega02_01.webp",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "image": "https://orient-watch.com/images/orient_star_top/mouse_img_75th.webp",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Orient Star’s Autumn/Winter 2026 announcement introduces new models for the season. Individual references, specifications and Singapore availability vary by model; use the official release for details.",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_source": "official product or catalogue page"
     },
     {
       "id": "ffe6b344501114",
@@ -282,12 +283,13 @@
       "edition": "",
       "source": "https://orient-watch.com/en/news/detail/en-115.html",
       "sourceName": "Orient Star official source",
-      "image": "https://orient-watch.com/cnt_common/images/header/orient_master/header_mega02_01.webp",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "image": "https://orient-watch.com/images/orient_star_top/mouse_img_75th.webp",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Orient Star’s Autumn/Winter 2026 announcement introduces new models for the season. Individual references, specifications and Singapore availability vary by model; use the official release for details.",
       "tags": [
         "Official announcement"
-      ]
+      ],
+      "image_source": "official product or catalogue page"
     },
     {
       "price": null,
@@ -298,7 +300,7 @@
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "edition": "",
-      "image": "https://orient-watch.com/cnt_common/images/header/orient/header_mega01_01.webp",
+      "image": "https://orient-watch.com/images/orient_top/kv_01_sp_en.webp",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "id": "orient-flusso-2026",
       "brand": "Orient",
@@ -464,7 +466,7 @@
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "edition": "",
-      "image": "https://orient-watch.com/cnt_common/images/header/orient/header_mega01_01.webp",
+      "image": "https://orient-watch.com/images/orient_top/kv_01_sp_en.webp",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "id": "orient-aw26-lineup",
       "brand": "Orient",
@@ -497,7 +499,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260909/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260909/images/260909_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "A Citizen Attesa 50th-anniversary limited edition inspired by the green flash and aurora. See the official announcement for movement and dial details; Singapore availability has not been confirmed.",
       "tags": [
         "Official announcement",
@@ -521,7 +523,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260901/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260901/images/260901_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "A sport-focused Citizen PROMASTER release designed around practical timing and outdoor use. Consult the official announcement for the model-specific functions, specifications and regional release details.",
       "tags": [
         "Official announcement",
@@ -544,13 +546,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://orient-watch.com/en/news/detail/en-111.html",
       "sourceName": "Orient Star official source",
-      "image": "https://orient-watch.com/cnt_common/images/header/orient_master/header_mega02_01.webp",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "image": "https://orient-watch.com/images/orient_star_top/mouse_img_75th.webp",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "An Orient Star release celebrating the brand’s 75th anniversary with a special-edition design. Check the official announcement for individual references, production quantities and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
+      ],
+      "image_source": "official product or catalogue page"
     },
     {
       "price": null,
@@ -594,7 +597,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260723_1/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260723_1/images/260723_1_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Citizen expands the RAINELL collection with new designs, including a limited-edition model featuring sparkling diamonds. Refer to the official release for individual model details and regional availability.",
       "tags": [
         "Official announcement",
@@ -618,7 +621,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260723_2/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260723_2/images/260723_2_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "This TSUYOSA Shore limited edition draws on a retro-inspired design theme. Check the official release for the model’s specific design details, launch timing and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -642,7 +645,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260702/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260702/images/260702_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with a distinctive textured finish. Selected models in the range use high-accuracy Eco-Drive technology; refer to the official announcement for the exact model specification and edition details.",
       "tags": [
         "Official announcement",
@@ -666,7 +669,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260610/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260610/images/260610_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "10 June 2026 CITIZEN ATTESA New Limited-Edition Recrystallised Titanium Model with Striking All-Black Design. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -690,7 +693,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260604/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260604/images/260604_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with a distinctive textured finish. Selected models in the range use high-accuracy Eco-Drive technology; refer to the official announcement for the exact model specification and edition details.",
       "tags": [
         "Official announcement",
@@ -714,7 +717,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260521/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260521/images/260521_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "A sport-focused Citizen PROMASTER release designed around practical timing and outdoor use. Consult the official announcement for the model-specific functions, specifications and regional release details.",
       "tags": [
         "Official announcement"
@@ -737,7 +740,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260514/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260514/images/260514_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Part of Citizen’s Eco-Drive 50th-anniversary LIGHT in BLACK series, this model uses a dark, light-inspired design theme. Check the official release for model-specific specifications and availability.",
       "tags": [
         "Official announcement",
@@ -761,7 +764,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260428/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260428/images/260428_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "A Citizen ATTESA collaboration inspired by Star Wars and The Mandalorian, with design details referencing Beskar. See the official release for the full specification and edition information.",
       "tags": [
         "Official announcement",
@@ -785,7 +788,7 @@
       "source": "https://citizen.com.sg/products/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2026/01/product_overview_series-8_202601.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Products is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -808,7 +811,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260319_2/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260319_2/images/260319_2_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "19 March 2026 The CITIZEN Eco-Drive 50th Anniversary Edition model with hand-dyed green Japanese paper dial. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -832,7 +835,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260319_3/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260319_3/images/260319_3_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "19 March 2026 Eco-Drive 50th Anniversary Limited Model Eco-Drive PHOTON. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -856,7 +859,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260220_2/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260220_2/images/260220_2_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "20 February 2026 First-ever TSUYOSA x seconde/seconde/ collaboration model and new TSUYOSA models. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -880,7 +883,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260220_1/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260220_1/images/260220_1_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "20 February 2026 CITIZEN Series 8 New slim models featuring a globally trendy case size. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -904,7 +907,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260204/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260204/images/260204_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "4 February 2026 CITIZEN ATTESA The total lunar eclipse inspired “Shades of Red”, when the sun, Earth, and moon align. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -928,7 +931,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20251016/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20251016/images/251016_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "16 October 2025 CITIZEN ATTESA Platinum Shine Collection with First Duratect Platinum Recrystallized Titanium Model. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -952,7 +955,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20251003/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20251003/images/251003_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "3 October 2025 The CITIZEN Limited-Edition 30th Anniversary Models with New Mechanical and Eco-Drive Models. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -976,7 +979,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250925/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250925/images/250925_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "25 September 2025 CITIZEN Series 8 Limited-edition models inspired by cityscapes. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -1000,7 +1003,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250911/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250911/images/250911_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "11 September 2025 CITIZEN ATTESA New Limited Edition Model featuring a beautifully shining full sapphire bezel. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -1024,7 +1027,7 @@
       "source": "https://citizen.com.sg/product/jv2000-51l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/08/jv2000-51l_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "JV2000-51L is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -1047,7 +1050,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250903_2/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250903_2/images/250903_2_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with a distinctive textured finish. Selected models in the range use high-accuracy Eco-Drive technology; refer to the official announcement for the exact model specification and edition details.",
       "tags": [
         "Official announcement",
@@ -1071,7 +1074,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250903_3/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250903_3/images/250903_3_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "The TSUYOSA 60 collection brings a sport-casual automatic design with a contemporary dial and integrated-bracelet look. Consult the official announcement for the exact reference and specifications.",
       "tags": [
         "Official announcement"
@@ -1094,7 +1097,7 @@
       "source": "https://citizen.com.sg/product/em1133-85l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/08/em1133-85l_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "EM1133-85L is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -1117,7 +1120,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250819/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250819/images/250819_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "19 August 2025 CITIZEN ATTESA Limited-edition models inspired by the new JAXA HTV-X cargo transporter. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -1141,7 +1144,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250703/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250703/images/250703_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "3 July 2025 The CITIZEN Limited-edition 30th anniversary model with a Murakamo shibori dyeing washi paper dial. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -1165,7 +1168,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250624/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250624/images/250624_01.jpg",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "24 June 2025 The CITIZEN Limited-edition 30th anniversary model with a washi paper dial in traditional indigo. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
@@ -1189,7 +1192,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1414173742200.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw8023d123/product-pictures/114b5f0c-aa7d-4c02-8533-3f56e0a5ad69_T141-417-37-422-00_shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot T-Race MotoGP is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1238,7 +1241,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1254171703100.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dwb27aaf68/product-pictures/595e6141-1f04-4b20-bb08-b734d519efb0_T125-417-17-031-00_Shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Supersport NBA is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1261,7 +1264,7 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": "https://www.tissotwatches.com/on/demandware.static/-/Library-Sites-Tissot-SharedLibrary/default/dw2c193a82/3-STANDALONE-PAGES/1-BRAND-PAGES/Tissot-world/tissot-world-history-mobile.jpg",
+      "image": "https://www.tissotwatches.com/on/demandware.static/-/Library-Sites-Tissot-SharedLibrary/default/dw0c9015d8/2-PLP/2-CONTENT-TILE/MOBILE/content-tile-gift-finder-mobile-new.png",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
@@ -1287,7 +1290,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1254171104100.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dwec6c35a4/product-pictures/cc1213a5-a32e-4c91-a1d4-91dba4b8d99e_T125-417-11-041-00_Shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Supersport is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1311,7 +1314,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T83655313.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw60b563c9/product-pictures/35ed5c12-0f39-4292-9876-38f93fdb66be_T83-6-553-13_shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Savonnette is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1334,7 +1337,7 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": "https://www.tissotwatches.com/en-sg/gravity=center",
+      "image": "https://www.tissotwatches.com/on/demandware.static/-/Library-Sites-Tissot-SharedLibrary/default/dw0c9015d8/2-PLP/2-CONTENT-TILE/MOBILE/content-tile-gift-finder-mobile-new.png",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
@@ -1359,7 +1362,7 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": "https://www.tissotwatches.com/en-sg/women/main-collections/gravity=center",
+      "image": "https://www.tissotwatches.com/on/demandware.static/-/Library-Sites-Tissot-SharedLibrary/default/dwf2f72760/3-STANDALONE-PAGES/1-BRAND-PAGES/Know-How/WEB-PDP-Know-How-Luminova.jpg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
@@ -1384,7 +1387,7 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": "https://www.tissotwatches.com/en-sg/gravity=center",
+      "image": "https://www.tissotwatches.com/on/demandware.static/Sites-APAC-Site/-/default/dw6cbf933b/images/zoomincursorwithoutbg.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
@@ -1410,7 +1413,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1374171103100.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw73bfb745/product-pictures/6cb56835-c3ce-46f6-97bb-9e7f13d15990_T137-417-11-031-00_Shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot PRX is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1433,7 +1436,7 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": "https://www.tissotwatches.com/en-sg/gravity=center",
+      "image": "https://www.tissotwatches.com/on/demandware.static/Sites-APAC-Site/-/default/dw4388a332/images/360.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
@@ -1459,7 +1462,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1514223306100.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw07615931/product-pictures/873254a3-bf22-4d37-be4c-4e069c60dc78_T151-422-33-061-00_Shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot PRC 100 Solar is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1507,7 +1510,7 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": "https://www.tissotwatches.com/en-sg/gravity=center",
+      "image": "https://www.tissotwatches.com/on/demandware.static/-/Library-Sites-Tissot-SharedLibrary/default/dw0c9015d8/2-PLP/2-CONTENT-TILE/MOBILE/content-tile-gift-finder-mobile-new.png",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
@@ -1532,7 +1535,7 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": "https://www.tissotwatches.com/en-sg/gravity=center",
+      "image": "https://www.tissotwatches.com/on/demandware.static/Sites-APAC-Site/-/default/dw6cbf933b/images/zoomincursorwithoutbg.svg",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
@@ -1558,7 +1561,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1504172204100.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw10b79c55/product-pictures/1f8e23b0-e040-4e95-9819-461be1ddc50f_T150-417-22-041-00_Shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot PR100 is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1582,7 +1585,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T82655013.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw03877581/product-pictures/60c9f54d-3677-4743-a151-43f5276e2de1_T82-6-550-13_Shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Lepine is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1606,7 +1609,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T0062071103601.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw9f11962b/product-pictures/84afef79-0388-47ce-8198-6d7ec82e02ec_T006-207-11-036-01_shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Le Locle 20th Anniversary is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1630,7 +1633,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T0064071104300.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw343cc06a/product-pictures/7614a6b7-201d-4af1-ac0d-cc35d5cbfc50_T006-407-11-043-00_shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Le Locle is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1653,7 +1656,7 @@
       "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
-      "image": "https://www.tissotwatches.com/on/demandware.static/-/Library-Sites-Tissot-SharedLibrary/default/dw2c193a82/3-STANDALONE-PAGES/1-BRAND-PAGES/Tissot-world/tissot-world-history-mobile.jpg",
+      "image": "https://www.tissotwatches.com/on/demandware.static/-/Library-Sites-Tissot-SharedLibrary/default/dw0c9015d8/2-PLP/2-CONTENT-TILE/MOBILE/content-tile-gift-finder-mobile-new.png",
       "checked_at": "2026-10-15T18:44:04.391Z",
       "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
       "tags": [
@@ -1679,7 +1682,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T9348074109100.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dwd1a8220d/product-pictures/d2952686-742f-4cda-8b34-bd5dea6e943c_T934-807-41-091-00_Shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Gentleman is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1703,7 +1706,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1522231149600.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw08add161/product-pictures/69c7ae7c-a66e-4e97-b514-bb2738461695_T152-223-11-496-00_Shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Desir is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1727,7 +1730,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1294101601300.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw556a9d65/product-pictures/1d2813bb-043b-46e0-b714-fd2eb76ddeec_T129-410-16-013-00_shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Classic Dream is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1751,7 +1754,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1164171104200.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw03d67f7e/product-pictures/4e28ae71-a3f0-4237-b877-784ee169b4a8_T116-417-11-042-00_shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Chrono L is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1775,7 +1778,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1398363644100.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw4068d975/product-pictures/c9b3eacb-ef18-4c0b-827b-19b4589d4df7_T139-836-36-441-00_Shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Chemin Des Tourelles is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1824,7 +1827,7 @@
       "source": "https://www.tissotwatches.com/en-sg/T1564103337100.html",
       "sourceName": "Tissot Singapore",
       "image": "https://www.tissotwatches.com/on/demandware.static/-/Sites-Tissot-Catalogue/default/dw1254e75a/product-pictures/e05682ba-3a05-4c8a-90c3-ed660d8d0171_T156-410-33-371-00_Shadow.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "Tissot Ballade is listed in the official Tissot Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Singapore catalogue product",
@@ -1848,7 +1851,7 @@
       "source": "https://citizen.com.sg/product/pc1017-88y/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/02/pc1017-88y_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "The Sakura limited edition features a 34 mm pink-gold-tone case and bracelet, a mother-of-pearl dial with a soft pink gradation, and a cherry-blossom-shaped open-heart aperture. Its automatic Calibre 8229 is paired with sapphire crystal and 100 m water resistance; worldwide production is limited to 1,900 pieces.",
       "tags": [
         "Official Singapore page"
@@ -1871,7 +1874,7 @@
       "source": "https://citizen.com.sg/product/nk5020-58l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/nk5020-58l_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "The Zenshin 60 pairs a lightweight Super Titanium case and integrated bracelet with a brushed, gradient light-blue dial and small-seconds subdial. Its automatic Calibre 8322 offers about 60 hours of power reserve, sapphire crystal and 100 m water resistance.",
       "tags": [
         "Official Singapore page"
@@ -1894,7 +1897,7 @@
       "source": "https://citizen.com.sg/product/nj0200-50e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/nj0200-50e_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "The limited-edition TSUYOSA “Time Slip” has a compact 37 mm stainless-steel case and integrated bracelet, a textured black dial with rose-gold-tone details, and a magnified date display. It uses the automatic Calibre 8210 and is water-resistant to 50 m.",
       "tags": [
         "Official Singapore page"
@@ -1917,7 +1920,7 @@
       "source": "https://citizen.com.sg/product/nj0191-83a/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/02/nj0191-83a_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "NJ0191-83A is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -1940,7 +1943,7 @@
       "source": "https://citizen.com.sg/product/nh9136-02l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/03/nh9136-02l_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "NH9136-02L is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -1963,7 +1966,7 @@
       "source": "https://citizen.com.sg/product/nc1000-51e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2023/08/nc1000-51e_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "NC1000-51E is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -1986,7 +1989,7 @@
       "source": "https://citizen.com.sg/product/nb6060-58x/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/02/nb6060-58x_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "NB6060-58X is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2009,7 +2012,7 @@
       "source": "https://citizen.com.sg/product/nb6059-57p/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/02/nb6059-57p_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "NB6059-57P is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2032,7 +2035,7 @@
       "source": "https://citizen.com.sg/product/nb6051-59l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/03/nb6051-59l_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "NB6051-59L is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2055,7 +2058,7 @@
       "source": "https://citizen.com.sg/product/nb6036-52n/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/09/nb6036-52n_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "NB6036-52N is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2078,7 +2081,7 @@
       "source": "https://citizen.com.sg/product/nb6033-51e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/12/nb6033-51e_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "NB6033-51E is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2101,7 +2104,7 @@
       "source": "https://citizen.com.sg/product/jp2008-06e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/jp2008-06e_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "JP2008-06E is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2124,7 +2127,7 @@
       "source": "https://citizen.com.sg/product/ew5624-54y/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/02/ew5624-54y_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "EW5624-54Y is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2147,7 +2150,7 @@
       "source": "https://citizen.com.sg/product/eo2027-09l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/eo2027-09l_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "EO2027-09L is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2170,7 +2173,7 @@
       "source": "https://citizen.com.sg/product/em1163-09x/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/12/em1163-09x_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "EM1163-09X is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2193,7 +2196,7 @@
       "source": "https://citizen.com.sg/product/em1099-57l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/08/em1099-57l_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "EM1099-57L is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2216,7 +2219,7 @@
       "source": "https://citizen.com.sg/product/em0990-81a/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/em0990-81a_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "EM0990-81A is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2239,7 +2242,7 @@
       "source": "https://citizen.com.sg/product/eg7114-53d/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/eg7114-53d_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "EG7114-53D is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2262,7 +2265,7 @@
       "source": "https://citizen.com.sg/product/cc4105-69e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/03/cc4105-69e_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "CC4105-69E is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2285,7 +2288,7 @@
       "source": "https://citizen.com.sg/product/cc4075-50l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/04/cc4075-50l_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "CC4075-50L is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2308,7 +2311,7 @@
       "source": "https://citizen.com.sg/product/cc4074-61w/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/10/cc4074-61w_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "CC4074-61W is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2331,7 +2334,7 @@
       "source": "https://citizen.com.sg/product/cc3097-52l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/09/cc3097-52l_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "CC3097-52L is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2354,7 +2357,7 @@
       "source": "https://citizen.com.sg/product/cb3046-76e/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/08/cb3046-76e_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "CB3046-76E is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2377,7 +2380,7 @@
       "source": "https://citizen.com.sg/product/ca4691-59x/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/ca4691-59x_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "CA4691-59X is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2400,7 +2403,7 @@
       "source": "https://citizen.com.sg/product/by1010-81z/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/by1010-81z_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "BY1010-81Z is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2423,7 +2426,7 @@
       "source": "https://citizen.com.sg/product/bu0082-06p/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/bu0082-06p_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "BU0082-06P is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2446,7 +2449,7 @@
       "source": "https://citizen.com.sg/product/bn1025-08l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/05/bn1025-08l_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "BN1025-08L is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2469,7 +2472,7 @@
       "source": "https://citizen.com.sg/product/av0106-01l/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2025/07/av0106-01l_f_shot_md.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "AV0106-01L is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2492,7 +2495,7 @@
       "source": "https://citizen.com.sg/product/aq4106-18x/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/10/aq4106-18x_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "AQ4106-18X is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2515,7 +2518,7 @@
       "source": "https://citizen.com.sg/product/aq4100-65h/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2024/10/aq4100-65h_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "AQ4100-65H is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
@@ -2538,7 +2541,7 @@
       "source": "https://citizen.com.sg/product/aq4100-06w/",
       "sourceName": "Citizen Singapore",
       "image": "https://citizen.com.sg/wp-content/uploads/2022/05/aq4100-06w_f_shot.png",
-      "checked_at": "2026-10-15T19:31:10+00:00",
+      "checked_at": "2026-10-15T19:37:00+00:00",
       "description": "AQ4100-06W is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
