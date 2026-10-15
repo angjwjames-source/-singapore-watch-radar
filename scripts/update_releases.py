@@ -61,6 +61,30 @@ def meta_image(soup, base):
             candidate = absurl(t["content"], base)
             if candidate and not re.search(r"dummy|placeholder|logo|menu-push|sprite|banner", candidate, re.I):
                 return candidate
+    # Parse structured product metadata when a page exposes it outside social tags.
+    for node in soup.find_all("script", attrs={"type": "application/ld+json"}):
+        raw = node.string or node.get_text(" ", strip=True)
+        if not raw:
+            continue
+        try:
+            payload = json.loads(raw)
+        except Exception:
+            continue
+        stack = payload if isinstance(payload, list) else [payload]
+        while stack:
+            item = stack.pop(0)
+            if isinstance(item, dict):
+                image = item.get("image")
+                values = [image] if isinstance(image, str) else image if isinstance(image, list) else [image.get("url")] if isinstance(image, dict) and image.get("url") else []
+                for value in values:
+                    if isinstance(value, dict):
+                        value = value.get("url")
+                    candidate = absurl(value, base) if isinstance(value, str) else None
+                    if candidate and not re.search(r"dummy|placeholder|logo|menu-push|sprite|banner", candidate, re.I):
+                        return candidate
+                stack.extend(v for v in item.values() if isinstance(v, (dict, list)))
+            elif isinstance(item, list):
+                stack.extend(item)
     candidates = []
     for img in soup.find_all("img"):
         src = img.get("src") or img.get("data-src") or img.get("data-lazy-src")
