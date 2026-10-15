@@ -163,7 +163,7 @@ def valid_watch_title(title):
         return False
     blocked = {"brand", "skip to main content", "skip to footer content", "page number 1",
                "page number 2", "read more", "news", "orient", "orient star", "citizen", "tissot"}
-    return title.lower() not in blocked and not re.search(r"^(page\\s+\\d+|skip to |menu$|search$)", title, re.I)
+    return title.lower() not in blocked and not re.search(r"^(page\\s+\d+|skip to |menu$|search$)", title, re.I)
 
 
 def price_sgd(text):
@@ -188,7 +188,7 @@ def make_id(brand, name, source):
 def release_description(name, brand, sg_listing=False):
     """Write a short human-readable summary; never store scraped navigation text."""
     title = clean(name).replace("|", " ")
-    title = re.sub(r"^\\d{1,2}(?:st|nd|rd|th)?\\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+20\\d{2}\\s*", "", title, flags=re.I)
+    title = re.sub(r"^\d{1,2}(?:st|nd|rd|th)?\\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+20\d{2}\\s*", "", title, flags=re.I)
     if re.search(r"NK5020-58L", title, re.I):
         return "The Zenshin 60 pairs a lightweight Super Titanium case and integrated bracelet with a brushed, gradient light-blue dial and small-seconds subdial. Its automatic Calibre 8322 offers about 60 hours of power reserve, sapphire crystal and 100 m water resistance."
     if re.search(r"NJ0200-50E", title, re.I):
@@ -221,8 +221,8 @@ def release_description(name, brand, sg_listing=False):
         return "The TSUYOSA 60 collection brings a sport-casual automatic design with a contemporary dial and integrated-bracelet look. Consult the official announcement for the exact reference and specifications."
     if sg_listing:
         return f"{title} is listed in the official {brand} Singapore catalogue. Check the linked product page for current specifications and local availability."
-    clean_title = re.sub(r"^\\d{1,2}(?:st|nd|rd|th)?\\s+", "", title)
-    clean_title = re.sub(r"^20\\d{2}\\s+", "", clean_title)
+    clean_title = re.sub(r"^\d{1,2}(?:st|nd|rd|th)?\\s+", "", title)
+    clean_title = re.sub(r"^20\d{2}\\s+", "", clean_title)
     return f"{clean_title.rstrip('. ')}. Refer to the official source for full specifications, launch details and Singapore availability."
 
 
@@ -343,7 +343,7 @@ def scrape_tissot(items):
     links = []
     for a in soup.select('a[href*="/en-sg/"]'):
         href = absurl(a.get("href"), base)
-        if (href and re.search(r"/T[A-Z0-9]{8,}\\.html(?:$|[?#])", href, re.I)
+        if (href and re.search(r"/T[A-Z0-9]{8,}\.html(?:$|[?#])", href, re.I)
                 and href not in links):
             links.append(href)
     print(f"INFO Tissot: found {len(links)} individual product links")
@@ -357,7 +357,7 @@ def scrape_tissot(items):
             body = clean(detail.get_text(" ", strip=True))
             price = price_sgd(body)
             # Avoid treating a generic collection price as a product price.
-            refs = re.findall(r"\b[A-Z0-9]{2,5}-\\d{3}-\\d{2}-\\d{3}-\\d{2}\\b", body)
+            refs = re.findall(r"\b[A-Z0-9]{2,5}-\d{3}-\d{2}-\d{3}-\d{2}\\b", body)
             img = meta_image(detail, href)
             limited = bool(re.search(r"special edition|limited edition", name + " " + body, re.I))
             add(items, "Tissot", name, href, img, date_iso(body), refs[0] if refs else None,
