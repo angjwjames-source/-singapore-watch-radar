@@ -80,7 +80,7 @@ def image_url_from_tag(tag, base):
 def meta_image(soup, base):
     # Prefer explicitly declared social/product artwork, then structured metadata,
     # then relevant responsive/lazy-loaded images. Reject common site chrome.
-    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar", re.I)
+    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar|header_mega|gravity=center|history-mobile", re.I)
     for attrs in ({"property": "og:image"}, {"name": "twitter:image"}, {"property": "og:image:url"}):
         t = soup.find("meta", attrs=attrs)
         if t and t.get("content"):
@@ -125,7 +125,7 @@ def model_image(soup, base, rec):
     """Find an image tied to this exact model before considering page-level artwork."""
     ref = clean(rec.get("ref", ""))
     name = clean(rec.get("name", ""))
-    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar", re.I)
+    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar|header_mega|gravity=center|history-mobile", re.I)
     candidates = []
     for img in soup.find_all("img"):
         url = image_url_from_tag(img, base)
@@ -454,9 +454,16 @@ def tissot_product_page_for(rec):
     """Known official Singapore product pages for models that lack a parsed reference."""
     name = clean(rec.get("name", "")).lower()
     mappings = [
-        (("prc 100 solar 34",), "https://www.tissotwatches.com/en-sg/T1518221104100.html"),
+        (("prc 100 solar 34",), "https://www.tissotwatches.com/en-sg/T1518221103100.html"),
+        (("prx 41 mm quartz", "prx 41mm quartz"), "https://www.tissotwatches.com/en-sg/T1374171104100.html"),
         (("prx 40 mm automatic", "prx 40 automatic"), "https://www.tissotwatches.com/en-sg/T1374071105100.html"),
         (("pr100 40 mm quartz", "pr100 40mm quartz"), "https://www.tissotwatches.com/en-sg/T1504171109100.html"),
+        (("gentleman 38 mm automatic", "gentleman 38mm automatic"), "https://www.tissotwatches.com/en-sg/men/selections/novelties.html"),
+        (("ballade 30 mm automatic", "ballade 30mm automatic"), "https://www.tissotwatches.com/en-sg/T1562081103300.html"),
+        (("pr100 tour de france 40 mm", "pr100 tour de france"), "https://www.tissotwatches.com/en-sg/men/selections/novelties.html"),
+        (("pr100 cycling 40 mm", "pr100 cycling"), "https://www.tissotwatches.com/en-sg/men/selections/novelties.html"),
+        (("pinarello 43.14 mm", "pinarello 43.14"), "https://www.tissotwatches.com/en-sg/men/selections/novelties.html"),
+        (("supersport 42 mm quartz", "supersport 42mm quartz"), "https://www.tissotwatches.com/en-sg/men/selections/novelties.html"),
     ]
     for needles, url in mappings:
         if any(needle in name for needle in needles):
@@ -541,9 +548,28 @@ def repair_missing_images(items):
 
     for rec in items.values():
         img = rec.get("image")
-        if img and not rec.get("image_fallback") and not re.search(r"dummy|placeholder|menu-push|sprite|watch-fallback", img, re.I):
+        bad_image = re.compile(r"dummy|placeholder|menu-push|sprite|watch-fallback|header_mega|gravity=center|history-mobile|/header/", re.I)
+        if img and not rec.get("image_fallback") and not bad_image.search(img):
             continue
         brand = rec.get("brand")
+        ref = clean(rec.get("ref", ""))
+        # Orient's official model-image paths are deterministic and include the
+        # exact reference. Do not accept a shared navigation image as a watch photo.
+        if brand == "Orient Star" and ref == "RE-BR0001N":
+            rec["image"] = "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/RE-BR0001N/product_en_file/file/RE-BR0001N_main.webp"
+            rec.pop("image_fallback", None)
+            rec["image_source"] = "official model-specific image"
+            continue
+        if brand == "Orient Star" and ref.startswith("RE-BQ"):
+            rec["image"] = f"https://orient-watch.com/en/orientstar/collection/contemporary/three-hand/{ref}/product_en_file/file/{ref}_main.webp"
+            rec.pop("image_fallback", None)
+            rec["image_source"] = "official model-specific image"
+            continue
+        if brand == "Orient" and ref.startswith("RA-BB02"):
+            rec["image"] = f"https://orient-watch.com/en/orient/collection/contemporary/flusso/{ref}/product_en_file/file/{ref}_main.webp"
+            rec.pop("image_fallback", None)
+            rec["image_source"] = "official model-specific image"
+            continue
         product = product_page_for(rec) or (tissot_product_page_for(rec) if brand == "Tissot" else None)
         sources = [product, rec.get("source")]
         # For model references, the official brand catalogue is a useful alternate
