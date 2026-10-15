@@ -77,15 +77,53 @@ def image_url_from_tag(tag, base):
     return None
 
 
+IMAGE_BAD = re.compile(
+    r"(?:dummy|placeholder|no[-_ ]?image|default[-_ ]?image|watch-fallback|logo|"
+    r"menu-push|sprite|banner|icon|arrow|flag|search|avatar|favicon|header_mega|"
+    r"gravity=center|history-mobile|zoomincursorwithoutbg|/360[.]svg(?:[?#]|$)|"
+    r"gift-finder-mobile|mouse_img_75th|kv_01_sp|sponsorship-footer|"
+    r"timekeeper[-_]NBA|tissot[-_ ]world[-_ ]ambassadors|[.]svg(?:[?#]|$))",
+    re.I,
+)
+_IMAGE_CHECK_CACHE = {}
+
+
+def image_is_generic(url, alt=""):
+    if not url or not str(url).startswith(("http://", "https://")):
+        return True
+    return bool(IMAGE_BAD.search(str(url) + " " + clean(alt)))
+
+
+def verify_image_url(url):
+    """Verify that an official photo URL returns a raster image, not an icon or page."""
+    if image_is_generic(url):
+        return False
+    if url in _IMAGE_CHECK_CACHE:
+        return _IMAGE_CHECK_CACHE[url]
+    valid = False
+    try:
+        origin = re.match(r"^https?://[^/]+", url, re.I)
+        headers = {"Referer": origin.group(0) + "/"} if origin else {}
+        with S.get(url, timeout=15, stream=True, headers=headers) as response:
+            ctype = response.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
+            length = response.headers.get("Content-Length")
+            if response.status_code == 200 and ctype.startswith("image/") and "svg" not in ctype:
+                if not length or not length.isdigit() or int(length) >= 1200:
+                    sample = next(response.iter_content(chunk_size=64), b"")
+                    if sample and not sample.lstrip().lower().startswith((b"<html", b"<!doctype", b"<?xml", b"<svg")):
+                        valid = True
+    except Exception as exc:
+        print(f"WARN image verification {url}: {exc}")
+    _IMAGE_CHECK_CACHE[url] = valid
+    return valid
+
+
 def meta_image(soup, base):
-    # Prefer explicitly declared social/product artwork, then structured metadata,
-    # then relevant responsive/lazy-loaded images. Reject common site chrome.
-    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar|header_mega|gravity=center|history-mobile|zoomincursorwithoutbg|/360\\.svg|gift-finder-mobile|mouse_img_75th|kv_01_sp|/header/", re.I)
     for attrs in ({"property": "og:image"}, {"name": "twitter:image"}, {"property": "og:image:url"}):
-        t = soup.find("meta", attrs=attrs)
-        if t and t.get("content"):
-            candidate = absurl(t["content"], base)
-            if candidate and not bad.search(candidate):
+        tag = soup.find("meta", attrs=attrs)
+        if tag and tag.get("content"):
+            candidate = absurl(tag["content"], base)
+            if candidate and not image_is_generic(candidate):
                 return candidate
     for node in soup.find_all("script", attrs={"type": "application/ld+json"}):
         raw = node.string or node.get_text(" ", strip=True)
@@ -105,7 +143,7 @@ def meta_image(soup, base):
                     if isinstance(value, dict):
                         value = value.get("url") or value.get("contentUrl")
                     candidate = absurl(value, base) if isinstance(value, str) else None
-                    if candidate and not bad.search(candidate):
+                    if candidate and not image_is_generic(candidate):
                         return candidate
                 stack.extend(v for v in item.values() if isinstance(v, (dict, list)))
             elif isinstance(item, list):
@@ -114,7 +152,7 @@ def meta_image(soup, base):
     for img in soup.find_all("img"):
         candidate = image_url_from_tag(img, base)
         alt = clean(img.get("alt", ""))
-        if not candidate or bad.search(candidate + " " + alt):
+        if not candidate or image_is_generic(candidate, alt):
             continue
         if re.search(r"watch|timepiece|model|collection|limited|attesa|promaster|series 8|orient|tissot|dial|automatic", alt + " " + candidate, re.I):
             candidates.append(candidate)
@@ -122,36 +160,47 @@ def meta_image(soup, base):
 
 
 def model_image(soup, base, rec):
-    """Find an image tied to this exact model before considering page-level artwork."""
+    """Prefer an image whose URL or alt text identifies the requested model."""
     ref = clean(rec.get("ref", ""))
     name = clean(rec.get("name", ""))
-    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar|header_mega|gravity=center|history-mobile", re.I)
+    ref_norm = re.sub(r"[^a-z0-9]", "", ref.lower())
+    generic_tokens = {
+        "citizen", "tissot", "orient", "star", "watch", "watches", "timepiece",
+        "automatic", "quartz", "limited", "edition", "model", "collection",
+        "official", "new", "the", "with", "and", "for", "from", "series", "mm",
+        "view", "front", "profile", "back", "image", "product", "three", "hand",
+        "classic", "contemporary", "sports", "mechanical", "solar", "eco", "drive",
+    }
+    tokens = [re.sub(r"[^a-z0-9]", "", x.lower()) for x in re.findall(r"[A-Za-z0-9]+", name)]
+    tokens = [x for x in tokens if len(x) > 2 and x not in generic_tokens]
     candidates = []
     for img in soup.find_all("img"):
         url = image_url_from_tag(img, base)
-        if not url or bad.search(url):
-            continue
         alt = clean(img.get("alt", ""))
-        context = " ".join([url, alt, clean(img.get("title", ""))])
-        score = 0
-        if ref and ref.lower() in context.lower():
-            score += 100
-        # Orient product image alt text commonly embeds a collection and model ref.
-        if ref and ref.lower().replace("-", "") in context.lower().replace("-", ""):
-            score += 50
-        tokens = [x.lower() for x in re.findall(r"[A-Za-z0-9]+", name) if len(x) > 3]
-        if tokens:
-            overlap = sum(1 for token in tokens if token in context.lower())
-            score += min(overlap, 5) * 4
-        if re.search(r"main.image|product|watch|timepiece|model", context, re.I):
-            score += 5
+        if not url or image_is_generic(url, alt):
+            continue
+        context = " ".join([url, alt, clean(img.get("title", ""))]).lower()
+        normalized = re.sub(r"[^a-z0-9]", "", context)
+        score = 200 if ref_norm and len(ref_norm) >= 6 and ref_norm in normalized else 0
+        score += 25 * len({token for token in tokens if token in normalized})
         if score:
+            if re.search(r"front|main|primary", alt, re.I):
+                score += 8
+            if re.search(r"profile|back view|strap zoom|wrist|box|packaging", alt, re.I):
+                score -= 12
             candidates.append((score, url))
     if candidates:
-        return sorted(candidates, key=lambda x: x[0], reverse=True)[0][1]
-    # For a release announcement, its first relevant editorial image is often the
-    # hero watch photo. Don't choose arbitrary logos or navigation art.
-    return meta_image(soup, base)
+        return sorted(candidates, key=lambda item: item[0], reverse=True)[0][1]
+    product_page = bool(re.search(r"/T[A-Z0-9]{8,}[.]html(?:$|[?#])|/(?:RE|RA)-[A-Z0-9]{5,}/?(?:$|[?#])", base, re.I))
+    if product_page:
+        candidate = meta_image(soup, base)
+        if candidate and (not ref_norm or ref_norm in re.sub(r"[^a-z0-9]", "", candidate.lower())):
+            return candidate
+        return None
+    if "/news/" in base.lower() or "/detail/" in base.lower():
+        return meta_image(soup, base)
+    return None
+
 
 
 def valid_watch_title(title):
@@ -357,7 +406,7 @@ def scrape_tissot(items):
             if href and re.search(r"/T[A-Z0-9]{8,}\.html(?:$|[?#])", href, re.I) and href not in links:
                 links.append(href)
     print(f"INFO Tissot: found {len(links)} individual product links across new arrivals and full catalogue")
-    for href in links[:180]:
+    for href in links[:260]:
         try:
             detail = page(href)
             h = detail.find("h1")
@@ -389,6 +438,9 @@ def scrape_orient_catalogues(items):
         ("Orient", "https://orient-watch.com/en/orient/collection/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/contemporary/"),
+        ("Orient Star", "https://orient-watch.com/en/orientstar/collection/contemporary/three-hand/"),
+        ("Orient Star", "https://orient-watch.com/en/orientstar/collection/contemporary/lp/three-hand-2026aw/"),
+        ("Orient Star", "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/classic/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/sports/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/"),
@@ -434,7 +486,7 @@ def scrape_orient_catalogues(items):
 
 def scrape_citizen_singapore(items):
     # Use only explicitly listed official local pages; do not infer local availability from global news.
-    for base in ["https://citizen.com.sg/news/", "https://citizen.com.sg/collections/new-arrivals"]:
+    for base in ["https://citizen.com.sg/news/", "https://citizen.com.sg/collections/new-arrivals", "https://citizen.com.sg/products/"]:
         try: soup = page(base)
         except Exception as e:
             print(f"WARN Citizen Singapore {base}: {e}")
@@ -465,7 +517,11 @@ def scrape_citizen_singapore(items):
 
 
 def tissot_product_page_for(rec):
-    """Known official Singapore product pages for models that lack a parsed reference."""
+    """Use the official Singapore Tissot product page for the exact SKU where possible."""
+    ref = clean(rec.get("ref", "")).upper()
+    sku = re.sub(r"[^A-Z0-9]", "", ref)
+    if re.fullmatch(r"T[A-Z0-9]{8,}", sku):
+        return f"https://www.tissotwatches.com/en-sg/{sku}.html"
     name = clean(rec.get("name", "")).lower()
     mappings = [
         (("prc 100 solar 34",), "https://www.tissotwatches.com/en-sg/T1518221103100.html"),
@@ -478,6 +534,7 @@ def tissot_product_page_for(rec):
         if any(needle in name for needle in needles):
             return url
     return None
+
 
 
 def product_page_for(rec):
@@ -512,9 +569,10 @@ def repair_missing_images(items):
     # Catalogue pages expose exact model thumbnails even when product pages block
     # automated requests or omit social-image metadata.
     catalogue_urls = {
-        "Orient": ["https://orient-watch.com/en/orient/"],
-        "Orient Star": ["https://orient-watch.com/en/orientstar/"],
-        "Tissot": ["https://www.tissotwatches.com/en-sg/collection/selections/novelties.html", "https://www.tissotwatches.com/en-sg/collection.html"],
+        "Citizen": ["https://citizen.com.sg/products/"],
+        "Orient": ["https://orient-watch.com/en/orient/", "https://orient-watch.com/en/orient/collection/contemporary/", "https://orient-watch.com/en/orient/collection/classic/", "https://orient-watch.com/en/orient/collection/sports/", "https://orient-watch.com/en/orient/collection/"],
+        "Orient Star": ["https://orient-watch.com/en/orientstar/", "https://orient-watch.com/en/orientstar/collection/contemporary/", "https://orient-watch.com/en/orientstar/collection/contemporary/three-hand/", "https://orient-watch.com/en/orientstar/collection/contemporary/lp/three-hand-2026aw/", "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/", "https://orient-watch.com/en/orientstar/collection/classic/", "https://orient-watch.com/en/orientstar/collection/sports/", "https://orient-watch.com/en/orientstar/collection/"],
+        "Tissot": ["https://www.tissotwatches.com/en-sg/collection/selections/novelties.html", "https://www.tissotwatches.com/en-sg/collection.html", "https://www.tissotwatches.com/en-sg/collection/main-collections/tissot-pr-100.html", "https://www.tissotwatches.com/en-sg/collection/selections/cycling.html", "https://www.tissotwatches.com/en-sg/collection/selections/automatic-watches.html", "https://www.tissotwatches.com/en-sg/collection/selections/chronograph-watches.html", "https://www.tissotwatches.com/en-sg/collection/categories/sport.html", "https://www.tissotwatches.com/en-sg/collection/main-collections/tissot-prx.html", "https://www.tissotwatches.com/en-sg/collection/main-collections/tissot-seastar.html"],
     }
     catalogue_cache = {}
     tissot_product_cache = {}
@@ -522,7 +580,7 @@ def repair_missing_images(items):
     for record in items.values():
         image = record.get("image")
         if image:
-            identity = (record.get("brand"), clean(record.get("name", "")).lower())
+            identity = (clean(record.get("brand", "")).lower(), clean(record.get("ref", "")).lower() or clean(record.get("name", "")).lower())
             image_owners.setdefault(image, set()).add(identity)
 
     def get_soup(url):
@@ -567,10 +625,10 @@ def repair_missing_images(items):
 
     for rec in items.values():
         img = rec.get("image")
-        bad_image = re.compile(r"dummy|placeholder|menu-push|sprite|watch-fallback|header_mega|gravity=center|history-mobile|/header/|zoomincursorwithoutbg|/360\\.svg|gift-finder-mobile", re.I)
+        bad_image = IMAGE_BAD
         tissot_listing_record = brand_is_tissot_listing(rec)
         duplicate_image = bool(img and len(image_owners.get(img, set())) > 1)
-        if img and not rec.get("image_fallback") and not bad_image.search(img) and not tissot_listing_record and not duplicate_image:
+        if img and rec.get("image_verified") is True and not image_is_generic(img) and not tissot_listing_record and not duplicate_image and verify_image_url(img):
             continue
         brand = rec.get("brand")
         ref = clean(rec.get("ref", ""))
@@ -596,7 +654,7 @@ def repair_missing_images(items):
                             tissot_product_cache[href] = None
                     detail = tissot_product_cache[href]
                     if detail is not None:
-                        recovered = model_image(detail, href, rec) or meta_image(detail, href)
+                        recovered = model_image(detail, href, rec)
                         if recovered:
                             break
             # Exact-reference image alt text takes precedence on collection pages.
@@ -607,12 +665,20 @@ def repair_missing_images(items):
                     break
                 if source == product:
                     break
+        if recovered and not image_is_generic(recovered) and verify_image_url(recovered):
+            owners = image_owners.get(recovered, set())
+            ident = (clean(rec.get("brand", "")).lower(), clean(rec.get("ref", "")).lower() or clean(rec.get("name", "")).lower())
+            if owners and owners != {ident}:
+                recovered = None
         if recovered:
             rec["image"] = recovered
+            rec["image_verified"] = True
             rec.pop("image_fallback", None)
-            rec["image_source"] = "official product or catalogue page"
+            rec["image_source"] = "verified official model or release page"
+            image_owners.setdefault(recovered, set()).add((clean(rec.get("brand", "")).lower(), clean(rec.get("ref", "")).lower() or clean(rec.get("name", "")).lower()))
         else:
-            rec["image"] = fallback.get(brand, "assets/watch-fallback.svg")
+            rec["image"] = None
+            rec["image_verified"] = False
             rec["image_fallback"] = True
 
 
@@ -633,8 +699,10 @@ def main():
     for rec in items.values():
         if not valid_watch_title(rec.get("name", "")):
             continue
-        if rec.get("image") and re.search(r"dummy|placeholder|menu-push|sprite|watch-fallback|header_mega|gravity=center|history-mobile|/header/|zoomincursorwithoutbg|/360\\.svg|gift-finder-mobile", rec["image"], re.I):
+        if rec.get("image") and image_is_generic(rec["image"]):
             rec["image"] = None
+            rec["image_verified"] = False
+            rec["image_fallback"] = True
         price = rec.get("price")
         if price is not None and (not isinstance(price, (int, float)) or price <= 0 or price > 100000):
             rec["price"] = None
@@ -647,6 +715,8 @@ def main():
             cleaned[key] = rec
         else:
             old_name, new_name = clean(old.get("name", "")), clean(rec.get("name", ""))
+            old_verified_image = old.get("image") if old.get("image_verified") is True else None
+            new_verified_image = rec.get("image") if rec.get("image_verified") is True else None
             old_headline = len(old_name) > 95 or bool(re.match(r"^\d{1,2}\s", old_name))
             new_headline = len(new_name) > 95 or bool(re.match(r"^\d{1,2}\s", new_name))
             if (old_headline and not new_headline) or (not old.get("image") and rec.get("image")) or (old.get("image_fallback") and rec.get("image") and not rec.get("image_fallback")):
@@ -654,25 +724,25 @@ def main():
                 merged.update({k: v for k, v in rec.items() if v not in (None, "", [])})
                 if not new_headline:
                     merged["name"] = new_name
-                if rec.get("image") and not rec.get("image_fallback"):
-                    merged["image"] = rec["image"]
+                if new_verified_image:
+                    merged["image"] = new_verified_image
+                    merged["image_verified"] = True
                     merged.pop("image_fallback", None)
                     if rec.get("image_source"):
                         merged["image_source"] = rec["image_source"]
+                elif old_verified_image:
+                    merged["image"] = old_verified_image
+                    merged["image_verified"] = True
+                    merged.pop("image_fallback", None)
                 cleaned[key] = merged
             else:
                 for field in ("image", "price", "ref", "date"):
                     if not old.get(field) and rec.get(field):
                         old[field] = rec[field]
-    fallback = {
-        "Citizen": "assets/watch-fallback-citizen.svg",
-        "Tissot": "assets/watch-fallback-tissot.svg",
-        "Orient": "assets/watch-fallback-orient.svg",
-        "Orient Star": "assets/watch-fallback-orient-star.svg",
-    }
     for rec in cleaned.values():
-        if not rec.get("image"):
-            rec["image"] = fallback.get(rec.get("brand"), "assets/watch-fallback.svg")
+        if not rec.get("image") or rec.get("image_verified") is not True or image_is_generic(rec.get("image", "")):
+            rec["image"] = None
+            rec["image_verified"] = False
             rec["image_fallback"] = True
     records = sorted(cleaned.values(), key=lambda x: (x.get("date") or "", x.get("brand", ""), x.get("name", "")), reverse=True)
     data = {"last_checked_at": NOW, "source_count": successful, "data_mode": "scheduled-source-sync", "releases": records}

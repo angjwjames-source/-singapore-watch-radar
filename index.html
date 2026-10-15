@@ -61,6 +61,8 @@ let view="all";
 let saved=new Set(JSON.parse(localStorage.getItem("swr-saved")||"[]"));
 const statusText=s=>s==="confirmed"?"SG confirmed":s==="global"?"Global listing":"SG unconfirmed";
 function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function imageFailed(img){const card=img.closest(".watch-card");const button=card&&card.querySelector("[data-save]");const id=button&&button.dataset.save;if(id){watches=watches.filter(w=>w.id!==id);render();}}
+document.addEventListener("error",e=>{if(e.target&&e.target.matches&&e.target.matches(".watch-photo"))imageFailed(e.target);},true);
 function render(){
  const q=$("search").value.toLowerCase().trim(), brand=$("brand").value, av=$("availability").value, mov=$("movement").value, sort=$("sort").value;
  let list=watches.filter(w=>(view!=="saved"||saved.has(w.id))&&(view!=="limited"||w.limited===true)&&(view!=="regular"||w.limited!==true)&&(view!=="new"||!!w.date)&&(view!=="global"||w.status==="global")&&(view!=="singapore"||w.status==="confirmed"||w.status==="unconfirmed")&&(!q||[w.brand,w.name,w.ref,w.dial,w.tags.join(" ")].join(" ").toLowerCase().includes(q))&&(!brand||w.brand===brand)&&(!av||w.status===av)&&(!mov||w.movement===mov));
@@ -71,7 +73,7 @@ function render(){
  const host=$("cards");
  if(!list.length){host.innerHTML='<div class="empty"><b>No watches found</b>Try changing your filters, or save a model to build your watchlist.</div>';return}
  host.innerHTML=list.map(w=>`<article class="watch-card">
-  <div class="watch-visual">${w.image?`<img class="watch-photo" src="${escapeHTML(w.image)}" alt="${escapeHTML(w.name)} watch photo" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;const b=this.closest('.watch-visual').querySelector('.brand-chip').textContent.toLowerCase().replace(' ','-');this.src='assets/watch-fallback-'+b+'.svg';this.alt='Illustrative watch artwork; official image unavailable';"><div class="photo-missing" hidden>Official watch image unavailable</div>`:`<div class="photo-missing">No official image was found in the source</div>`}<span class="brand-chip">${escapeHTML(w.brand.toUpperCase())}</span><button class="save ${saved.has(w.id)?"saved":""}" data-save="${w.id}" aria-label="${saved.has(w.id)?"Remove from":"Add to"} watchlist">${saved.has(w.id)?"♥":"♡"}</button></div>
+  <div class="watch-visual">${w.image?`<img class="watch-photo" src="${escapeHTML(w.image)}" alt="${escapeHTML(w.name)} watch photo" loading="lazy" referrerpolicy="no-referrer""><div class="photo-missing" hidden>Official watch image unavailable</div>`:`<div class="photo-missing">No official image was found in the source</div>`}<span class="brand-chip">${escapeHTML(w.brand.toUpperCase())}</span><button class="save ${saved.has(w.id)?"saved":""}" data-save="${w.id}" aria-label="${saved.has(w.id)?"Remove from":"Add to"} watchlist">${saved.has(w.id)?"♥":"♡"}</button></div>
   <div class="card-body"><div class="model-line"><h3>${escapeHTML(w.name)}</h3><span class="status ${w.status}">${statusText(w.status)}</span></div>
   <div class="meta">${escapeHTML(w.ref||"Reference not listed")} · ${w.date?`Announcement ${new Date(w.date+"T12:00:00").toLocaleDateString("en-SG",{day:"numeric",month:"short",year:"numeric"})}`:`Checked ${w.checked_at?new Date(w.checked_at).toLocaleDateString("en-SG",{day:"numeric",month:"short",year:"numeric"}):"recently"}`}</div>
   ${w.limited?`<div class="tags"><span class="tag" style="background:#f5e8cf;color:#7a5720">✦ Limited edition tracker</span><span class="tag">${escapeHTML(w.edition||"Edition details to verify")}</span></div>`:""}
@@ -89,10 +91,10 @@ async function loadLiveData(){
   const response=await fetch("data/releases.json?ts="+Date.now(),{cache:"no-store"});
   if(!response.ok) throw new Error("Feed not available yet");
   const feed=await response.json();
-  watches=Array.isArray(feed.releases)?feed.releases:[];
+  watches=Array.isArray(feed.releases)?feed.releases.filter(w=>w.image&&w.image_verified===true&&!w.image_fallback):[];
   const checked=feed.last_checked_at?new Date(feed.last_checked_at):null;
   $("updatedLabel").textContent=checked?"Checked "+checked.toLocaleString("en-SG",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):"Waiting for first sync";
-  $("dataNotice").innerHTML=`<strong>Source sync:</strong> ${watches.length} real listings collected from official brand sources. Last checked ${checked?checked.toLocaleString("en-SG"):"not yet recorded"}. Photos are shown only when found on official source pages. Singapore stock is marked confirmed only when the source supports it.`;
+  $("dataNotice").innerHTML=`<strong>Source sync:</strong> ${watches.length} listings with verified official watch photos are displayed. Records without a unique verified photo are withheld. Last checked ${checked?checked.toLocaleString("en-SG"):"not yet recorded"}. Photos are shown only when found on official source pages. Singapore stock is marked confirmed only when the source supports it.`;
   render();
  }catch(err){
   watches=[]; $("updatedLabel").textContent="Feed not connected";
