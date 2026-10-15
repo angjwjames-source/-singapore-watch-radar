@@ -80,7 +80,7 @@ def image_url_from_tag(tag, base):
 def meta_image(soup, base):
     # Prefer explicitly declared social/product artwork, then structured metadata,
     # then relevant responsive/lazy-loaded images. Reject common site chrome.
-    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar|header_mega|gravity=center|history-mobile", re.I)
+    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar|header_mega|gravity=center|history-mobile|zoomincursorwithoutbg|/360\\.svg|gift-finder-mobile|/header/", re.I)
     for attrs in ({"property": "og:image"}, {"name": "twitter:image"}, {"property": "og:image:url"}):
         t = soup.find("meta", attrs=attrs)
         if t and t.get("content"):
@@ -628,7 +628,7 @@ def main():
     for rec in items.values():
         if not valid_watch_title(rec.get("name", "")):
             continue
-        if rec.get("image") and re.search(r"dummy|placeholder|menu-push", rec["image"], re.I):
+        if rec.get("image") and re.search(r"dummy|placeholder|menu-push|sprite|watch-fallback|header_mega|gravity=center|history-mobile|/header/|zoomincursorwithoutbg|/360\\.svg|gift-finder-mobile", rec["image"], re.I):
             rec["image"] = None
         price = rec.get("price")
         if price is not None and (not isinstance(price, (int, float)) or price <= 0 or price > 100000):
