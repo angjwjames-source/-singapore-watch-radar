@@ -45,14 +45,14 @@
       "edition": "1,300 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260924/index.html",
       "sourceName": "Citizen official source",
-      "image": "assets/watch-fallback-citizen.svg",
+      "image": "https://img.chrono24.com/images/uhren/48802774-fvxesm2fi732woxk1nd8vxkh-ExtraLarge.jpg",
       "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN Series 8 New Limited-edition Model with Damascus Steel and Forged Carbon| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN Series 8 New Limited-ed",
       "tags": [
         "Official announcement",
         "Limited edition"
       ],
-      "image_fallback": true
+      "image_source": "Chrono24 dealer listing; exact reference"
     },
     {
       "id": "b9488e1e66a1ad",
@@ -70,14 +70,14 @@
       "edition": "350 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260917/index.html",
       "sourceName": "Citizen official source",
-      "image": "assets/watch-fallback-citizen.svg",
+      "image": "https://citizen.jp/img/goods/5/TCT_AQ4106-00B_00_EC.png",
       "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "The CITIZEN Two New Eco-Drive Tosa Washi Paper Models with Annual Accuracy of ±5 Seconds| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Two New Eco",
       "tags": [
         "Official announcement",
         "Limited edition"
       ],
-      "image_fallback": true
+      "image_source": "Citizen Japan official product image"
     },
     {
       "id": "orient-star-re-br0001n",
@@ -421,14 +421,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://www.citizenwatch-global.com/news/2026/20260610/index.html",
       "sourceName": "Citizen official source",
-      "image": "assets/watch-fallback-citizen.svg",
+      "image": "https://shop.theclockhouse.jp/cdn/shop/files/cc4107-80h_2.jpg?v=1780524980&width=900",
       "checked_at": "2026-10-15T18:58:38+00:00",
       "description": "CITIZEN ATTESA New Limited-Edition Recrystallised Titanium Model with Striking All-Black Design| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTESA N",
       "tags": [
         "Official announcement",
         "Limited edition"
       ],
-      "image_fallback": true
+      "image_source": "The Clock House retailer; exact reference"
     },
     {
       "id": "20ea8614f949ec",
