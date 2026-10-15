@@ -567,23 +567,7 @@ def repair_missing_images(items):
             continue
         brand = rec.get("brand")
         ref = clean(rec.get("ref", ""))
-        # Orient's official model-image paths are deterministic and include the
-        # exact reference. Do not accept a shared navigation image as a watch photo.
-        if brand == "Orient Star" and ref == "RE-BR0001N":
-            rec["image"] = "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/RE-BR0001N/product_en_file/file/RE-BR0001N_main.webp"
-            rec.pop("image_fallback", None)
-            rec["image_source"] = "official model-specific image"
-            continue
-        if brand == "Orient Star" and ref.startswith("RE-BQ"):
-            rec["image"] = f"https://orient-watch.com/en/orientstar/collection/contemporary/three-hand/{ref}/product_en_file/file/{ref}_main.webp"
-            rec.pop("image_fallback", None)
-            rec["image_source"] = "official model-specific image"
-            continue
-        if brand == "Orient" and ref.startswith("RA-BB02"):
-            rec["image"] = f"https://orient-watch.com/en/orient/collection/contemporary/flusso/{ref}/product_en_file/file/{ref}_main.webp"
-            rec.pop("image_fallback", None)
-            rec["image_source"] = "official model-specific image"
-            continue
+        # Prefer images actually discovered on official model pages over guessed URLs.
         product = product_page_for(rec) or (tissot_product_page_for(rec) if brand == "Tissot" else None)
         sources = [product, rec.get("source")]
         # For model references, the official brand catalogue is a useful alternate
