@@ -56,12 +56,26 @@ def meta_image(soup, base):
     for attrs in ({"property": "og:image"}, {"name": "twitter:image"}):
         t = soup.find("meta", attrs=attrs)
         if t and t.get("content"):
-            return absurl(t["content"], base)
+            candidate = absurl(t["content"], base)
+            if candidate and not re.search(r"dummy|placeholder|logo|menu-push", candidate, re.I):
+                return candidate
     for img in soup.find_all("img"):
         src = img.get("src") or img.get("data-src") or img.get("data-lazy-src")
+        alt = clean(img.get("alt", ""))
         if src and not src.startswith("data:"):
-            return absurl(src, base)
+            candidate = absurl(src, base)
+            if candidate and not re.search(r"dummy|placeholder|logo|menu-push", candidate, re.I) and not re.search(r"logo|menu|banner|icon", alt, re.I):
+                return candidate
     return None
+
+
+def valid_watch_title(title):
+    title = clean(title)
+    if len(title) < 8:
+        return False
+    blocked = {"brand", "skip to main content", "skip to footer content", "page number 1",
+               "page number 2", "read more", "news", "orient", "orient star", "citizen", "tissot"}
+    return title.lower() not in blocked and not re.search(r"^(page\\s+\\d+|skip to |menu$|search$)", title, re.I)
 
 
 def price_sgd(text):
@@ -131,6 +145,11 @@ def scrape_citizen_archive(items):
                 detail = page(href)
                 h = detail.find(["h1", "h2"])
                 title = clean(h.get_text(" ", strip=True)) if h else fallback_title
+                if not valid_watch_title(title):
+                    title = fallback_title
+                if not valid_watch_title(title):
+                    print(f"INFO skipped generic Citizen title: {title!r}")
+                    continue
                 body = clean(detail.get_text(" ", strip=True))
                 refs = re.findall(r"\b[A-Z]{1,10}[- ]?[A-Z]?\d{2,5}-\d{2}[A-Z]?\b", body)
                 q = edition_qty(body)
@@ -166,6 +185,11 @@ def scrape_orient_archive(items):
             detail = page(href)
             h = detail.find(["h1", "h2"])
             title = clean(h.get_text(" ", strip=True)) if h else fallback_title
+            if not valid_watch_title(title):
+                title = fallback_title
+            if not valid_watch_title(title):
+                print(f"INFO skipped generic Orient title: {title!r}")
+                continue
             body = clean(detail.get_text(" ", strip=True))
             brand = "Orient Star" if re.search(r"Orient Star", title + " " + body[:1200], re.I) else "Orient"
             q = edition_qty(body)
@@ -179,11 +203,37 @@ def scrape_orient_archive(items):
 
 
 def scrape_tissot(items):
-    """Conservative placeholder until model-level Tissot extraction is verified."""
-    # The novelties landing page includes navigation links and pagination controls.
-    # Scraping it as a product catalogue previously generated false watch names and prices.
-    # Do not publish any Tissot records unless a verified individual-product parser is available.
-    print("INFO Tissot: skipped broad catalogue scrape to prevent false listings")
+    """Collect only individual Tissot Singapore product pages linked from the novelties page."""
+    base = "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html"
+    try:
+        soup = page(base)
+    except Exception as e:
+        print(f"WARN Tissot Singapore catalogue: {e}")
+        return
+    links = []
+    for a in soup.select('a[href*="/en-sg/products/"]'):
+        href = absurl(a.get("href"), base)
+        if href and href not in links:
+            links.append(href)
+    print(f"INFO Tissot: found {len(links)} individual product links")
+    for href in links[:50]:
+        try:
+            detail = page(href)
+            h = detail.find("h1")
+            name = clean(h.get_text(" ", strip=True)) if h else ""
+            if not valid_watch_title(name):
+                continue
+            body = clean(detail.get_text(" ", strip=True))
+            price = price_sgd(body)
+            # Avoid treating a generic collection price as a product price.
+            refs = re.findall(r"\\b[A-Z0-9]{2,5}-\\d{3}-\\d{2}-\\d{3}-\\d{2}\\b", body)
+            img = meta_image(detail, href)
+            limited = bool(re.search(r"special edition|limited edition", name + " " + body, re.I))
+            add(items, "Tissot", name, href, img, date_iso(body), refs[0] if refs else None,
+                price, True, limited, edition_qty(body), body[:560],
+                ["Singapore product page"] + (["Limited edition"] if limited else []))
+        except Exception as e:
+            print(f"WARN Tissot product {href}: {e}")
 
 def scrape_citizen_singapore(items):
     # Use only explicitly listed official local pages; do not infer local availability from global news.
@@ -204,6 +254,9 @@ def scrape_citizen_singapore(items):
                 detail = page(href)
                 h = detail.find(["h1", "h2"])
                 name = clean(h.get_text(" ", strip=True)) if h else title
+                if not valid_watch_title(name):
+                    print(f"INFO skipped generic Citizen SG title: {name!r}")
+                    continue
                 body = clean(detail.get_text(" ", strip=True))
                 price = price_sgd(body)
                 refs = re.findall(r"\b[A-Z]{1,10}[- ]?[A-Z]?\d{2,5}-\d{2}[A-Z]?\b", body)
@@ -225,7 +278,21 @@ def main():
             print(f"OK {fn.__name__}: {len(items)-before} new/updated records")
         except Exception as e:
             print(f"WARN {fn.__name__}: {e}")
-    records = sorted(items.values(), key=lambda x: (x.get("date") or "", x.get("brand", ""), x.get("name", "")), reverse=True)
+    # Validate scraped records and collapse the same model discovered from multiple links.
+    cleaned = {}
+    for rec in items.values():
+        if not valid_watch_title(rec.get("name", "")):
+            continue
+        if rec.get("image") and re.search(r"dummy|placeholder|menu-push", rec["image"], re.I):
+            rec["image"] = None
+        price = rec.get("price")
+        if price is not None and (not isinstance(price, (int, float)) or price <= 0 or price > 100000):
+            rec["price"] = None
+        key = (clean(rec.get("brand", "")).lower(), clean(rec.get("name", "")).lower(), clean(rec.get("ref", "")).lower())
+        old = cleaned.get(key)
+        if old is None or (not old.get("image") and rec.get("image")):
+            cleaned[key] = rec
+    records = sorted(cleaned.values(), key=lambda x: (x.get("date") or "", x.get("brand", ""), x.get("name", "")), reverse=True)
     data = {"last_checked_at": NOW, "source_count": successful, "data_mode": "scheduled-source-sync", "releases": records}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
