@@ -351,6 +351,10 @@ def product_page_for(rec):
         return "https://www.citizenwatch.com/us/en/product/" + ref
     if brand == "Orient Star" and ref == "RE-BR0001N":
         return "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/" + ref + "/"
+    if brand == "Orient Star" and ref.startswith("RE-BQ"):
+        return "https://orient-watch.com/en/orientstar/collection/contemporary/three-hand/" + ref + "/"
+    if brand == "Orient" and ref.startswith("RA-BB02"):
+        return "https://orient-watch.com/en/orient/collection/contemporary/flusso/" + ref + "/"
     return None
 
 
