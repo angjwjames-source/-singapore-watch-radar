@@ -1,5 +1,5 @@
 {
-  "last_checked_at": "2026-10-15T18:58:38+00:00",
+  "last_checked_at": "2026-10-15T19:08:15+00:00",
   "source_count": 4,
   "data_mode": "scheduled-source-sync",
   "releases": [
@@ -45,14 +45,14 @@
       "edition": "1,300 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260924/index.html",
       "sourceName": "Citizen official source",
-      "image": "https://img.chrono24.com/images/uhren/48802774-fvxesm2fi732woxk1nd8vxkh-ExtraLarge.jpg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
+      "image": "assets/watch-fallback-citizen.svg",
+      "checked_at": "2026-10-15T19:08:15+00:00",
       "description": "This Series 8 limited edition combines Damascus steel and forged carbon in a distinctive contemporary design. The announced edition is limited to 1,300 pieces worldwide; check the official release for full specifications and local availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
       ],
-      "image_source": "Chrono24 dealer listing; exact reference"
+      "image_fallback": true
     },
     {
       "id": "b9488e1e66a1ad",
@@ -70,185 +70,9 @@
       "edition": "350 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2026/20260917/index.html",
       "sourceName": "Citizen official source",
-      "image": "https://citizen.jp/img/goods/5/TCT_AQ4106-00B_00_EC.png",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "Part of The CITIZEN’s high-accuracy Eco-Drive range, this limited edition pairs a traditional Tosa washi-paper dial with solar-powered timekeeping rated to annual accuracy of ±5 seconds. Singapore availability and local pricing should be confirmed separately.",
-      "tags": [
-        "Official announcement",
-        "Limited edition"
-      ],
-      "image_source": "Citizen Japan official product image"
-    },
-    {
-      "id": "orient-star-re-br0001n",
-      "brand": "Orient Star",
-      "name": "Orient Star Skeleton 75th Anniversary",
-      "ref": "RE-BR0001N",
-      "date": "2026-09-09",
-      "launch_date": "2026-12",
-      "price": null,
-      "movement": "Hand-wound Calibre F9B82",
-      "dial": "Openworked skeleton",
-      "size": "40 mm",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "130 pieces worldwide",
-      "source": "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/RE-BR0001N/",
-      "sourceName": "Orient Star official product page",
-      "image": "assets/watch-fallback-orient-star.svg",
-      "checked_at": "2026-10-16T09:00:00+08:00",
-      "description": "Orient Star’s 75th-anniversary flagship skeleton watch explores the theme of time and space through an openworked mechanical movement. The hand-wound Calibre F9B82 offers over 72 hours of power reserve and +10/-4 seconds-per-day accuracy. Its 40 mm stainless-steel case is 9.5 mm thick, with sapphire crystal, a goat-leather strap and 30 m water resistance. Limited to 130 pieces worldwide, with a planned December 2026 launch.",
-      "tags": [
-        "75th anniversary",
-        "72+ hour power reserve",
-        "130 pieces worldwide"
-      ],
-      "image_fallback": true
-    },
-    {
-      "price": null,
-      "ref": null,
-      "movement": "See official announcement",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "edition": "",
-      "image": "assets/watch-fallback-orient-star.svg",
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "id": "orient-star-aw26-lineup",
-      "brand": "Orient Star",
-      "name": "Orient Star Autumn/Winter 2026 New Models",
-      "date": "2026-09-09",
-      "limited": false,
-      "source": "https://orient-watch.com/en/news/detail/en-118.html",
-      "sourceName": "Orient Star official announcement",
-      "description": "Official Autumn/Winter 2026 collection announcement covering new Orient Star models. Individual references and Singapore allocations should be checked at the source.",
-      "tags": [
-        "New collection",
-        "Regular watches"
-      ],
-      "image_fallback": true
-    },
-    {
-      "id": "996bb823bd7ca7",
-      "brand": "Orient Star",
-      "name": "Orient Star Announces New Products for Autumn/Winter 2026 (2026 AW)",
-      "ref": null,
-      "date": "2026-09-09",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "Limited edition; quantity not stated",
-      "source": "https://orient-watch.com/en/news/detail/en-118.html",
-      "sourceName": "Orient Star official source",
-      "image": "assets/watch-fallback-orient-star.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "Orient Star’s Autumn/Winter 2026 announcement introduces new models for the season. Individual references, specifications and Singapore availability vary by model; use the official release for details.",
-      "tags": [
-        "Official announcement",
-        "Limited edition"
-      ],
-      "image_fallback": true
-    },
-    {
-      "id": "ffe6b344501114",
-      "brand": "Orient Star",
-      "name": "Orient Announces New Products for Autumn/Winter 2026 (2026 AW)",
-      "ref": null,
-      "date": "2026-09-09",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": false,
-      "edition": "",
-      "source": "https://orient-watch.com/en/news/detail/en-115.html",
-      "sourceName": "Orient Star official source",
-      "image": "assets/watch-fallback-orient-star.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "Orient Star’s Autumn/Winter 2026 announcement introduces new models for the season. Individual references, specifications and Singapore availability vary by model; use the official release for details.",
-      "tags": [
-        "Official announcement"
-      ],
-      "image_fallback": true
-    },
-    {
-      "price": null,
-      "ref": null,
-      "movement": "See official announcement",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "edition": "",
-      "image": "assets/watch-fallback-orient.svg",
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "id": "orient-flusso-2026",
-      "brand": "Orient",
-      "name": "Orient Flusso",
-      "date": "2026-09-09",
-      "limited": false,
-      "source": "https://orient-watch.com/en/news/detail/en-115.html",
-      "sourceName": "Orient official announcement",
-      "description": "Orient announced Flusso, a modern reinterpretation of its distinctive SK design. Model-level pricing and Singapore availability require confirmation.",
-      "tags": [
-        "New model",
-        "Regular watches"
-      ],
-      "image_fallback": true
-    },
-    {
-      "price": null,
-      "ref": null,
-      "movement": "See official announcement",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "edition": "",
-      "image": "assets/watch-fallback-orient.svg",
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "id": "orient-aw26-lineup",
-      "brand": "Orient",
-      "name": "Orient Autumn/Winter 2026 New Models",
-      "date": "2026-09-09",
-      "limited": false,
-      "source": "https://orient-watch.com/en/news/detail/en-115.html",
-      "sourceName": "Orient official announcement",
-      "description": "Official announcement introducing Orient's Autumn/Winter 2026 models. Follow the source for individual model specifications and regional availability.",
-      "tags": [
-        "New collection",
-        "Regular watches"
-      ],
-      "image_fallback": true
-    },
-    {
-      "id": "e82649cd75247f",
-      "brand": "Citizen",
-      "name": "9 September 2026 CITIZEN ATTESA Eco-Drive 50th Anniversary Edition Inspired by the Green Flash and Aurora",
-      "ref": "CC4084-83Z",
-      "date": "2026-09-09",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "1,500 pieces worldwide",
-      "source": "https://www.citizenwatch-global.com/news/2026/20260909/index.html",
-      "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "Citizen’s Attesa 50th-anniversary limited edition takes inspiration from the green flash and aurora. See the official announcement for the dial and movement details; Singapore availability has not been confirmed.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with a distinctive textured finish. Selected models in the range use high-accuracy Eco-Drive technology; refer to the official announcement for the exact model specification and edition details.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -363,6 +187,132 @@
         "100 m water resistance",
         "Official product page"
       ]
+    },
+    {
+      "id": "orient-star-re-br0001n",
+      "brand": "Orient Star",
+      "name": "Orient Star Skeleton 75th Anniversary",
+      "ref": "RE-BR0001N",
+      "date": "2026-09-09",
+      "launch_date": "2026-12",
+      "price": null,
+      "movement": "Hand-wound Calibre F9B82",
+      "dial": "Openworked skeleton",
+      "size": "40 mm",
+      "status": "global",
+      "sg_status": "Global announcement · SG availability unconfirmed",
+      "limited": true,
+      "edition": "130 pieces worldwide",
+      "source": "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/RE-BR0001N/",
+      "sourceName": "Orient Star official product page",
+      "image": "assets/watch-fallback-orient-star.svg",
+      "checked_at": "2026-10-16T09:00:00+08:00",
+      "description": "Orient Star’s 75th-anniversary flagship skeleton watch explores the theme of time and space through an openworked mechanical movement. The hand-wound Calibre F9B82 offers over 72 hours of power reserve and +10/-4 seconds-per-day accuracy. Its 40 mm stainless-steel case is 9.5 mm thick, with sapphire crystal, a goat-leather strap and 30 m water resistance. Limited to 130 pieces worldwide, with a planned December 2026 launch.",
+      "tags": [
+        "75th anniversary",
+        "72+ hour power reserve",
+        "130 pieces worldwide"
+      ],
+      "image_fallback": true
+    },
+    {
+      "price": null,
+      "ref": null,
+      "movement": "See official announcement",
+      "dial": "See official source",
+      "size": "See official source",
+      "status": "global",
+      "sg_status": "Global announcement · SG availability unconfirmed",
+      "edition": "",
+      "image": "assets/watch-fallback-orient-star.svg",
+      "checked_at": "2026-10-15T18:44:04.391Z",
+      "id": "orient-star-aw26-lineup",
+      "brand": "Orient Star",
+      "name": "Orient Star Autumn/Winter 2026 New Models",
+      "date": "2026-09-09",
+      "limited": false,
+      "source": "https://orient-watch.com/en/news/detail/en-118.html",
+      "sourceName": "Orient Star official announcement",
+      "description": "Official Autumn/Winter 2026 collection announcement covering new Orient Star models. Individual references and Singapore allocations should be checked at the source.",
+      "tags": [
+        "New collection",
+        "Regular watches"
+      ],
+      "image_fallback": true
+    },
+    {
+      "id": "996bb823bd7ca7",
+      "brand": "Orient Star",
+      "name": "Orient Star Announces New Products for Autumn/Winter 2026 (2026 AW)",
+      "ref": null,
+      "date": "2026-09-09",
+      "price": null,
+      "movement": "Not specified",
+      "dial": "See official source",
+      "size": "See official source",
+      "status": "global",
+      "sg_status": "Global announcement · SG availability unconfirmed",
+      "limited": true,
+      "edition": "Limited edition; quantity not stated",
+      "source": "https://orient-watch.com/en/news/detail/en-118.html",
+      "sourceName": "Orient Star official source",
+      "image": "assets/watch-fallback-orient-star.svg",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "Orient Star’s Autumn/Winter 2026 announcement introduces new models for the season. Individual references, specifications and Singapore availability vary by model; use the official release for details.",
+      "tags": [
+        "Official announcement",
+        "Limited edition"
+      ],
+      "image_fallback": true
+    },
+    {
+      "id": "ffe6b344501114",
+      "brand": "Orient Star",
+      "name": "Orient Announces New Products for Autumn/Winter 2026 (2026 AW)",
+      "ref": null,
+      "date": "2026-09-09",
+      "price": null,
+      "movement": "Not specified",
+      "dial": "See official source",
+      "size": "See official source",
+      "status": "global",
+      "sg_status": "Global announcement · SG availability unconfirmed",
+      "limited": false,
+      "edition": "",
+      "source": "https://orient-watch.com/en/news/detail/en-115.html",
+      "sourceName": "Orient Star official source",
+      "image": "assets/watch-fallback-orient-star.svg",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "Orient Star’s Autumn/Winter 2026 announcement introduces new models for the season. Individual references, specifications and Singapore availability vary by model; use the official release for details.",
+      "tags": [
+        "Official announcement"
+      ],
+      "image_fallback": true
+    },
+    {
+      "price": null,
+      "ref": null,
+      "movement": "See official announcement",
+      "dial": "See official source",
+      "size": "See official source",
+      "status": "global",
+      "sg_status": "Global announcement · SG availability unconfirmed",
+      "edition": "",
+      "image": "assets/watch-fallback-orient.svg",
+      "checked_at": "2026-10-15T18:44:04.391Z",
+      "id": "orient-flusso-2026",
+      "brand": "Orient",
+      "name": "Orient Flusso",
+      "date": "2026-09-09",
+      "limited": false,
+      "source": "https://orient-watch.com/en/news/detail/en-115.html",
+      "sourceName": "Orient official announcement",
+      "description": "Orient announced Flusso, a modern reinterpretation of its distinctive SK design. Model-level pricing and Singapore availability require confirmation.",
+      "tags": [
+        "New model",
+        "Regular watches"
+      ],
+      "image_fallback": true
     },
     {
       "id": "orient-ra-bb0201s",
@@ -501,6 +451,56 @@
       ]
     },
     {
+      "price": null,
+      "ref": null,
+      "movement": "See official announcement",
+      "dial": "See official source",
+      "size": "See official source",
+      "status": "global",
+      "sg_status": "Global announcement · SG availability unconfirmed",
+      "edition": "",
+      "image": "assets/watch-fallback-orient.svg",
+      "checked_at": "2026-10-15T18:44:04.391Z",
+      "id": "orient-aw26-lineup",
+      "brand": "Orient",
+      "name": "Orient Autumn/Winter 2026 New Models",
+      "date": "2026-09-09",
+      "limited": false,
+      "source": "https://orient-watch.com/en/news/detail/en-115.html",
+      "sourceName": "Orient official announcement",
+      "description": "Official announcement introducing Orient's Autumn/Winter 2026 models. Follow the source for individual model specifications and regional availability.",
+      "tags": [
+        "New collection",
+        "Regular watches"
+      ],
+      "image_fallback": true
+    },
+    {
+      "id": "e82649cd75247f",
+      "brand": "Citizen",
+      "name": "9 September 2026 CITIZEN ATTESA Eco-Drive 50th Anniversary Edition Inspired by the Green Flash and Aurora",
+      "ref": "CC4084-83Z",
+      "date": "2026-09-09",
+      "price": null,
+      "movement": "Not specified",
+      "dial": "See official source",
+      "size": "See official source",
+      "status": "global",
+      "sg_status": "Global announcement · SG availability unconfirmed",
+      "limited": true,
+      "edition": "1,500 pieces worldwide",
+      "source": "https://www.citizenwatch-global.com/news/2026/20260909/index.html",
+      "sourceName": "Citizen official source",
+      "image": "assets/watch-fallback-citizen.svg",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "A Citizen Attesa 50th-anniversary limited edition inspired by the green flash and aurora. See the official announcement for movement and dial details; Singapore availability has not been confirmed.",
+      "tags": [
+        "Official announcement",
+        "Limited edition"
+      ],
+      "image_fallback": true
+    },
+    {
       "id": "526da7e00adb56",
       "brand": "Citizen",
       "name": "1st September 2026 CITIZEN PROMASTER Eco-Drive 50th Anniversary SKYHAWK and TSUNO CHRONO Limited-edition Models",
@@ -517,8 +517,8 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260901/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "CITIZEN PROMASTER Eco-Drive 50th Anniversary SKYHAWK and TSUNO CHRONO Limited-edition Models. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "A sport-focused Citizen PROMASTER release designed around practical timing and outdoor use. Consult the official announcement for the model-specific functions, specifications and regional release details.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -542,8 +542,8 @@
       "source": "https://orient-watch.com/en/news/detail/en-111.html",
       "sourceName": "Orient Star official source",
       "image": "assets/watch-fallback-orient-star.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "An Orient Star release celebrating the brand’s 75th anniversary, featuring a special-edition design. Check the official announcement for individual references, production quantities and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "An Orient Star release celebrating the brand’s 75th anniversary with a special-edition design. Check the official announcement for individual references, production quantities and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -592,7 +592,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260723_1/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
+      "checked_at": "2026-10-15T19:08:15+00:00",
       "description": "Citizen expands the RAINELL collection with new designs, including a limited-edition model featuring sparkling diamonds. Refer to the official release for individual model details and regional availability.",
       "tags": [
         "Official announcement",
@@ -617,8 +617,8 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260723_2/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "This TSUYOSA Shore limited edition draws on a retro-inspired design theme, with the specific dial and case details described in Citizen’s announcement. Check the source for launch information and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "This TSUYOSA Shore limited edition draws on a retro-inspired design theme. Check the official release for the model’s specific design details, launch timing and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -642,8 +642,8 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260702/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with an indigo-toned finish and intricate natural texture. Refer to the official release for the exact model specification and edition details.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with a distinctive textured finish. Selected models in the range use high-accuracy Eco-Drive technology; refer to the official announcement for the exact model specification and edition details.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -666,14 +666,14 @@
       "edition": "Limited edition; quantity not stated",
       "source": "https://www.citizenwatch-global.com/news/2026/20260610/index.html",
       "sourceName": "Citizen official source",
-      "image": "https://shop.theclockhouse.jp/cdn/shop/files/cc4107-80h_2.jpg?v=1780524980&width=900",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "CITIZEN ATTESA New Limited-Edition Recrystallised Titanium Model with Striking All-Black Design. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "image": "assets/watch-fallback-citizen.svg",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "10 June 2026 CITIZEN ATTESA New Limited-Edition Recrystallised Titanium Model with Striking All-Black Design. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
       ],
-      "image_source": "The Clock House retailer; exact reference"
+      "image_fallback": true
     },
     {
       "id": "20ea8614f949ec",
@@ -692,8 +692,8 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260604/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with an indigo-toned finish and intricate natural texture. Refer to the official release for the exact model specification and edition details.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with a distinctive textured finish. Selected models in the range use high-accuracy Eco-Drive technology; refer to the official announcement for the exact model specification and edition details.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -717,8 +717,8 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260521/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "A PROMASTER light-powered Eco-Drive combination watch designed around yacht racing, combining a sport-focused display with practical timing functions. Consult the official announcement for full specifications and regional release details.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "A sport-focused Citizen PROMASTER release designed around practical timing and outdoor use. Consult the official announcement for the model-specific functions, specifications and regional release details.",
       "tags": [
         "Official announcement"
       ],
@@ -741,7 +741,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260514/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
+      "checked_at": "2026-10-15T19:08:15+00:00",
       "description": "Part of Citizen’s Eco-Drive 50th-anniversary LIGHT in BLACK series, this model uses a dark, light-inspired design theme. Check the official release for model-specific specifications and availability.",
       "tags": [
         "Official announcement",
@@ -766,7 +766,7 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260428/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
+      "checked_at": "2026-10-15T19:08:15+00:00",
       "description": "A Citizen ATTESA collaboration inspired by Star Wars and The Mandalorian, with design details referencing Beskar. See the official release for the full specification and edition information.",
       "tags": [
         "Official announcement",
@@ -814,8 +814,8 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260319_2/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "The CITIZEN Eco-Drive 50th Anniversary Edition model with hand-dyed green Japanese paper dial. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "19 March 2026 The CITIZEN Eco-Drive 50th Anniversary Edition model with hand-dyed green Japanese paper dial. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -839,8 +839,8 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260319_3/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "Eco-Drive 50th Anniversary Limited Model Eco-Drive PHOTON. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "19 March 2026 Eco-Drive 50th Anniversary Limited Model Eco-Drive PHOTON. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -864,8 +864,8 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260220_2/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "First-ever TSUYOSA x seconde/seconde/ collaboration model and new TSUYOSA models. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "20 February 2026 First-ever TSUYOSA x seconde/seconde/ collaboration model and new TSUYOSA models. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -889,8 +889,8 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260220_1/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "CITIZEN Series 8 New slim models featuring a globally trendy case size. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "20 February 2026 CITIZEN Series 8 New slim models featuring a globally trendy case size. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -914,8 +914,8 @@
       "source": "https://www.citizenwatch-global.com/news/2026/20260204/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "CITIZEN ATTESA The total lunar eclipse inspired “Shades of Red”, when the sun, Earth, and moon align. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "4 February 2026 CITIZEN ATTESA The total lunar eclipse inspired “Shades of Red”, when the sun, Earth, and moon align. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -939,8 +939,8 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20251016/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "CITIZEN ATTESA Platinum Shine Collection with First Duratect Platinum Recrystallized Titanium Model. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "16 October 2025 CITIZEN ATTESA Platinum Shine Collection with First Duratect Platinum Recrystallized Titanium Model. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -964,8 +964,8 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20251003/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "The CITIZEN Limited-Edition 30th Anniversary Models with New Mechanical and Eco-Drive Models. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "3 October 2025 The CITIZEN Limited-Edition 30th Anniversary Models with New Mechanical and Eco-Drive Models. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -989,8 +989,8 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250925/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "CITIZEN Series 8 Limited-edition models inspired by cityscapes. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "25 September 2025 CITIZEN Series 8 Limited-edition models inspired by cityscapes. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -1014,8 +1014,8 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250911/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "CITIZEN ATTESA New Limited Edition Model featuring a beautifully shining full sapphire bezel. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "11 September 2025 CITIZEN ATTESA New Limited Edition Model featuring a beautifully shining full sapphire bezel. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -1062,8 +1062,8 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250903_2/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with an indigo-toned finish and intricate natural texture. Refer to the official release for the exact model specification and edition details.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with a distinctive textured finish. Selected models in the range use high-accuracy Eco-Drive technology; refer to the official announcement for the exact model specification and edition details.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -1087,7 +1087,7 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250903_3/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
+      "checked_at": "2026-10-15T19:08:15+00:00",
       "description": "The TSUYOSA 60 collection brings a sport-casual automatic design with a contemporary dial and integrated-bracelet look. Consult the official announcement for the exact reference and specifications.",
       "tags": [
         "Official announcement"
@@ -1134,8 +1134,8 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250819/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "CITIZEN ATTESA Limited-edition models inspired by the new JAXA HTV-X cargo transporter. Refer to the official source for the full specifications, launch details and Singapore availability.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "19 August 2025 CITIZEN ATTESA Limited-edition models inspired by the new JAXA HTV-X cargo transporter. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -1159,8 +1159,8 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250703/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with an indigo-toned finish and intricate natural texture. Refer to the official release for the exact model specification and edition details.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "3 July 2025 The CITIZEN Limited-edition 30th anniversary model with a Murakamo shibori dyeing washi paper dial. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -1184,8 +1184,8 @@
       "source": "https://www.citizenwatch-global.com/news/2025/20250624/index.html",
       "sourceName": "Citizen official source",
       "image": "assets/watch-fallback-citizen.svg",
-      "checked_at": "2026-10-15T18:58:38+00:00",
-      "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with an indigo-toned finish and intricate natural texture. Refer to the official release for the exact model specification and edition details.",
+      "checked_at": "2026-10-15T19:08:15+00:00",
+      "description": "24 June 2025 The CITIZEN Limited-edition 30th anniversary model with a washi paper dial in traditional indigo. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
