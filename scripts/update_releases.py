@@ -337,6 +337,13 @@ def scrape_tissot(items):
     catalogues = [
         "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
         "https://www.tissotwatches.com/en-sg/collection.html",
+        "https://www.tissotwatches.com/en-sg/collection/main-collections/tissot-pr-100.html",
+        "https://www.tissotwatches.com/en-sg/collection/selections/cycling.html",
+        "https://www.tissotwatches.com/en-sg/collection/selections/automatic-watches.html",
+        "https://www.tissotwatches.com/en-sg/collection/selections/chronograph-watches.html",
+        "https://www.tissotwatches.com/en-sg/collection/categories/sport.html",
+        "https://www.tissotwatches.com/en-sg/collection/main-collections/tissot-prx.html",
+        "https://www.tissotwatches.com/en-sg/collection/main-collections/tissot-seastar.html",
     ]
     links = []
     for base in catalogues:
@@ -360,9 +367,12 @@ def scrape_tissot(items):
             body = clean(detail.get_text(" ", strip=True))
             price = price_sgd(body)
             refs = re.findall(r"\b[A-Z0-9]{2,5}-\d{3}-\d{2}-\d{3}-\d{2}\b", body)
-            img = meta_image(detail, href)
+            # Preserve Tissot product URL SKU so colour/size variants remain distinct.
+            url_ref = re.search(r"/(T[A-Z0-9]{8,})\.html(?:$|[?#])", href, re.I)
+            ref = refs[0] if refs else (url_ref.group(1).upper() if url_ref else None)
+            img = model_image(detail, href, {"name": name, "ref": ref}) or meta_image(detail, href)
             limited = bool(re.search(r"special edition|limited edition", name + " " + body, re.I))
-            add(items, "Tissot", name, href, img, date_iso(body), refs[0] if refs else None,
+            add(items, "Tissot", name, href, img, date_iso(body), ref,
                 price, True, limited, edition_qty(body), release_description(name, "Tissot", True),
                 ["Singapore catalogue product"] + (["Limited edition"] if limited else []))
         except Exception as e:
