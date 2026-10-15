@@ -1,6 +1,10 @@
 name: Daily watch release sync
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/update_releases.py'
+      - '.github/workflows/daily-watch-sync.yml'
   schedule:
     - cron: '15 1 * * *' # 09:15 Singapore time daily
 permissions:
