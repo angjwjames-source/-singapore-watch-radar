@@ -286,7 +286,7 @@ def repair_missing_images(items):
     }
     for rec in items.values():
         img = rec.get("image")
-        if img and not re.search(r"dummy|placeholder|menu-push|sprite", img, re.I):
+        if img and not rec.get("image_fallback") and not re.search(r"dummy|placeholder|menu-push|sprite|watch-fallback", img, re.I):
             continue
         source = rec.get("source")
         if source:
