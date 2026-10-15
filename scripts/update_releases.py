@@ -52,16 +52,41 @@ def date_iso(text):
     return None
 
 
+def image_url_from_tag(tag, base):
+    """Resolve the best URL exposed by a lazy-loaded or responsive image tag."""
+    for key in ("data-src", "data-lazy-src", "data-original", "data-image", "src"):
+        value = tag.get(key)
+        if value and not value.startswith("data:"):
+            return absurl(value, base)
+    srcset = tag.get("srcset") or tag.get("data-srcset")
+    if srcset:
+        choices = []
+        for part in srcset.split(","):
+            bits = part.strip().split()
+            if bits:
+                url = absurl(bits[0], base)
+                if url:
+                    score = 0
+                    if len(bits) > 1:
+                        m = re.match(r"(\d+)(w|x)", bits[1])
+                        if m:
+                            score = int(m.group(1))
+                    choices.append((score, url))
+        if choices:
+            return max(choices)[1]
+    return None
+
+
 def meta_image(soup, base):
-    # Prefer explicit social/product artwork. A random first page image is often
-    # a logo, navigation thumbnail, or unrelated watch and must not be shown.
-    for attrs in ({"property": "og:image"}, {"name": "twitter:image"}):
+    # Prefer explicitly declared social/product artwork, then structured metadata,
+    # then relevant responsive/lazy-loaded images. Reject common site chrome.
+    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar", re.I)
+    for attrs in ({"property": "og:image"}, {"name": "twitter:image"}, {"property": "og:image:url"}):
         t = soup.find("meta", attrs=attrs)
         if t and t.get("content"):
             candidate = absurl(t["content"], base)
-            if candidate and not re.search(r"dummy|placeholder|logo|menu-push|sprite|banner", candidate, re.I):
+            if candidate and not bad.search(candidate):
                 return candidate
-    # Parse structured product metadata when a page exposes it outside social tags.
     for node in soup.find_all("script", attrs={"type": "application/ld+json"}):
         raw = node.string or node.get_text(" ", strip=True)
         if not raw:
@@ -74,28 +99,59 @@ def meta_image(soup, base):
         while stack:
             item = stack.pop(0)
             if isinstance(item, dict):
-                image = item.get("image")
-                values = [image] if isinstance(image, str) else image if isinstance(image, list) else [image.get("url")] if isinstance(image, dict) and image.get("url") else []
+                image = item.get("image") or item.get("thumbnailUrl")
+                values = [image] if isinstance(image, str) else image if isinstance(image, list) else [image.get("url") or image.get("contentUrl")] if isinstance(image, dict) else []
                 for value in values:
                     if isinstance(value, dict):
-                        value = value.get("url")
+                        value = value.get("url") or value.get("contentUrl")
                     candidate = absurl(value, base) if isinstance(value, str) else None
-                    if candidate and not re.search(r"dummy|placeholder|logo|menu-push|sprite|banner", candidate, re.I):
+                    if candidate and not bad.search(candidate):
                         return candidate
                 stack.extend(v for v in item.values() if isinstance(v, (dict, list)))
             elif isinstance(item, list):
                 stack.extend(item)
     candidates = []
     for img in soup.find_all("img"):
-        src = img.get("src") or img.get("data-src") or img.get("data-lazy-src")
+        candidate = image_url_from_tag(img, base)
         alt = clean(img.get("alt", ""))
-        if not src or src.startswith("data:") or re.search(r"logo|menu|banner|icon|arrow|flag|search", alt, re.I):
+        if not candidate or bad.search(candidate + " " + alt):
             continue
-        candidate = absurl(src, base)
-        if candidate and not re.search(r"dummy|placeholder|logo|menu-push|sprite|banner|icon", candidate, re.I):
-            if re.search(r"watch|timepiece|model|collection|limited|attesa|promaster|series 8|orient|tissot", alt, re.I):
-                candidates.append(candidate)
+        if re.search(r"watch|timepiece|model|collection|limited|attesa|promaster|series 8|orient|tissot|dial|automatic", alt + " " + candidate, re.I):
+            candidates.append(candidate)
     return candidates[0] if candidates else None
+
+
+def model_image(soup, base, rec):
+    """Find an image tied to this exact model before considering page-level artwork."""
+    ref = clean(rec.get("ref", ""))
+    name = clean(rec.get("name", ""))
+    bad = re.compile(r"dummy|placeholder|logo|menu-push|sprite|banner|icon|arrow|flag|search|avatar", re.I)
+    candidates = []
+    for img in soup.find_all("img"):
+        url = image_url_from_tag(img, base)
+        if not url or bad.search(url):
+            continue
+        alt = clean(img.get("alt", ""))
+        context = " ".join([url, alt, clean(img.get("title", ""))])
+        score = 0
+        if ref and ref.lower() in context.lower():
+            score += 100
+        # Orient product image alt text commonly embeds a collection and model ref.
+        if ref and ref.lower().replace("-", "") in context.lower().replace("-", ""):
+            score += 50
+        tokens = [x.lower() for x in re.findall(r"[A-Za-z0-9]+", name) if len(x) > 3]
+        if tokens:
+            overlap = sum(1 for token in tokens if token in context.lower())
+            score += min(overlap, 5) * 4
+        if re.search(r"main.image|product|watch|timepiece|model", context, re.I):
+            score += 5
+        if score:
+            candidates.append((score, url))
+    if candidates:
+        return sorted(candidates, key=lambda x: x[0], reverse=True)[0][1]
+    # For a release announcement, its first relevant editorial image is often the
+    # hero watch photo. Don't choose arbitrary logos or navigation art.
+    return meta_image(soup, base)
 
 
 def valid_watch_title(title):
@@ -359,7 +415,7 @@ def product_page_for(rec):
 
 
 def repair_missing_images(items):
-    """Try official source pages for real images, then use a clearly labelled local fallback."""
+    """Recover actual model/release photography from official product or announcement pages."""
     cache = {}
     fallback = {
         "Citizen": "assets/watch-fallback-citizen.svg",
@@ -371,36 +427,33 @@ def repair_missing_images(items):
         img = rec.get("image")
         if img and not rec.get("image_fallback") and not re.search(r"dummy|placeholder|menu-push|sprite|watch-fallback", img, re.I):
             continue
-        # Prefer a model-specific product page over a broad announcement page.
-        sources = [product_page_for(rec), rec.get("source")]
+        product = product_page_for(rec)
+        sources = [product, rec.get("source")]
         recovered = None
         for source in [x for x in sources if x]:
-            if source not in cache:
-                try:
-                    soup = page(source)
-                    recovered_image = meta_image(soup, source)
-                    if not recovered_image and source == product_page_for(rec):
-                        for im in soup.find_all("img"):
-                            raw = im.get("src") or im.get("data-src") or im.get("data-lazy-src")
-                            alt = clean(im.get("alt", ""))
-                            candidate = absurl(raw, source)
-                            if candidate and not re.search(r"logo|menu|banner|icon|arrow|flag|search|sprite|placeholder", candidate + " " + alt, re.I):
-                                recovered_image = candidate
-                                break
-                    cache[source] = recovered_image
-                except Exception as e:
-                    print(f"WARN image recovery {source}: {e}")
-                    cache[source] = None
-            if cache[source]:
-                recovered = cache[source]
-                break
+            # Product-page image selection must be record-specific, so cache only page HTML,
+            # not the selected image URL, for pages that could list multiple watches.
+            try:
+                soup = page(source)
+            except Exception as e:
+                print(f"WARN image recovery {source}: {e}")
+                continue
+            found = model_image(soup, source, rec)
+            if found:
+                recovered = found
+                # A broad collection/news page may only provide a page hero. Prefer a
+                # model-specific hit whenever the image itself contains this reference.
+                if rec.get("ref") and rec["ref"].lower() in found.lower():
+                    break
+                if source == product:
+                    break
         if recovered:
             rec["image"] = recovered
             rec.pop("image_fallback", None)
-            rec["image_source"] = "model-specific official product page"
-            continue
-        rec["image"] = fallback.get(rec.get("brand"), "assets/watch-fallback.svg")
-        rec["image_fallback"] = True
+            rec["image_source"] = "official page image"
+        else:
+            rec["image"] = fallback.get(rec.get("brand"), "assets/watch-fallback.svg")
+            rec["image_fallback"] = True
 
 
 def main():
