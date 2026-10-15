@@ -518,6 +518,12 @@ def repair_missing_images(items):
     }
     catalogue_cache = {}
     tissot_product_cache = {}
+    image_owners = {}
+    for record in items.values():
+        image = record.get("image")
+        if image:
+            identity = (record.get("brand"), clean(record.get("name", "")).lower())
+            image_owners.setdefault(image, set()).add(identity)
 
     def get_soup(url):
         if url not in catalogue_cache:
@@ -563,7 +569,8 @@ def repair_missing_images(items):
         img = rec.get("image")
         bad_image = re.compile(r"dummy|placeholder|menu-push|sprite|watch-fallback|header_mega|gravity=center|history-mobile|/header/|zoomincursorwithoutbg|/360\\.svg|gift-finder-mobile", re.I)
         tissot_listing_record = brand_is_tissot_listing(rec)
-        if img and not rec.get("image_fallback") and not bad_image.search(img) and not tissot_listing_record:
+        duplicate_image = bool(img and len(image_owners.get(img, set())) > 1)
+        if img and not rec.get("image_fallback") and not bad_image.search(img) and not tissot_listing_record and not duplicate_image:
             continue
         brand = rec.get("brand")
         ref = clean(rec.get("ref", ""))
