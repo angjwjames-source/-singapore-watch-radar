@@ -54,11 +54,7 @@ def date_iso(text):
 
 def image_url_from_tag(tag, base):
     """Resolve the best URL exposed by a lazy-loaded or responsive image tag."""
-    for key in ("data-src", "data-lazy-src", "data-original", "data-image", "src"):
-        value = tag.get(key)
-        if value and not value.startswith("data:"):
-            return absurl(value, base)
-    srcset = tag.get("srcset") or tag.get("data-srcset")
+    srcset = tag.get("data-srcset") or tag.get("srcset")
     if srcset:
         choices = []
         for part in srcset.split(","):
@@ -74,6 +70,10 @@ def image_url_from_tag(tag, base):
                     choices.append((score, url))
         if choices:
             return max(choices)[1]
+    for key in ("data-src", "data-lazy-src", "data-original", "data-image", "src"):
+        value = tag.get(key)
+        if value and not value.startswith("data:"):
+            return absurl(value, base)
     return None
 
 
@@ -341,9 +341,10 @@ def scrape_tissot(items):
         print(f"WARN Tissot Singapore catalogue: {e}")
         return
     links = []
-    for a in soup.select('a[href*="/en-sg/products/"]'):
+    for a in soup.select('a[href*="/en-sg/"]'):
         href = absurl(a.get("href"), base)
-        if href and href not in links:
+        if (href and re.search(r"/T[A-Z0-9]{8,}\\.html(?:$|[?#])", href, re.I)
+                and href not in links):
             links.append(href)
     print(f"INFO Tissot: found {len(links)} individual product links")
     for href in links[:50]:
@@ -448,7 +449,7 @@ def repair_missing_images(items):
         target = clean(rec.get("name", "")).lower()
         target_tokens = [t for t in re.findall(r"[a-z0-9]+", target) if len(t) > 2 and t not in {"tissot", "automatic", "quartz", "new", "mm"}]
         ranked = []
-        for a in listing.select('a[href*="/en-sg/"]'):
+        for a in listing.select("a[href]"):
             href = absurl(a.get("href"), "https://www.tissotwatches.com")
             if not href or "/collection/" in href or not re.search(r"\.html$", href):
                 continue
