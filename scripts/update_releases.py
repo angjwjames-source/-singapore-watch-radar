@@ -450,6 +450,20 @@ def scrape_citizen_singapore(items):
                 print(f"WARN Citizen SG detail {href}: {e}")
 
 
+def tissot_product_page_for(rec):
+    """Known official Singapore product pages for models that lack a parsed reference."""
+    name = clean(rec.get("name", "")).lower()
+    mappings = [
+        (("prc 100 solar 34",), "https://www.tissotwatches.com/en-sg/T1518221104100.html"),
+        (("prx 40 mm automatic", "prx 40 automatic"), "https://www.tissotwatches.com/en-sg/T1374071105100.html"),
+        (("pr100 40 mm quartz", "pr100 40mm quartz"), "https://www.tissotwatches.com/en-sg/T1504171109100.html"),
+    ]
+    for needles, url in mappings:
+        if any(needle in name for needle in needles):
+            return url
+    return None
+
+
 def product_page_for(rec):
     """Return a model-specific official product page when a reference is known."""
     ref = clean(rec.get("ref", ""))
@@ -530,7 +544,7 @@ def repair_missing_images(items):
         if img and not rec.get("image_fallback") and not re.search(r"dummy|placeholder|menu-push|sprite|watch-fallback", img, re.I):
             continue
         brand = rec.get("brand")
-        product = product_page_for(rec)
+        product = product_page_for(rec) or (tissot_product_page_for(rec) if brand == "Tissot" else None)
         sources = [product, rec.get("source")]
         # For model references, the official brand catalogue is a useful alternate
         # when a product detail endpoint is blocked.
