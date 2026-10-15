@@ -30,30 +30,6 @@
       ]
     },
     {
-      "id": "4aaf10096e6279",
-      "brand": "Citizen",
-      "name": "13 October 2026 ATTESA EVER SINCE Limited Edition New Model Evokes the Beauty and Serenity of a Winter Morning",
-      "ref": "BY1000-69L",
-      "date": "2026-10-13",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "2,400 pieces worldwide",
-      "source": "https://www.citizenwatch-global.com/news/2026/20261013/index.html",
-      "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20261013/images/261013_01.jpg",
-      "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "ATTESA EVER SINCE Limited Edition New Model Evokes the Beauty and Serenity of a Winter Morning| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS ATTESA EVER SINCE",
-      "tags": [
-        "Official announcement",
-        "Limited edition"
-      ]
-    },
-    {
       "id": "14ed905713952c",
       "brand": "Citizen",
       "name": "24 September 2026 CITIZEN Series 8 New Limited-edition Model with Damascus Steel and Forged Carbon",
@@ -99,79 +75,6 @@
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
-    },
-    {
-      "id": "orient-star-re-br0001n",
-      "brand": "Orient Star",
-      "name": "Orient Star Skeleton 75th Anniversary",
-      "ref": "RE-BR0001N",
-      "date": "2026-09-09",
-      "launch_date": null,
-      "price": null,
-      "movement": "Hand-wound mechanical F9B82",
-      "dial": "Skeletonised silver",
-      "size": "40 mm",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "130 pieces worldwide",
-      "source": "https://orient-watch.com/en/news/detail/en-118.html",
-      "sourceName": "Orient Star official announcement",
-      "image": null,
-      "checked_at": "2026-10-16T09:00:00+08:00",
-      "description": "Official press release states 130 pieces worldwide. Singapore allocation and price are not confirmed.",
-      "tags": [
-        "Limited edition",
-        "75th anniversary",
-        "Skeleton"
-      ]
-    },
-    {
-      "id": "996bb823bd7ca7",
-      "brand": "Orient Star",
-      "name": "Orient Star Announces New Products for Autumn/Winter 2026 (2026 AW)",
-      "ref": null,
-      "date": "2026-09-09",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "Limited edition; quantity not stated",
-      "source": "https://orient-watch.com/en/news/detail/en-118.html",
-      "sourceName": "Orient Star official source",
-      "image": null,
-      "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "Orient Star Announces New Products for Autumn/Winter 2026 (2026 AW)| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store Orient W",
-      "tags": [
-        "Official announcement",
-        "Limited edition"
-      ]
-    },
-    {
-      "id": "ffe6b344501114",
-      "brand": "Orient Star",
-      "name": "Orient Announces New Products for Autumn/Winter 2026 (2026 AW)",
-      "ref": null,
-      "date": "2026-09-09",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": false,
-      "edition": "",
-      "source": "https://orient-watch.com/en/news/detail/en-115.html",
-      "sourceName": "Orient Star official source",
-      "image": null,
-      "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "Orient Announces New Products for Autumn/Winter 2026 (2026 AW)| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store Orient Watche",
-      "tags": [
-        "Official announcement"
       ]
     },
     {
@@ -247,6 +150,53 @@
       ]
     },
     {
+      "id": "ffe6b344501114",
+      "brand": "Orient Star",
+      "name": "Orient Announces New Products for Autumn/Winter 2026 (2026 AW)",
+      "ref": null,
+      "date": "2026-09-09",
+      "price": null,
+      "movement": "Not specified",
+      "dial": "See official source",
+      "size": "See official source",
+      "status": "global",
+      "sg_status": "Global announcement · SG availability unconfirmed",
+      "limited": false,
+      "edition": "",
+      "source": "https://orient-watch.com/en/news/detail/en-115.html",
+      "sourceName": "Orient Star official source",
+      "image": null,
+      "checked_at": "2026-10-15T18:28:25+00:00",
+      "description": "Orient Announces New Products for Autumn/Winter 2026 (2026 AW)| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store Orient Watche",
+      "tags": [
+        "Official announcement"
+      ]
+    },
+    {
+      "id": "996bb823bd7ca7",
+      "brand": "Orient Star",
+      "name": "Orient Star Announces New Products for Autumn/Winter 2026 (2026 AW)",
+      "ref": null,
+      "date": "2026-09-09",
+      "price": null,
+      "movement": "Not specified",
+      "dial": "See official source",
+      "size": "See official source",
+      "status": "global",
+      "sg_status": "Global announcement · SG availability unconfirmed",
+      "limited": false,
+      "edition": "",
+      "source": "https://orient-watch.com/en/news/detail/en-118.html",
+      "sourceName": "Orient Star official source",
+      "image": null,
+      "checked_at": "2026-10-15T18:28:25+00:00",
+      "description": "Orient Star Announces New Products for Autumn/Winter 2026 (2026 AW)| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store Orient W",
+      "tags": [
+        "Official announcement",
+        "Limited edition"
+      ]
+    },
+    {
       "price": null,
       "ref": null,
       "movement": "See official announcement",
@@ -271,27 +221,29 @@
       ]
     },
     {
-      "price": null,
+      "id": "orient-star-re-br0001n",
+      "brand": "Orient Star",
+      "name": "Orient Star Skeleton 75th Anniversary",
       "ref": "RE-BR0001N",
+      "date": "2026-09-09",
+      "launch_date": null,
+      "price": null,
       "movement": "Hand-wound mechanical F9B82",
       "dial": "Skeletonised silver",
       "size": "40 mm",
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
-      "edition": "130 pieces worldwide",
-      "image": null,
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "id": "orient-star-skeleton-75",
-      "brand": "Orient Star",
-      "name": "Orient Star Skeleton 75th Anniversary",
-      "date": "2026-09-09",
       "limited": true,
+      "edition": "130 pieces worldwide",
       "source": "https://orient-watch.com/en/news/detail/en-118.html",
       "sourceName": "Orient Star official announcement",
-      "description": "75th anniversary flagship skeleton model. The official announcement states 130 pieces worldwide; Singapore allocation and pricing are not confirmed.",
+      "image": null,
+      "checked_at": "2026-10-16T09:00:00+08:00",
+      "description": "Official press release states 130 pieces worldwide. Singapore allocation and price are not confirmed.",
       "tags": [
         "Limited edition",
-        "75th anniversary"
+        "75th anniversary",
+        "Skeleton"
       ]
     },
     {
@@ -313,30 +265,6 @@
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260901/images/260901_01.jpg",
       "checked_at": "2026-10-15T18:28:25+00:00",
       "description": "CITIZEN PROMASTER Eco-Drive 50th Anniversary SKYHAWK and TSUNO CHRONO Limited-edition Models| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN PROMASTER E",
-      "tags": [
-        "Official announcement",
-        "Limited edition"
-      ]
-    },
-    {
-      "id": "744ce755f34226",
-      "brand": "Orient Star",
-      "name": "Orient Star Announces New Models Including 75th Anniversary Limited Editions",
-      "ref": null,
-      "date": "2026-08-19",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "Limited edition; quantity not stated",
-      "source": "https://orient-watch.com/en/news/detail/en-111.html",
-      "sourceName": "Orient Star official source",
-      "image": null,
-      "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "Orient Star Announces New Models Including 75th Anniversary Limited Editions| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -367,11 +295,11 @@
       ]
     },
     {
-      "id": "c12cb2aff7083b",
-      "brand": "Citizen",
-      "name": "23 July 2026 New Additions to the RAINELL Collection Including a Limited-edition Model with Sparkling Diamonds",
-      "ref": "EX1540-58L",
-      "date": "2026-07-23",
+      "id": "744ce755f34226",
+      "brand": "Orient Star",
+      "name": "Orient Star Announces New Models Including 75th Anniversary Limited Editions",
+      "ref": null,
+      "date": "2026-08-19",
       "price": null,
       "movement": "Not specified",
       "dial": "See official source",
@@ -379,12 +307,12 @@
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "limited": true,
-      "edition": "3,500 pieces worldwide",
-      "source": "https://www.citizenwatch-global.com/news/2026/20260723_1/index.html",
-      "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260723_1/images/260723_1_01.jpg",
+      "edition": "Limited edition; quantity not stated",
+      "source": "https://orient-watch.com/en/news/detail/en-111.html",
+      "sourceName": "Orient Star official source",
+      "image": null,
       "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "New Additions to the RAINELL Collection Including a Limited-edition Model with Sparkling Diamonds| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS New Additions",
+      "description": "Orient Star Announces New Models Including 75th Anniversary Limited Editions| Orient, a brand of mechanical watches 日本語 English About Orient Brand Brand Support Support Support TOP About Products About Service Worldwide Distributors News Product Search Stores Online Store Online Store Orient Watches UK Official Website Orient Watches Germany Official Website Orient Watches France Official Website 日本語 English About Orient Brand Orient Star Orient Support Support TOP About Product About Service Worldwide Distributors News Product Search Stores Online Store",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -409,6 +337,30 @@
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260723_2/images/260723_2_01.jpg",
       "checked_at": "2026-10-15T18:28:25+00:00",
       "description": "CITIZEN TSUYOSA Shore New Limited-Edition Model Inspired by a Journey Back in Time| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN TSUYOSA Shore New Lim",
+      "tags": [
+        "Official announcement",
+        "Limited edition"
+      ]
+    },
+    {
+      "id": "c12cb2aff7083b",
+      "brand": "Citizen",
+      "name": "23 July 2026 New Additions to the RAINELL Collection Including a Limited-edition Model with Sparkling Diamonds",
+      "ref": "EX1540-58L",
+      "date": "2026-07-23",
+      "price": null,
+      "movement": "Not specified",
+      "dial": "See official source",
+      "size": "See official source",
+      "status": "global",
+      "sg_status": "Global announcement · SG availability unconfirmed",
+      "limited": true,
+      "edition": "3,500 pieces worldwide",
+      "source": "https://www.citizenwatch-global.com/news/2026/20260723_1/index.html",
+      "sourceName": "Citizen official source",
+      "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260723_1/images/260723_1_01.jpg",
+      "checked_at": "2026-10-15T18:28:25+00:00",
+      "description": "New Additions to the RAINELL Collection Including a Limited-edition Model with Sparkling Diamonds| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS New Additions",
       "tags": [
         "Official announcement",
         "Limited edition"
@@ -510,29 +462,6 @@
       ]
     },
     {
-      "id": "06cbe29b71c1d0",
-      "brand": "Citizen",
-      "name": "19 May, 2026 CITIZEN PROMASTER Wins the Red Dot Design Award 2026",
-      "ref": "BN1024-01Z",
-      "date": "2026-05-19",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": false,
-      "edition": "",
-      "source": "https://www.citizenwatch-global.com/news/2026/20260519/index.html",
-      "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260519/images/260519_01.jpg",
-      "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "CITIZEN PROMASTER Wins the Red Dot Design Award 2026| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN PROMASTER Wins the Red Dot Design Award 2026 News 2",
-      "tags": [
-        "Official announcement"
-      ]
-    },
-    {
       "id": "69dcfcdb2ca6d3",
       "brand": "Citizen",
       "name": "14 May 2026 Eco-Drive 50th Anniversary LIGHT in BLACK Models Inspired by Light and Time",
@@ -544,8 +473,8 @@
       "size": "See official source",
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "Limited edition; quantity not stated",
+      "limited": false,
+      "edition": "",
       "source": "https://www.citizenwatch-global.com/news/2026/20260514/index.html",
       "sourceName": "Citizen official source",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260514/images/260514_01.jpg",
@@ -581,26 +510,27 @@
       ]
     },
     {
-      "id": "ad243cba8560e7",
+      "id": "0b6a648f8cc7f6",
       "brand": "Citizen",
-      "name": "31 March 2026 To customers using dedicated apps for CITIZEN Bluetooth Watches",
-      "ref": null,
-      "date": "2026-03-31",
+      "name": "19 March 2026 Eco-Drive 50th Anniversary Limited Model Eco-Drive PHOTON",
+      "ref": "BJ6560-53W",
+      "date": "2026-03-19",
       "price": null,
       "movement": "Not specified",
       "dial": "See official source",
       "size": "See official source",
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": false,
-      "edition": "",
-      "source": "https://www.citizenwatch-global.com/news/2026/20260331/index.html",
+      "limited": true,
+      "edition": "5,000 pieces worldwide",
+      "source": "https://www.citizenwatch-global.com/news/2026/20260319_3/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
+      "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260319_3/images/260319_3_01.jpg",
       "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "To customers using dedicated apps for CITIZEN Bluetooth Watches| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS To customers using dedicated apps for CITIZEN Bl",
+      "description": "Eco-Drive 50th Anniversary Limited Model Eco-Drive PHOTON| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS Eco-Drive 50th Anniversary Limited Model Eco-Drive PHO",
       "tags": [
-        "Official announcement"
+        "Official announcement",
+        "Limited edition"
       ]
     },
     {
@@ -628,73 +558,27 @@
       ]
     },
     {
-      "id": "0b6a648f8cc7f6",
+      "id": "d08a3c314d6182",
       "brand": "Citizen",
-      "name": "19 March 2026 Eco-Drive 50th Anniversary Limited Model Eco-Drive PHOTON",
-      "ref": "BJ6560-53W",
-      "date": "2026-03-19",
+      "name": "20 February 2026 CITIZEN Series 8 New slim models featuring a globally trendy case size",
+      "ref": "NB6080-51W",
+      "date": "2026-02-20",
       "price": null,
       "movement": "Not specified",
       "dial": "See official source",
       "size": "See official source",
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "5,000 pieces worldwide",
-      "source": "https://www.citizenwatch-global.com/news/2026/20260319_3/index.html",
+      "limited": false,
+      "edition": "",
+      "source": "https://www.citizenwatch-global.com/news/2026/20260220_1/index.html",
       "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260319_3/images/260319_3_01.jpg",
+      "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260220_1/images/260220_1_01.jpg",
       "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "Eco-Drive 50th Anniversary Limited Model Eco-Drive PHOTON| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS Eco-Drive 50th Anniversary Limited Model Eco-Drive PHO",
+      "description": "CITIZEN Series 8 New slim models featuring a globally trendy case size| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN Series 8 New slim models featurin",
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
-    },
-    {
-      "id": "4d83577d73f2fb",
-      "brand": "Citizen",
-      "name": "19 March 2026 Celebrating 50 Years of Eco-Drive: CITIZEN Marks Half a Century of Light-Powered Innovation",
-      "ref": null,
-      "date": "2026-03-19",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": false,
-      "edition": "",
-      "source": "https://www.citizenwatch-global.com/news/2026/20260319_1/index.html",
-      "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260319_1/images/260319_1_01.jpg",
-      "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "Celebrating 50 Years of Eco-Drive: CITIZEN Marks Half a Century of Light-Powered Innovation| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS Celebrating 50 Years",
-      "tags": [
-        "Official announcement"
-      ]
-    },
-    {
-      "id": "c905f9e9e06f31",
-      "brand": "Citizen",
-      "name": "13 March 2026 CITIZEN ATTESA Wins the “iF Design Award 2026”",
-      "ref": "CC4105-69E",
-      "date": "2026-03-13",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": false,
-      "edition": "",
-      "source": "https://www.citizenwatch-global.com/news/2026/20260313/index.html",
-      "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260313/images/260313_01.jpg",
-      "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "CITIZEN ATTESA Wins the “iF Design Award 2026”| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN ATTESA Wins the “iF Design Award 2026” News 2026 2025 202",
-      "tags": [
-        "Official announcement"
       ]
     },
     {
@@ -722,30 +606,6 @@
       ]
     },
     {
-      "id": "d08a3c314d6182",
-      "brand": "Citizen",
-      "name": "20 February 2026 CITIZEN Series 8 New slim models featuring a globally trendy case size",
-      "ref": "NB6080-51W",
-      "date": "2026-02-20",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "Limited edition; quantity not stated",
-      "source": "https://www.citizenwatch-global.com/news/2026/20260220_1/index.html",
-      "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20260220_1/images/260220_1_01.jpg",
-      "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "CITIZEN Series 8 New slim models featuring a globally trendy case size| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN Series 8 New slim models featurin",
-      "tags": [
-        "Official announcement",
-        "Limited edition"
-      ]
-    },
-    {
       "id": "cd4111cf41a760",
       "brand": "Citizen",
       "name": "4 February 2026 CITIZEN ATTESA The total lunar eclipse inspired “Shades of Red”, when the sun, Earth, and moon align",
@@ -767,29 +627,6 @@
       "tags": [
         "Official announcement",
         "Limited edition"
-      ]
-    },
-    {
-      "id": "d5c1b1e52eef54",
-      "brand": "Citizen",
-      "name": "31 October 2025 CITIZEN continues its 43-year official sponsorship of ISU Figure Skating events",
-      "ref": null,
-      "date": "2025-10-31",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": false,
-      "edition": "",
-      "source": "https://www.citizenwatch-global.com/news/2025/20251031/index.html",
-      "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20251031/images/251031_01.jpg",
-      "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "CITIZEN continues its 43-year official sponsorship of ISU Figure Skating events| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN continues its 43-year of",
-      "tags": [
-        "Official announcement"
       ]
     },
     {
@@ -889,10 +726,10 @@
       ]
     },
     {
-      "id": "5a99407fae6516",
+      "id": "df2a601d0524b4",
       "brand": "Citizen",
-      "name": "3 September 2025 The CITIZEN Limited-Edition 30th Anniversary Models with Washi Dials",
-      "ref": "AQ4103-16W",
+      "name": "3 September 2025 CITIZEN PROMASTER New pilot watches with dials inspired by cockpit instruments",
+      "ref": "JV2000-51L",
       "date": "2025-09-03",
       "price": null,
       "movement": "Not specified",
@@ -900,16 +737,15 @@
       "size": "See official source",
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "400 pieces worldwide",
-      "source": "https://www.citizenwatch-global.com/news/2025/20250903_2/index.html",
+      "limited": false,
+      "edition": "",
+      "source": "https://www.citizenwatch-global.com/news/2025/20250903_1/index.html",
       "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250903_2/images/250903_2_01.jpg",
+      "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250903_1/images/250903_1_01.jpg",
       "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "The CITIZEN Limited-Edition 30th Anniversary Models with Washi Dials| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Limited-Edition 30th Anniversar",
+      "description": "CITIZEN PROMASTER New pilot watches with dials inspired by cockpit instruments| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN PROMASTER New pilot watch",
       "tags": [
-        "Official announcement",
-        "Limited edition"
+        "Official announcement"
       ]
     },
     {
@@ -936,10 +772,10 @@
       ]
     },
     {
-      "id": "df2a601d0524b4",
+      "id": "5a99407fae6516",
       "brand": "Citizen",
-      "name": "3 September 2025 CITIZEN PROMASTER New pilot watches with dials inspired by cockpit instruments",
-      "ref": "JV2000-51L",
+      "name": "3 September 2025 The CITIZEN Limited-Edition 30th Anniversary Models with Washi Dials",
+      "ref": "AQ4103-16W",
       "date": "2025-09-03",
       "price": null,
       "movement": "Not specified",
@@ -947,38 +783,16 @@
       "size": "See official source",
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": false,
-      "edition": "",
-      "source": "https://www.citizenwatch-global.com/news/2025/20250903_1/index.html",
+      "limited": true,
+      "edition": "400 pieces worldwide",
+      "source": "https://www.citizenwatch-global.com/news/2025/20250903_2/index.html",
       "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250903_1/images/250903_1_01.jpg",
+      "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250903_2/images/250903_2_01.jpg",
       "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "CITIZEN PROMASTER New pilot watches with dials inspired by cockpit instruments| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN PROMASTER New pilot watch",
+      "description": "The CITIZEN Limited-Edition 30th Anniversary Models with Washi Dials| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS The CITIZEN Limited-Edition 30th Anniversar",
       "tags": [
-        "Official announcement"
-      ]
-    },
-    {
-      "id": "475a015e1ea794",
-      "brand": "Citizen",
-      "name": "1 September 2025 CITIZEN Brand watches International guarantee providing cover for 3 years worldwide",
-      "ref": null,
-      "date": "2025-09-01",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": false,
-      "edition": "",
-      "source": "https://www.citizenwatch-global.com/news/2025/20250901/index.html",
-      "sourceName": "Citizen official source",
-      "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250901/images/250901_01.jpg",
-      "checked_at": "2026-10-15T18:28:25+00:00",
-      "description": "CITIZEN Brand watches International guarantee providing cover for 3 years worldwide| CITIZEN WATCH Global Network About CITIZEN History Philosophy Technology / Manufacture Brand Activity Sustainability Technologies Service & Support News Global Network Select Region Austria France Germany Italy Netherlands Portugal Spain Switzerland UK Cambodia China Hong Kong SAR India Japan Malaysia Philippines Singapore Taiwan Region Thailand Vietnam Indonesia Australia New Zealand Middle East South Africa Canada Mexico Panama USA TOP NEWS CITIZEN Brand watches Intern",
-      "tags": [
-        "Official announcement"
+        "Official announcement",
+        "Limited edition"
       ]
     },
     {
@@ -1078,87 +892,15 @@
       ]
     },
     {
-      "id": "tissot-supersport-nba",
+      "id": "tissot-ballade-30",
       "brand": "Tissot",
-      "name": "Tissot Supersport NBA 42 mm",
+      "name": "Tissot Ballade 30 mm Automatic COSC",
       "ref": null,
       "date": null,
-      "price": 660,
-      "movement": "Special Edition",
+      "price": 1500,
+      "movement": "Automatic COSC",
       "dial": "See official product listing",
-      "size": "42 mm",
-      "status": "confirmed",
-      "sg_status": "Listed on Tissot Singapore new-styles page",
-      "limited": true,
-      "edition": "Special edition; quantity not stated",
-      "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
-      "sourceName": "Tissot Singapore new styles",
-      "image": null,
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
-      "tags": [
-        "Singapore listing",
-        "Limited edition"
-      ]
-    },
-    {
-      "id": "tissot-prx-quartz-41",
-      "brand": "Tissot",
-      "name": "Tissot PRX 41 mm Quartz",
-      "ref": null,
-      "date": null,
-      "price": 650,
-      "movement": "Quartz",
-      "dial": "See official product listing",
-      "size": "41 mm",
-      "status": "confirmed",
-      "sg_status": "Listed on Tissot Singapore new-styles page",
-      "limited": false,
-      "edition": "",
-      "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
-      "sourceName": "Tissot Singapore new styles",
-      "image": null,
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
-      "tags": [
-        "Singapore listing",
-        "Regular watch"
-      ]
-    },
-    {
-      "id": "tissot-pr100-quartz-40",
-      "brand": "Tissot",
-      "name": "Tissot PR100 40 mm Quartz",
-      "ref": null,
-      "date": null,
-      "price": 610,
-      "movement": "Quartz",
-      "dial": "See official product listing",
-      "size": "40 mm",
-      "status": "confirmed",
-      "sg_status": "Listed on Tissot Singapore new-styles page",
-      "limited": false,
-      "edition": "",
-      "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
-      "sourceName": "Tissot Singapore new styles",
-      "image": null,
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
-      "tags": [
-        "Singapore listing",
-        "Regular watch"
-      ]
-    },
-    {
-      "id": "tissot-prc100-solar-34",
-      "brand": "Tissot",
-      "name": "Tissot PRC 100 Solar 34 mm",
-      "ref": null,
-      "date": null,
-      "price": 690,
-      "movement": "Quartz Solar",
-      "dial": "See official product listing",
-      "size": "34 mm",
+      "size": "30 mm",
       "status": "confirmed",
       "sg_status": "Listed on Tissot Singapore new-styles page",
       "limited": false,
@@ -1198,15 +940,111 @@
       ]
     },
     {
-      "id": "tissot-ballade-30",
+      "id": "tissot-pinarello",
       "brand": "Tissot",
-      "name": "Tissot Ballade 30 mm Automatic COSC",
+      "name": "Tissot Pinarello 43.14 mm Automatic COSC",
       "ref": null,
       "date": null,
-      "price": 1500,
-      "movement": "Automatic COSC",
+      "price": 2250,
+      "movement": "Special Edition",
       "dial": "See official product listing",
-      "size": "30 mm",
+      "size": "43.14 mm",
+      "status": "confirmed",
+      "sg_status": "Listed on Tissot Singapore new-styles page",
+      "limited": false,
+      "edition": "",
+      "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
+      "sourceName": "Tissot Singapore new styles",
+      "image": null,
+      "checked_at": "2026-10-15T18:44:04.391Z",
+      "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
+      "tags": [
+        "Singapore listing",
+        "Limited edition"
+      ]
+    },
+    {
+      "id": "tissot-pr100-quartz-40",
+      "brand": "Tissot",
+      "name": "Tissot PR100 40 mm Quartz",
+      "ref": null,
+      "date": null,
+      "price": 610,
+      "movement": "Quartz",
+      "dial": "See official product listing",
+      "size": "40 mm",
+      "status": "confirmed",
+      "sg_status": "Listed on Tissot Singapore new-styles page",
+      "limited": false,
+      "edition": "",
+      "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
+      "sourceName": "Tissot Singapore new styles",
+      "image": null,
+      "checked_at": "2026-10-15T18:44:04.391Z",
+      "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
+      "tags": [
+        "Singapore listing",
+        "Regular watch"
+      ]
+    },
+    {
+      "id": "tissot-pr100-cycling",
+      "brand": "Tissot",
+      "name": "Tissot PR100 Cycling 40 mm",
+      "ref": null,
+      "date": null,
+      "price": 400,
+      "movement": "Special Edition",
+      "dial": "See official product listing",
+      "size": "40 mm",
+      "status": "confirmed",
+      "sg_status": "Listed on Tissot Singapore new-styles page",
+      "limited": false,
+      "edition": "",
+      "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
+      "sourceName": "Tissot Singapore new styles",
+      "image": null,
+      "checked_at": "2026-10-15T18:44:04.391Z",
+      "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
+      "tags": [
+        "Singapore listing",
+        "Limited edition"
+      ]
+    },
+    {
+      "id": "tissot-prx-tour-de-france",
+      "brand": "Tissot",
+      "name": "Tissot PR100 Tour de France 40 mm",
+      "ref": null,
+      "date": null,
+      "price": 610,
+      "movement": "Special Edition",
+      "dial": "See official product listing",
+      "size": "40 mm",
+      "status": "confirmed",
+      "sg_status": "Listed on Tissot Singapore new-styles page",
+      "limited": false,
+      "edition": "",
+      "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
+      "sourceName": "Tissot Singapore new styles",
+      "image": null,
+      "checked_at": "2026-10-15T18:44:04.391Z",
+      "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
+      "tags": [
+        "Singapore listing",
+        "Limited edition"
+      ]
+    },
+    {
+      "id": "tissot-prc100-solar-34",
+      "brand": "Tissot",
+      "name": "Tissot PRC 100 Solar 34 mm",
+      "ref": null,
+      "date": null,
+      "price": 690,
+      "movement": "Quartz Solar",
+      "dial": "See official product listing",
+      "size": "34 mm",
       "status": "confirmed",
       "sg_status": "Listed on Tissot Singapore new-styles page",
       "limited": false,
@@ -1246,6 +1084,30 @@
       ]
     },
     {
+      "id": "tissot-prx-quartz-41",
+      "brand": "Tissot",
+      "name": "Tissot PRX 41 mm Quartz",
+      "ref": null,
+      "date": null,
+      "price": 650,
+      "movement": "Quartz",
+      "dial": "See official product listing",
+      "size": "41 mm",
+      "status": "confirmed",
+      "sg_status": "Listed on Tissot Singapore new-styles page",
+      "limited": false,
+      "edition": "",
+      "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
+      "sourceName": "Tissot Singapore new styles",
+      "image": null,
+      "checked_at": "2026-10-15T18:44:04.391Z",
+      "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
+      "tags": [
+        "Singapore listing",
+        "Regular watch"
+      ]
+    },
+    {
       "id": "tissot-supersport-42",
       "brand": "Tissot",
       "name": "Tissot Supersport 42 mm Quartz",
@@ -1270,67 +1132,19 @@
       ]
     },
     {
-      "id": "tissot-prx-tour-de-france",
+      "id": "tissot-supersport-nba",
       "brand": "Tissot",
-      "name": "Tissot PR100 Tour de France 40 mm",
+      "name": "Tissot Supersport NBA 42 mm",
       "ref": null,
       "date": null,
-      "price": 610,
+      "price": 660,
       "movement": "Special Edition",
       "dial": "See official product listing",
-      "size": "40 mm",
+      "size": "42 mm",
       "status": "confirmed",
       "sg_status": "Listed on Tissot Singapore new-styles page",
-      "limited": true,
-      "edition": "Special edition; quantity not stated",
-      "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
-      "sourceName": "Tissot Singapore new styles",
-      "image": null,
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
-      "tags": [
-        "Singapore listing",
-        "Limited edition"
-      ]
-    },
-    {
-      "id": "tissot-pr100-cycling",
-      "brand": "Tissot",
-      "name": "Tissot PR100 Cycling 40 mm",
-      "ref": null,
-      "date": null,
-      "price": 400,
-      "movement": "Special Edition",
-      "dial": "See official product listing",
-      "size": "40 mm",
-      "status": "confirmed",
-      "sg_status": "Listed on Tissot Singapore new-styles page",
-      "limited": true,
-      "edition": "Special edition; quantity not stated",
-      "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
-      "sourceName": "Tissot Singapore new styles",
-      "image": null,
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "description": "Model and Singapore list price shown on Tissot's official New Styles catalogue. This is a catalogue listing, not necessarily a newly announced release date; verify the exact variant on the source page.",
-      "tags": [
-        "Singapore listing",
-        "Limited edition"
-      ]
-    },
-    {
-      "id": "tissot-pinarello",
-      "brand": "Tissot",
-      "name": "Tissot Pinarello 43.14 mm Automatic COSC",
-      "ref": null,
-      "date": null,
-      "price": 2250,
-      "movement": "Special Edition",
-      "dial": "See official product listing",
-      "size": "43.14 mm",
-      "status": "confirmed",
-      "sg_status": "Listed on Tissot Singapore new-styles page",
-      "limited": true,
-      "edition": "Special edition; quantity not stated",
+      "limited": false,
+      "edition": "",
       "source": "https://www.tissotwatches.com/en-sg/collection/selections/novelties.html",
       "sourceName": "Tissot Singapore new styles",
       "image": null,
@@ -1341,5 +1155,6 @@
         "Limited edition"
       ]
     }
-  ]
+  ],
+  "record_count": 48
 }
