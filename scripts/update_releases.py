@@ -582,6 +582,7 @@ def main():
             print(f"OK {fn.__name__}: {len(items)-before} new/updated records")
         except Exception as e:
             print(f"WARN {fn.__name__}: {e}")
+    repair_missing_images(items)
     # Validate scraped records and collapse the same model discovered from multiple links.
     cleaned = {}
     for rec in items.values():
