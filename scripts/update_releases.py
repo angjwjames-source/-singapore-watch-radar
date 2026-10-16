@@ -435,40 +435,61 @@ def scrape_orient_catalogues(items):
     print(f"INFO Orient catalogues: discovered {len(seen)} distinct model references")
 
 def scrape_citizen_singapore(items):
-    # Use only explicitly listed official local pages; do not infer local availability from global news.
-    base_urls = ["https://citizen.com.sg/news/", "https://citizen.com.sg/collections/new-arrivals", "https://citizen.com.sg/products/", "https://citizen.com.sg/products/eco-drive/"]
-    # Discover official collection/category pages from the local product index instead
-    # of guessing category URLs; each page exposes individual reference-labelled models.
+    # Use official local catalogue pages, but keep the daily run bounded and reliable.
+    base_urls = [
+        "https://citizen.com.sg/news/",
+        "https://citizen.com.sg/collections/new-arrivals",
+        "https://citizen.com.sg/products/",
+        "https://citizen.com.sg/products/eco-drive/",
+    ]
     try:
         index = page("https://citizen.com.sg/products/")
         for link in index.select("a[href]"):
             href = absurl(link.get("href"), "https://citizen.com.sg/products/")
             label = clean(link.get_text(" ", strip=True))
-            if href and "citizen.com.sg/products/" in href and href.rstrip("/") != "https://citizen.com.sg/products" and len(label) >= 4:
-                if href not in base_urls:
-                    base_urls.append(href)
+            if (href and href.startswith("https://citizen.com.sg/products/")
+                    and href.rstrip("/") != "https://citizen.com.sg/products"
+                    and len(label) >= 4 and href not in base_urls):
+                base_urls.append(href)
     except Exception as e:
         print(f"WARN Citizen category discovery: {e}")
-    base_urls = list(dict.fromkeys(base_urls))
+
+    # Category links often repeat across the navigation and product cards. Fetch each
+    # catalogue page once, and only open a bounded number of specific product pages.
+    base_urls = list(dict.fromkeys(base_urls))[:18]
+    detail_seen = set()
+    detail_limit = 24
     for base in base_urls:
-        try: soup = page(base)
+        try:
+            soup = page(base)
         except Exception as e:
             print(f"WARN Citizen Singapore {base}: {e}")
             continue
         for a in soup.select("a[href]"):
             href = absurl(a.get("href"), base)
             title = clean(a.get_text(" ", strip=True))
-            if not href or "citizen.com.sg" not in href or len(title) < 8 or href.rstrip("/") == base.rstrip("/"):
+            if not href or not href.startswith("https://citizen.com.sg/") or len(title) < 8:
                 continue
-            # Product/article details are parsed only if the link appears to be a specific item.
-            if not any(k in href.lower() for k in ["product", "news", "blog", "article", "collections"]):
+            path = urlparse(href).path.strip("/")
+            parts = path.split("/") if path else []
+            # Product details are one path segment below /products/ or /product/.
+            # Skip broad collections/category URLs; those are already scraped above.
+            is_product_detail = (
+                len(parts) == 2 and parts[0] == "products"
+            ) or (
+                len(parts) == 2 and parts[0] == "product"
+            )
+            if not is_product_detail or href in detail_seen:
                 continue
+            detail_seen.add(href)
+            if len(detail_seen) > detail_limit:
+                print(f"INFO Citizen Singapore detail-page cap reached ({detail_limit})")
+                return
             try:
                 detail = page(href)
                 h = detail.find(["h1", "h2"])
                 name = clean(h.get_text(" ", strip=True)) if h else title
                 if not valid_watch_title(name):
-                    print(f"INFO skipped generic Citizen SG title: {name!r}")
                     continue
                 body = clean(detail.get_text(" ", strip=True))
                 price = price_sgd(body)
