@@ -71,7 +71,7 @@ def image_url_from_tag(tag, base):
                     choices.append((score, url))
         if choices:
             return max(choices)[1]
-    for key in ("data-src", "data-lazy-src", "data-original", "data-image", "src"):
+    for key in ("data-large_image", "data-zoom-image", "data-full-src", "data-src", "data-lazy-src", "data-original", "data-image", "src"):
         value = tag.get(key)
         if value and not value.startswith("data:"):
             return absurl(value, base)
@@ -426,7 +426,6 @@ def scrape_orient_catalogues(items):
         ("Orient", "https://orient-watch.com/en/orient/collection/contemporary/"),
         ("Orient", "https://orient-watch.com/en/orient/collection/classic/"),
         ("Orient", "https://orient-watch.com/en/orient/collection/sports/"),
-        ("Orient", "https://orient-watch.com/en/orient/collection/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/contemporary/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/contemporary/three-hand/"),
@@ -434,7 +433,6 @@ def scrape_orient_catalogues(items):
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/classic/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/sports/"),
-        ("Orient Star", "https://orient-watch.com/en/orientstar/collection/"),
     ]
     # Search pages expose paginated, reference-labelled model cards; extracting the
     # exact-reference image from the listing avoids dozens of slow product-page requests.
