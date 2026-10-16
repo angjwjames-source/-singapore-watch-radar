@@ -211,7 +211,8 @@ def valid_watch_title(title):
     if re.search(r"\b(award|sponsorship|sponsor|guarantee|warranty|customers using|dedicated apps|innovation|corporate|financial results|page number|skip to main content)\b", title, re.I):
         return False
     blocked = {"brand", "skip to main content", "skip to footer content", "page number 1",
-               "page number 2", "read more", "news", "orient", "orient star", "citizen"}
+               "page number 2", "read more", "news", "orient", "orient star", "citizen",
+               "products", "product", "collections", "all products", "new arrivals"}
     return title.lower() not in blocked and not re.search(r"^(page\\s+\d+|skip to |menu$|search$)", title, re.I)
 
 
