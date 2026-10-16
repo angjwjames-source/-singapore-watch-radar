@@ -524,10 +524,8 @@ def tissot_product_page_for(rec):
         return f"https://www.tissotwatches.com/en-sg/{sku}.html"
     name = clean(rec.get("name", "")).lower()
     mappings = [
-        (("supersport 42 mm quartz", "supersport 42mm quartz"), "https://www.tissotwatches.com/en-sg/T1254101104100.html"),
-        (("pinarello 43.14 mm automatic cosc", "pinarello 43.14mm automatic cosc"), "https://www.tissotwatches.com/en-sg/T1494621104100.html"),
+        (("supersport 42 mm quartz", "supersport 42mm quartz"), "https://www.tissotwatches.com/en-sg/T1254173305100.html"),
         (("pr100 tour de france 40 mm", "pr100 tour de france 40mm"), "https://www.tissotwatches.com/en-sg/T1504101703700.html"),
-        (("gentleman 38 mm automatic", "gentleman 38mm automatic"), "https://www.tissotwatches.com/en-sg/T1658071104100.html"),
         (("prc 100 solar 34",), "https://www.tissotwatches.com/en-sg/T1518221103100.html"),
         (("prx 41 mm quartz", "prx 41mm quartz"), "https://www.tissotwatches.com/en-sg/T1374171104100.html"),
         (("prx 40 mm automatic", "prx 40 automatic"), "https://www.tissotwatches.com/en-sg/T1374071105100.html"),
