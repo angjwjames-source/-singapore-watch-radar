@@ -107,7 +107,8 @@ async function loadLiveData(){
   watches=Array.isArray(feed.releases)?feed.releases.filter(w=>w&&w.id&&w.brand&&w.name&&w.source):[];
   const checked=feed.last_checked_at?new Date(feed.last_checked_at):null;
   $("updatedLabel").textContent=checked?"Checked "+checked.toLocaleString("en-SG",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}):"Waiting for first sync";
-  $("dataNotice").innerHTML=`<strong>Source sync:</strong> ${watches.length} listings with verified official watch photos are displayed. Records without a unique verified photo are withheld. Last checked ${checked?checked.toLocaleString("en-SG"):"not yet recorded"}. Photos are shown only when found on official source pages. Singapore stock is marked confirmed only when the source supports it.`;
+  const verifiedPhotos=watches.filter(w=>w.image&&w.image_verified===true&&!w.image_fallback).length;
+  $("dataNotice").innerHTML=`<strong>Source sync:</strong> ${watches.length} watch records tracked; ${verifiedPhotos} have verified official photos. Records without a verified photo remain listed with a source link while image recovery continues. Last checked ${checked?checked.toLocaleString("en-SG"):"not yet recorded"}. Singapore stock is marked confirmed only when the source supports it.`;
   render();
  }catch(err){
   watches=[]; $("updatedLabel").textContent="Feed not connected";
