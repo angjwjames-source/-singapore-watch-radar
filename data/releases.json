@@ -11,9 +11,9 @@
       "date": "2026-10-13",
       "launch_date": "2026-11",
       "price": null,
-      "movement": "Eco-Drive Radio-Controlled",
-      "dial": "Deep blue patterned dial",
-      "size": "41.5 mm",
+      "movement": "Eco-Drive radio-controlled Calibre H874",
+      "dial": "Deep blue gradient, forest-inspired pattern and moon-phase display",
+      "size": "41.5 mm diameter; 10.8 mm thick",
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "limited": true,
@@ -22,14 +22,17 @@
       "sourceName": "Citizen official announcement",
       "image": "https://www.citizenwatch-global.com/cms/global/news/2026/20261013/images/261013_01.jpg",
       "checked_at": "2026-10-16T09:00:00+08:00",
-      "description": "Announced 13 October 2026. Scheduled for November 2026 launch. Singapore price and allocation are not confirmed.",
+      "description": "ATTESA EVER SINCE limited edition inspired by a snow-covered forest at dawn. Calibre H874 combines light-powered Eco-Drive, radio-controlled timekeeping and a moon-phase display. The Super Titanium case and bracelet measure 41.5 mm across and 10.8 mm thick; sapphire crystal, 100 m water resistance. Planned global launch: November 2026. Singapore price and allocation are not confirmed.",
       "tags": [
         "Limited edition",
+        "Eco-Drive",
         "Radio-controlled",
-        "Global announcement"
+        "Moon phase",
+        "2,400 pieces worldwide"
       ],
       "image_source": "verified official model or release page",
-      "image_verified": true
+      "image_verified": true,
+      "spec_source": "https://www.citizenwatch-global.com/news/2026/20261013/index.html"
     },
     {
       "id": "14ed905713952c",
@@ -38,9 +41,9 @@
       "ref": "NB6092-01E",
       "date": "2026-09-24",
       "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
+      "movement": "Automatic Calibre 9054 with GMT",
+      "dial": "Black forged carbon",
+      "size": "41 mm diameter; 13.5 mm thick",
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "limited": true,
@@ -49,13 +52,19 @@
       "sourceName": "Citizen official source",
       "image": "https://citizen.com.sg/wp-content/uploads/2026/09/nb6092-01e_f_shot_md.jpg",
       "checked_at": "2026-10-16T03:40:22+00:00",
-      "description": "This Series 8 limited edition combines Damascus steel and forged carbon in a distinctive contemporary design. The announced edition is limited to 1,300 pieces worldwide; check the official release for full specifications and local availability.",
+      "description": "Series 8 fifth-anniversary limited edition combining a Damascus-steel case centre with a forged-carbon dial. Automatic Calibre 9054 offers traveller GMT, approximately 50 hours of power reserve and enhanced magnetic resistance. The 41 mm case is 13.5 mm thick, with anti-reflective sapphire crystal, a transparent case back and 100 m water resistance. Planned global launch: October 2026. Singapore price and allocation are not confirmed.",
       "tags": [
-        "Official announcement",
-        "Limited edition"
+        "Limited edition",
+        "Series 8",
+        "Automatic GMT",
+        "Damascus steel",
+        "Forged carbon",
+        "1,300 pieces worldwide"
       ],
       "image_verified": true,
-      "image_source": "verified official model or release page"
+      "image_source": "verified official model or release page",
+      "launch_date": "2026-10",
+      "spec_source": "https://www.citizenwatch-global.com/news/2026/20260924/index.html"
     },
     {
       "id": "b9488e1e66a1ad",
@@ -63,10 +72,10 @@
       "name": "17 September 2026 The CITIZEN Two New Eco-Drive Tosa Washi Paper Models with Annual Accuracy of ±5 Seconds",
       "ref": "AQ4106-00B",
       "date": "2026-09-17",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
+      "price": 4578,
+      "movement": "Eco-Drive Calibre A060",
+      "dial": "White Tosa Unryushi washi paper with gold fibres",
+      "size": "38.3 mm diameter; 12.2 mm thick",
       "status": "global",
       "sg_status": "Global announcement · SG availability unconfirmed",
       "limited": true,
@@ -75,13 +84,21 @@
       "sourceName": "Citizen official source",
       "image": "https://citizen.com.sg/wp-content/uploads/2026/09/aq4106-00b_f_shot_md.jpg",
       "checked_at": "2026-10-16T03:40:22+00:00",
-      "description": "This The CITIZEN limited edition highlights a Japanese washi-paper dial with a distinctive textured finish. Selected models in the range use high-accuracy Eco-Drive technology; refer to the official announcement for the exact model specification and edition details.",
+      "description": "The CITIZEN limited edition uses a Tosa Unryushi washi-paper dial with swirling fibres and gold accents, a Sakura Pink Super Titanium case and a crocodile-leather strap. Eco-Drive Calibre A060 offers annual accuracy of ±5 seconds and a perpetual calendar. The case measures 38.3 mm by 12.2 mm, with sapphire crystal and 100 m water resistance. The official Singapore product page lists S$4,578; confirm current availability with Citizen Singapore.",
       "tags": [
-        "Official announcement",
-        "Limited edition"
+        "Limited edition",
+        "The CITIZEN",
+        "Eco-Drive",
+        "±5 seconds per year",
+        "Washi paper dial",
+        "350 pieces worldwide"
       ],
       "image_verified": true,
-      "image_source": "verified official model or release page"
+      "image_source": "verified official model or release page",
+      "launch_date": "2026-10",
+      "spec_source": "https://www.citizenwatch-global.com/news/2026/20260917/index.html",
+      "price_currency": "SGD",
+      "price_source": "https://citizen.com.sg/product/aq4106-00b/"
     },
     {
       "id": "orient-star-re-bq0001g",
