@@ -611,8 +611,13 @@ def repair_missing_images(items):
         # For model references, the official brand catalogue is a useful alternate
         # when a product detail endpoint is blocked.
         sources.extend(catalogue_urls.get(brand, []))
-        recovered = None
-        for source in [x for x in sources if x]:
+        # A model-specific photo confirmed in the official announcement can be
+        # used directly when the page's gallery markup defeats automatic extraction.
+        known_official_images = {
+            ("citizen", "at8385-55e"): "https://www.citizenwatch-global.com/cms/global/news/2026/20260428/images/260428_02.jpg",
+        }
+        recovered = known_official_images.get((clean(brand).lower(), ref.lower()))
+        for source in ([] if recovered else [x for x in sources if x]):
             soup = get_soup(source)
             if soup is None:
                 continue
