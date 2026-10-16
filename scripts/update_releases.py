@@ -642,8 +642,12 @@ def main():
             print(f"WARN {fn.__name__}: {e}")
     repair_missing_images(items)
     # Validate scraped records and collapse the same model discovered from multiple links.
+    # Broad Orient announcement summaries are not individual watches. Keep the watch
+    # catalogue focused on identifiable Orient / Orient Star model references.
     cleaned = {}
     for rec in items.values():
+        if rec.get("brand") in {"Orient", "Orient Star"} and not clean(rec.get("ref", "")):
+            continue
         if not valid_watch_title(rec.get("name", "")):
             continue
         if rec.get("image") and image_is_generic(rec["image"]):
