@@ -33,18 +33,33 @@ jobs:
           git add data/releases.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh official watch release feed'
-            # Another workflow or a manual change may update main while scraping.
-            # Rebase onto the latest main and retry the push instead of failing
-            # with a non-fast-forward rejection.
+            # A manual feed/documentation change can land while scraping. Retry
+            # on the latest main; if only the generated feed conflicts, preserve
+            # the freshly scraped feed and continue the rebase automatically.
             for attempt in 1 2 3 4 5; do
               git fetch origin main
-              if ! git rebase origin/main; then
-                git rebase --abort
-                echo "Rebase conflict while publishing refreshed feed." >&2
-                exit 1
-              fi
-              if git push origin HEAD:main; then
-                exit 0
+              if git rebase origin/main; then
+                if git push origin HEAD:main; then
+                  exit 0
+                fi
+              else
+                if git diff --name-only --diff-filter=U | grep -qx 'data/releases.json'; then
+                  git checkout --theirs -- data/releases.json
+                  git add data/releases.json
+                  if GIT_EDITOR=true git rebase --continue; then
+                    if git push origin HEAD:main; then
+                      exit 0
+                    fi
+                  else
+                    git rebase --abort || true
+                    echo "Rebase could not continue after resolving the generated feed conflict." >&2
+                    exit 1
+                  fi
+                else
+                  git rebase --abort || true
+                  echo "Rebase conflict outside the generated feed; stopping for manual review." >&2
+                  exit 1
+                fi
               fi
               echo "Push attempt $attempt failed; retrying after fetching main."
               sleep 2
