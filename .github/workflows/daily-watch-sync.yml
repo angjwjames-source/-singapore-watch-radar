@@ -6,7 +6,8 @@ on:
       - 'scripts/update_releases.py'
       - '.github/workflows/daily-watch-sync.yml'
   schedule:
-    - cron: '0 13 * * *' # 21:00 Singapore time daily (UTC+8)
+    - cron: '0 21 * * *'
+      timezone: 'Asia/Singapore' # 9:00 PM Singapore time daily
 permissions:
   contents: write
 concurrency:
