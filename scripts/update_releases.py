@@ -769,7 +769,7 @@ def main():
                     if not old.get(field) and rec.get(field):
                         old[field] = rec[field]
     for rec in cleaned.values():
-        if not rec.get("image") or rec.get("image_verified") is not True or image_is_generic(rec.get("image", "")):
+        if (not rec.get("image") or rec.get("image_verified") is not True or image_is_generic(rec.get("image", "")) or image_reference_conflicts(rec.get("image", ""), rec)):
             rec["image"] = None
             rec["image_verified"] = False
             rec["image_fallback"] = True
