@@ -6,13 +6,9 @@ Live site: https://angjwjames-source.github.io/-singapore-watch-radar/
 
 ## Current catalogue
 
-The generated feed lives in `data/releases.json`. After image recovery and cleanup on 16 October 2026, it contains 138 identifiable watch records:
+The generated feed lives in `data/releases.json` and tracks individual models and release announcements across Citizen, Orient, and Orient Star. The live count and verified-photo count are calculated from the current feed in the website rather than hard-coded in this document.
 
-- Citizen: 61 records
-- Orient: 40 records
-- Orient Star: 37 records
-
-All 138 feed records currently have a non-fallback image marked verified, with no duplicate image URLs detected in the feed. The main site is designed to display only records with verified, non-fallback imagery. Records without a confirmed Singapore source must not be interpreted as available locally.
+Records remain visible when a photo cannot be verified, with a link to the official source. They are not presented as having a verified photo. The main catalogue keeps global announcements separate from confirmed Singapore availability, and prices are stored only when supported by an official Singapore listing.
 
 The feed's `last_checked_at` timestamp records the most recent completed data collection. Check the workflow before assuming a refresh succeeded.
 
