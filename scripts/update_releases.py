@@ -524,6 +524,10 @@ def tissot_product_page_for(rec):
         return f"https://www.tissotwatches.com/en-sg/{sku}.html"
     name = clean(rec.get("name", "")).lower()
     mappings = [
+        (("supersport 42 mm quartz", "supersport 42mm quartz"), "https://www.tissotwatches.com/en-sg/T1254101104100.html"),
+        (("pinarello 43.14 mm automatic cosc", "pinarello 43.14mm automatic cosc"), "https://www.tissotwatches.com/en-sg/T1494621104100.html"),
+        (("pr100 tour de france 40 mm", "pr100 tour de france 40mm"), "https://www.tissotwatches.com/en-sg/T1504101703700.html"),
+        (("gentleman 38 mm automatic", "gentleman 38mm automatic"), "https://www.tissotwatches.com/en-sg/T1658071104100.html"),
         (("prc 100 solar 34",), "https://www.tissotwatches.com/en-sg/T1518221103100.html"),
         (("prx 41 mm quartz", "prx 41mm quartz"), "https://www.tissotwatches.com/en-sg/T1374171104100.html"),
         (("prx 40 mm automatic", "prx 40 automatic"), "https://www.tissotwatches.com/en-sg/T1374071105100.html"),
@@ -544,7 +548,9 @@ def product_page_for(rec):
     if not ref:
         return None
     if brand == "Citizen":
-        return "https://www.citizenwatch.com/us/en/product/" + ref
+        # Try the Singapore product route first during recovery, then the global
+        # US route. Some references exist in Singapore's catalogue but not the US.
+        return "https://citizen.com.sg/product/" + ref.lower() + "/"
     if brand == "Orient Star" and ref == "RE-BR0001N":
         return "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/" + ref + "/"
     if brand == "Orient Star" and ref.startswith("RE-BQ"):
