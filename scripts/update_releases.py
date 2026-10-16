@@ -30,8 +30,9 @@ def absurl(src, base):
     return urljoin(base, src)
 
 
-def page(url):
-    r = S.get(url, timeout=12)
+def page(url, timeout=12):
+    """Fetch an official page with a bounded timeout; slower sources can override it."""
+    r = S.get(url, timeout=timeout)
     r.raise_for_status()
     return BeautifulSoup(r.text, "html.parser")
 
@@ -588,7 +589,7 @@ def repair_missing_images(items):
     def get_soup(url):
         if url not in catalogue_cache:
             try:
-                catalogue_cache[url] = page(url)
+                catalogue_cache[url] = page(url, timeout=7)
             except Exception as e:
                 print(f"WARN image recovery {url}: {e}")
                 catalogue_cache[url] = None
@@ -848,6 +849,10 @@ def main():
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+    verified_photos = sum(1 for rec in records if rec.get("image") and rec.get("image_verified") is True and not rec.get("image_fallback"))
+    date_prefixed = sum(1 for rec in records if re.match(r"^(?:\\d{1,2}(?:st|nd|rd|th)?\\s+[A-Za-z]+\\s+20\\d{2}|20\\d{2}[./-]\\d{1,2}[./-]\\d{1,2})\\s+", clean(rec.get("name", ""))))
+    print(f"PHOTO COVERAGE: {verified_photos}/{len(records)} records have verified official photos; {len(records) - verified_photos} still need recovery.")
+    print(f"TITLE CLEANUP: {date_prefixed} records still have a leading publication date.")
     print(f"Wrote {len(records)} official-source records to data/releases.json")
     if successful == 0:
         raise SystemExit("All source checks failed; retaining only previously saved records. See warnings above.")
