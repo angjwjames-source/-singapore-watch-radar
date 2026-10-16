@@ -167,7 +167,7 @@ def image_reference_conflicts(url, rec):
     # Restrict this check to recognizable model-code filename patterns, not generic
     # editorial filenames or shared collection images.
     filename = url.split("?", 1)[0].rsplit("/", 1)[-1]
-    match = re.search(r"([a-z]{1,4}\\d{4,5}[-_]\\d{2}[a-z]?)", filename, re.I)
+    match = re.search(r"([a-z]{1,4}\d{4,5}[-_]\d{2}[a-z]?)", filename, re.I)
     if not match:
         return False
     image_ref = re.sub(r"[^a-z0-9]", "", match.group(1).lower())
