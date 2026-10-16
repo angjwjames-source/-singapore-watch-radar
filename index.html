@@ -78,7 +78,7 @@ function render(){
   <div class="card-body"><div class="model-line"><h3>${escapeHTML(w.name)}</h3><span class="status ${w.status}">${statusText(w.status)}</span></div>
   <div class="meta">${escapeHTML(w.ref||"Reference not listed")} · ${w.date?`Announcement ${new Date(w.date+"T12:00:00").toLocaleDateString("en-SG",{day:"numeric",month:"short",year:"numeric"})}`:`Checked ${w.checked_at?new Date(w.checked_at).toLocaleDateString("en-SG",{day:"numeric",month:"short",year:"numeric"}):"recently"}`}</div>
   ${w.limited?`<div class="tags"><span class="tag" style="background:#f5e8cf;color:#7a5720">✦ Limited edition tracker</span><span class="tag">${escapeHTML(w.edition||"Edition details to verify")}</span></div>`:""}
-  <div class="tags">${[w.movement,w.dial,w.size,...w.tags.slice(0,1)].map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join("")}</div>
+  <div class="tags">${[w.movement,w.dial,w.size,...(Array.isArray(w.tags)?w.tags.slice(0,1):[])].filter(Boolean).map(t=>`<span class="tag">${escapeHTML(t)}</span>`).join("")}</div>
   <div class="meta">${escapeHTML(w.description||"Official-source release listing. Check source for current availability and specifications.")}</div>
   <div class="card-bottom"><a class="source" href="${escapeHTML(w.source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(w.sourceName||"Official source")} ↗</a><button class="detail-button" type="button" data-detail="${escapeHTML(w.id)}">Details</button></div><div class="details">${escapeHTML(w.sg_status||"Global listing")}</div></div></article>`).join("");
 }
@@ -86,7 +86,7 @@ function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");
 document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{view=b.dataset.view;document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("active",x===b));render()}));
 ["search","brand","availability","movement","sort"].forEach(id=>$(id).addEventListener(id==="search"?"input":"change",render));
 $("clearFilters").addEventListener("click",()=>{$("search").value="";$("brand").value="";$("availability").value="";$("movement").value="";$("sort").value="recent";render()});
-$("cards").addEventListener("click",e=>{const detail=e.target.closest("[data-detail]");if(detail){openDetails(detail.dataset.detail);return}const b=e.target.closest("[data-save]");if(!b)return;const id=b.dataset.save;if(saved.has(id)){saved.delete(id);toast("Removed from your watchlist")}else{saved.add(id);toast("Added to your watchlist")}localStorage.setItem("swr-saved",JSON.stringify([...saved]));render()});
+$("cards").addEventListener("click",e=>{const detail=e.target.closest("[data-detail]");if(detail){openDetails(detail.dataset.detail);return}const b=e.target.closest("[data-save]");if(!b)return;const id=b.dataset.save;if(saved.has(id)){saved.delete(id);toast("Removed from your watchlist")}else{saved.add(id);toast("Added to your watchlist")}try{localStorage.setItem("swr-saved",JSON.stringify([...saved]));}catch(err){console.warn("Watchlist could not be saved in this browser.",err)}render()});
 function openDetails(id){
  const w=watches.find(item=>item.id===id);if(!w)return;
  const date=w.date?new Date(w.date+"T12:00:00").toLocaleDateString("en-SG",{day:"numeric",month:"long",year:"numeric"}):"Not stated by source";
