@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-10-16T03:04:27+00:00",
+  "last_checked_at": "2026-10-16T03:20:00+00:00",
   "source_count": 3,
-  "data_mode": "scheduled-source-sync",
+  "data_mode": "official-source-sync",
   "releases": [
     {
       "id": "citizen-attesa-by1000-69l",
@@ -229,110 +229,6 @@
       "image_verified": true
     },
     {
-      "price": null,
-      "ref": null,
-      "movement": "See official announcement",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "edition": "",
-      "image": "https://orient-watch.com/images/orient_star/collection/contemporary/lp/three-hand-2026aw/mainimage.webp",
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "id": "orient-star-aw26-lineup",
-      "brand": "Orient Star",
-      "name": "Orient Star Autumn/Winter 2026 New Models",
-      "date": "2026-09-09",
-      "limited": false,
-      "source": "https://orient-watch.com/en/news/detail/en-118.html",
-      "sourceName": "Orient Star official announcement",
-      "description": "Official Autumn/Winter 2026 collection announcement covering new Orient Star models. Individual references and Singapore allocations should be checked at the source.",
-      "tags": [
-        "New collection",
-        "Regular watches"
-      ],
-      "image_source": "verified official model or release page",
-      "image_verified": true
-    },
-    {
-      "id": "996bb823bd7ca7",
-      "brand": "Orient Star",
-      "name": "Orient Star Announces New Products for Autumn/Winter 2026 (2026 AW)",
-      "ref": null,
-      "date": "2026-09-09",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "Limited edition; quantity not stated",
-      "source": "https://orient-watch.com/en/news/detail/en-118.html",
-      "sourceName": "Orient Star official source",
-      "image": null,
-      "checked_at": "2026-10-16T03:04:27+00:00",
-      "description": "Orient Star’s Autumn/Winter 2026 announcement introduces new models for the season. Individual references, specifications and Singapore availability vary by model; use the official release for details.",
-      "tags": [
-        "Official announcement",
-        "Limited edition"
-      ],
-      "image_verified": false,
-      "image_fallback": true
-    },
-    {
-      "id": "ffe6b344501114",
-      "brand": "Orient Star",
-      "name": "Orient Announces New Products for Autumn/Winter 2026 (2026 AW)",
-      "ref": null,
-      "date": "2026-09-09",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": false,
-      "edition": "",
-      "source": "https://orient-watch.com/en/news/detail/en-115.html",
-      "sourceName": "Orient Star official source",
-      "image": null,
-      "checked_at": "2026-10-16T03:04:27+00:00",
-      "description": "Orient Star’s Autumn/Winter 2026 announcement introduces new models for the season. Individual references, specifications and Singapore availability vary by model; use the official release for details.",
-      "tags": [
-        "Official announcement"
-      ],
-      "image_verified": false,
-      "image_fallback": true
-    },
-    {
-      "price": null,
-      "ref": null,
-      "movement": "See official announcement",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "edition": "",
-      "image": null,
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "id": "orient-flusso-2026",
-      "brand": "Orient",
-      "name": "Orient Flusso",
-      "date": "2026-09-09",
-      "limited": false,
-      "source": "https://orient-watch.com/en/news/detail/en-115.html",
-      "sourceName": "Orient official announcement",
-      "description": "Orient announced Flusso, a modern reinterpretation of its distinctive SK design. Model-level pricing and Singapore availability require confirmation.",
-      "tags": [
-        "New model",
-        "Regular watches"
-      ],
-      "image_source": "official product or catalogue page",
-      "image_verified": false,
-      "image_fallback": true
-    },
-    {
       "id": "orient-ra-bb0201s",
       "brand": "Orient",
       "name": "Orient Flusso",
@@ -479,33 +375,6 @@
       "image_verified": true
     },
     {
-      "price": null,
-      "ref": null,
-      "movement": "See official announcement",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "edition": "",
-      "image": null,
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "id": "orient-aw26-lineup",
-      "brand": "Orient",
-      "name": "Orient Autumn/Winter 2026 New Models",
-      "date": "2026-09-09",
-      "limited": false,
-      "source": "https://orient-watch.com/en/news/detail/en-115.html",
-      "sourceName": "Orient official announcement",
-      "description": "Official announcement introducing Orient's Autumn/Winter 2026 models. Follow the source for individual model specifications and regional availability.",
-      "tags": [
-        "New collection",
-        "Regular watches"
-      ],
-      "image_source": "official product or catalogue page",
-      "image_verified": false,
-      "image_fallback": true
-    },
-    {
       "id": "e82649cd75247f",
       "brand": "Citizen",
       "name": "9 September 2026 CITIZEN ATTESA Eco-Drive 50th Anniversary Edition Inspired by the Green Flash and Aurora",
@@ -556,59 +425,6 @@
       ],
       "image_verified": true,
       "image_source": "verified official model or release page"
-    },
-    {
-      "id": "744ce755f34226",
-      "brand": "Orient Star",
-      "name": "Orient Star Announces New Models Including 75th Anniversary Limited Editions",
-      "ref": null,
-      "date": "2026-08-19",
-      "price": null,
-      "movement": "Not specified",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "limited": true,
-      "edition": "Limited edition; quantity not stated",
-      "source": "https://orient-watch.com/en/news/detail/en-111.html",
-      "sourceName": "Orient Star official source",
-      "image": null,
-      "checked_at": "2026-10-16T03:04:27+00:00",
-      "description": "An Orient Star release celebrating the brand’s 75th anniversary with a special-edition design. Check the official announcement for individual references, production quantities and Singapore availability.",
-      "tags": [
-        "Official announcement",
-        "Limited edition"
-      ],
-      "image_verified": false,
-      "image_fallback": true
-    },
-    {
-      "price": null,
-      "ref": null,
-      "movement": "See official announcement",
-      "dial": "See official source",
-      "size": "See official source",
-      "status": "global",
-      "sg_status": "Global announcement · SG availability unconfirmed",
-      "edition": "See official source for model quantities",
-      "image": null,
-      "checked_at": "2026-10-15T18:44:04.391Z",
-      "id": "orient-star-75th-limited-models",
-      "brand": "Orient Star",
-      "name": "Orient Star 75th Anniversary Limited Editions",
-      "date": "2026-08-19",
-      "limited": true,
-      "source": "https://orient-watch.com/en/news/detail/en-111.html",
-      "sourceName": "Orient Star official announcement",
-      "description": "Official announcement of new Orient Star models including 75th anniversary limited editions. Check the source for individual references and quantities.",
-      "tags": [
-        "Limited edition",
-        "75th anniversary"
-      ],
-      "image_source": "official product or catalogue page",
-      "image_verified": false,
-      "image_fallback": true
     },
     {
       "id": "c12cb2aff7083b",
@@ -1014,15 +830,16 @@
       "edition": "500 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2025/20251003/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
-      "checked_at": "2026-10-16T01:39:21+00:00",
+      "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20251003/images/251003_03.jpg",
+      "checked_at": "2026-10-16T11:20:00+08:00",
       "description": "3 October 2025 The CITIZEN Limited-Edition 30th Anniversary Models with New Mechanical and Eco-Drive Models. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
       ],
-      "image_verified": false,
-      "image_fallback": true
+      "image_verified": true,
+      "image_fallback": false,
+      "image_source": "verified official model or release page"
     },
     {
       "id": "d460ab2ed8087e",
@@ -1219,15 +1036,16 @@
       "edition": "300 pieces worldwide",
       "source": "https://www.citizenwatch-global.com/news/2025/20250703/index.html",
       "sourceName": "Citizen official source",
-      "image": null,
-      "checked_at": "2026-10-16T01:39:21+00:00",
+      "image": "https://www.citizenwatch-global.com/cms/global/news/2025/20250703/images/250703_01.jpg",
+      "checked_at": "2026-10-16T11:20:00+08:00",
       "description": "3 July 2025 The CITIZEN Limited-edition 30th anniversary model with a Murakamo shibori dyeing washi paper dial. Refer to the official source for full specifications, launch details and Singapore availability.",
       "tags": [
         "Official announcement",
         "Limited edition"
       ],
-      "image_verified": false,
-      "image_fallback": true
+      "image_verified": true,
+      "image_fallback": false,
+      "image_source": "verified official model or release page"
     },
     {
       "id": "ecc7e32a133333",
@@ -3671,14 +3489,15 @@
       "edition": "",
       "source": "https://citizen.com.sg/product/aq4100-65h/",
       "sourceName": "Citizen Singapore",
-      "image": null,
-      "checked_at": "2026-10-16T01:39:21+00:00",
+      "image": "https://citizen.com.sg/wp-content/uploads/2024/10/aq4100-65h_f_shot-500x788.png",
+      "checked_at": "2026-10-16T11:20:00+08:00",
       "description": "AQ4100-65H is listed in the official Citizen Singapore catalogue. Check the linked product page for current specifications and local availability.",
       "tags": [
         "Official Singapore page"
       ],
-      "image_verified": false,
-      "image_fallback": true
+      "image_verified": true,
+      "image_fallback": false,
+      "image_source": "verified official model or release page"
     },
     {
       "id": "774c79a216d022",
