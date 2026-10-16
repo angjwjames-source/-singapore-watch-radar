@@ -154,7 +154,7 @@ def meta_image(soup, base):
         alt = clean(img.get("alt", ""))
         if not candidate or image_is_generic(candidate, alt):
             continue
-        if re.search(r"watch|timepiece|model|collection|limited|attesa|promaster|series 8|orient|tissot|dial|automatic", alt + " " + candidate, re.I):
+        if re.search(r"watch|timepiece|model|collection|limited|attesa|promaster|series 8|orient|dial|automatic", alt + " " + candidate, re.I):
             candidates.append(candidate)
     return candidates[0] if candidates else None
 
@@ -211,7 +211,7 @@ def valid_watch_title(title):
     if re.search(r"\b(award|sponsorship|sponsor|guarantee|warranty|customers using|dedicated apps|innovation|corporate|financial results|page number|skip to main content)\b", title, re.I):
         return False
     blocked = {"brand", "skip to main content", "skip to footer content", "page number 1",
-               "page number 2", "read more", "news", "orient", "orient star", "citizen", "tissot"}
+               "page number 2", "read more", "news", "orient", "orient star", "citizen"}
     return title.lower() not in blocked and not re.search(r"^(page\\s+\d+|skip to |menu$|search$)", title, re.I)
 
 
@@ -501,11 +501,6 @@ def product_page_for(rec):
 
 def repair_missing_images(items):
     """Recover actual model/release photography from official product and catalogue pages."""
-    fallback = {
-        "Citizen": "assets/watch-fallback-citizen.svg",
-        "Orient": "assets/watch-fallback-orient.svg",
-        "Orient Star": "assets/watch-fallback-orient-star.svg",
-    }
     # Catalogue pages expose exact model thumbnails even when product pages block
     # automated requests or omit social-image metadata.
     catalogue_urls = {
@@ -530,40 +525,8 @@ def repair_missing_images(items):
                 catalogue_cache[url] = None
         return catalogue_cache[url]
 
-    def tissot_detail_for(rec, listing):
-        """Find the individual Tissot product card best matching the release name."""
-        if listing is None:
-            return None
-        target = clean(rec.get("name", "")).lower()
-        target_tokens = [t for t in re.findall(r"[a-z0-9]+", target) if len(t) > 2 and t not in {"tissot", "automatic", "quartz", "new", "mm"}]
-        ranked = []
-        for a in listing.select("a[href]"):
-            href = absurl(a.get("href"), "https://www.tissotwatches.com")
-            if not href or "/collection/" in href or not re.search(r"\.html$", href):
-                continue
-            card = a
-            for _ in range(4):
-                if card.parent:
-                    card = card.parent
-                text_card = clean(card.get_text(" ", strip=True))
-                if len(text_card) > len(clean(a.get_text(" ", strip=True))) + 8:
-                    break
-            label = clean(a.get_text(" ", strip=True) + " " + text_card)
-            label_l = label.lower()
-            score = sum(1 for token in target_tokens if token in label_l)
-            if score:
-                ranked.append((score, href))
-        if not ranked:
-            return None
-        ranked.sort(reverse=True)
-        # Only use a link when it has a meaningful match to the model name.
-        if ranked[0][0] < max(1, min(2, len(target_tokens))):
-            return None
-        return ranked[0][1]
-
     for rec in items.values():
         img = rec.get("image")
-        bad_image = IMAGE_BAD
         duplicate_image = bool(img and len(image_owners.get(img, set())) > 1)
         if img and rec.get("image_verified") is True and not image_is_generic(img) and not duplicate_image and verify_image_url(img):
             continue
