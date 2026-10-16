@@ -850,7 +850,7 @@ def main():
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     verified_photos = sum(1 for rec in records if rec.get("image") and rec.get("image_verified") is True and not rec.get("image_fallback"))
-    date_prefixed = sum(1 for rec in records if re.match(r"^(?:\\d{1,2}(?:st|nd|rd|th)?\\s+[A-Za-z]+\\s+20\\d{2}|20\\d{2}[./-]\\d{1,2}[./-]\\d{1,2})\\s+", clean(rec.get("name", ""))))
+    date_prefixed = sum(1 for rec in records if re.match(r"^(?:\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]+\s+20\d{2}|20\d{2}[./-]\d{1,2}[./-]\d{1,2})\s+", clean(rec.get("name", ""))))
     print(f"PHOTO COVERAGE: {verified_photos}/{len(records)} records have verified official photos; {len(records) - verified_photos} still need recovery.")
     print(f"TITLE CLEANUP: {date_prefixed} records still have a leading publication date.")
     print(f"Wrote {len(records)} official-source records to data/releases.json")
