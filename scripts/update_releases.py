@@ -706,6 +706,65 @@ def enrich_verified_specs(items):
             rec.pop("price_currency", None)
             rec.pop("price_source", None)
 
+def validate_catalogue(records):
+    """Fail the sync when the published catalogue violates core integrity rules."""
+    errors = []
+    ids = {}
+    refs = {}
+    images = {}
+    for rec in records:
+        rid = clean(rec.get("id", ""))
+        if not rid:
+            errors.append(f"Record has no id: {clean(rec.get('ref', '')) or clean(rec.get('name', ''))}")
+        elif rid in ids:
+            errors.append(f"Duplicate record id: {rid}")
+        else:
+            ids[rid] = rec
+
+        ref = clean(rec.get("ref", "")).lower()
+        brand = clean(rec.get("brand", "")).lower()
+        if brand and ref:
+            key = (brand, ref)
+            if key in refs:
+                errors.append(f"Duplicate model reference: {brand} {ref}")
+            else:
+                refs[key] = rec
+
+        image = clean(rec.get("image", ""))
+        if image and rec.get("image_verified") is True and not rec.get("image_fallback"):
+            images.setdefault(image, []).append(rec)
+            if image_reference_conflicts(image, rec):
+                errors.append(f"Image filename conflicts with model reference: {rec.get('ref')} -> {image}")
+
+        price = rec.get("price")
+        if price is not None:
+            price_source = clean(rec.get("price_source", ""))
+            currency = clean(rec.get("price_currency", ""))
+            if not isinstance(price, (int, float)) or price <= 0 or price > 100000:
+                errors.append(f"Invalid price for {rec.get('ref')}: {price}")
+            if currency != "SGD":
+                errors.append(f"Price currency is not explicitly SGD for {rec.get('ref')}: {currency or 'missing'}")
+            if not price_source.startswith("https://citizen.com.sg/"):
+                errors.append(f"Price lacks an official Singapore Citizen source for {rec.get('ref')}")
+
+        source = clean(rec.get("source", ""))
+        if source and not source.startswith("https://"):
+            errors.append(f"Non-HTTPS source URL for {rec.get('ref') or rec.get('name')}")
+
+    for image, owners in images.items():
+        unique_models = {(clean(x.get("brand", "")).lower(), clean(x.get("ref", "")).lower() or clean(x.get("name", "")).lower()) for x in owners}
+        if len(unique_models) > 1:
+            errors.append(f"Image URL reused by different models: {image}")
+
+    print(f"CATALOGUE AUDIT: {len(records)} records, {len(ids)} unique ids, "
+          f"{len(refs)} unique brand/reference pairs, {len(images)} verified image URLs, "
+          f"{sum(1 for r in records if r.get('price') is not None)} priced records")
+    if errors:
+        for error in errors:
+            print(f"ERROR catalogue integrity: {error}")
+        raise SystemExit(f"Catalogue integrity audit failed with {len(errors)} issue(s).")
+
+
 def main():
     items = seed_existing()
     successful = 0
@@ -774,6 +833,7 @@ def main():
             rec["image_verified"] = False
             rec["image_fallback"] = True
     records = sorted(cleaned.values(), key=lambda x: (x.get("date") or "", x.get("brand", ""), x.get("name", "")), reverse=True)
+    validate_catalogue(records)
     data = {"last_checked_at": NOW, "source_count": successful, "data_mode": "scheduled-source-sync", "releases": records}
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w", encoding="utf-8") as f:
