@@ -223,7 +223,7 @@ def strip_release_date(title):
     """Remove a publication-date prefix from a release headline for cleaner cards."""
     title = clean(title)
     return re.sub(
-        r"^(?:\\d{1,2}(?:st|nd|rd|th)?\\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+20\\d{2}|20\\d{2}[./-]\\d{1,2}[./-]\\d{1,2})\\s+",
+        r"^(?:\d{1,2}(?:st|nd|rd|th)?\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+20\d{2}|20\d{2}[./-]\d{1,2}[./-]\d{1,2})\s+",
         "", title, flags=re.I
     ).strip()
 
