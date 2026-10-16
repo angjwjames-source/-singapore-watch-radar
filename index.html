@@ -21,7 +21,7 @@
   <section class="hero">
     <div class="eyebrow">Independent watch release tracker</div>
     <h1>New watches.<br>On your radar.</h1>
-    <p>Discover releases from Citizen, Orient and Orient Star. Compare launch information, check Singapore availability and save the models you want to keep an eye on.</p>
+    <p>Track new releases and limited editions from Citizen, Orient and Orient Star. Follow official announcements, check Singapore availability and save models you want to keep an eye on.</p>
     <div class="hero-stats">
       <div class="stat"><b id="totalCount">0</b><span>Models in catalogue</span></div>
       <div class="stat"><b id="savedCount">0</b><span>On your watchlist</span></div>
@@ -31,7 +31,7 @@
   </section>
   <div class="notice" id="dataNotice"><strong>Live data:</strong> Initial release records are sourced from official announcements and listings. Scheduled refreshes require publishing this project with its GitHub Actions workflow enabled. Global announcements and Singapore availability are tracked separately.</div>
   <div class="section-head">
-    <div><h2 id="sectionTitle">Release catalogue</h2><p id="sectionSubtitle">Explore watches and narrow down your next favourite.</p></div>
+    <div><h2 id="sectionTitle">Release catalogue</h2><p id="sectionSubtitle">Track new announcements, limited editions and Singapore availability across the three brands.</p></div>
     <div class="tabs" role="tablist" aria-label="Catalogue view">
       <button class="tab active" data-view="all">All watches</button>
       <button class="tab" data-view="regular">Regular watches <span id="regularTabCount">(0)</span></button>
@@ -47,7 +47,7 @@
     <div class="field"><label for="movement">Movement</label><select id="movement"><option value="">All movements</option><option>Automatic</option><option>Quartz</option><option>Solar</option><option>Eco-Drive</option></select></div>
     <button class="clear" id="clearFilters">Reset</button>
   </section>
-  <div class="field" style="max-width:220px;margin:0 0 14px"><label for="sort">Sort by</label><select id="sort"><option value="recent">Release date: newest</option><option value="checked">Recently checked</option><option value="limited">Limited editions first</option><option value="brand">Brand name</option><option value="name">Model name</option></select></div>
+  <div class="field" style="max-width:220px;margin:0 0 14px"><label for="sort">Sort by</label><select id="sort"><option value="recent">Release / announcement date: newest</option><option value="checked">Recently checked</option><option value="limited">Limited editions first</option><option value="brand">Brand name</option><option value="name">Model name</option></select></div>
   <main class="cards" id="cards" aria-live="polite"></main>
   <p class="watchlist-note">Your watchlist is saved in this browser on this device. It is not synced across devices in this starter version.</p>
   <footer class="footer"><span>Singapore Watch Radar · Independent personal project</span><span>Release information is sourced from official brand pages. Confirm local stock and warranty with the retailer.</span></footer>
@@ -70,7 +70,7 @@ function render(){
  if(sort==="name")list.sort((a,b)=>a.name.localeCompare(b.name)); else if(sort==="brand")list.sort((a,b)=>a.brand.localeCompare(b.brand)||a.name.localeCompare(b.name)); else if(sort==="limited")list.sort((a,b)=>Number(b.limited===true)-Number(a.limited===true)||(b.date||"").localeCompare(a.date||"")); else if(sort==="checked")list.sort((a,b)=>(b.checked_at||"").localeCompare(a.checked_at||"")); else list.sort((a,b)=>(b.date||"").localeCompare(a.date||"")||a.name.localeCompare(b.name));
  const limitedTotal=watches.filter(w=>w.limited===true).length;const regularTotal=watches.filter(w=>w.limited!==true).length;const newTotal=watches.filter(w=>!!w.date).length;const globalTotal=watches.filter(w=>w.status==="global").length;const singaporeTotal=watches.filter(w=>w.status==="confirmed"||w.status==="unconfirmed").length;$("totalCount").textContent=watches.length;$("savedCount").textContent=saved.size;$("limitedCount").textContent=limitedTotal;$("savedTabCount").textContent=`(${saved.size})`;$("regularTabCount").textContent=`(${regularTotal})`;$("limitedTabCount").textContent=`(${limitedTotal})`;$("newTabCount").textContent=`(${newTotal})`;$("globalTabCount").textContent=`(${globalTotal})`;$("singaporeTabCount").textContent=`(${singaporeTotal})`;const brandSelect=$("brand");[...brandSelect.options].forEach(opt=>{if(!opt.value){opt.textContent=`All brands (${watches.length})`;return}const base=opt.dataset.baseLabel||(opt.dataset.baseLabel=opt.textContent.replace(/\s\(\d+\)(?:\s\(\d+\))*$/,""));const n=watches.filter(w=>w.brand===opt.value).length;opt.textContent=`${base} (${n})`});
  $("sectionTitle").textContent=view==="saved"?"My watchlist":view==="new"?"New & upcoming":view==="limited"?"Limited edition releases":view==="regular"?"Regular watches":view==="global"?"Global release news":view==="singapore"?"Singapore listings":"Release catalogue";
- $("sectionSubtitle").textContent=view==="saved"?"Models you saved on this device.":view==="new"?"Latest dated official-source listings; source dates are shown only when published.":view==="limited"?"Limited, numbered and special-edition watches. Quantities appear only when an official source states them.":view==="regular"?"Regular watches, separate from limited editions.":view==="global"?"Official global announcements. Singapore availability is not assumed.":view==="singapore"?"Official Singapore listings and pricing. Global-only announcements are excluded.":"Browse regular and limited-edition watches across all three brands.";
+ $("sectionSubtitle").textContent=view==="saved"?"Models you saved on this device.":view==="new"?"Latest dated official-source listings; source dates are shown only when published.":view==="limited"?"Limited, numbered and special-edition watches. Quantities appear only when an official source states them.":view==="regular"?"Regular watches, separate from limited editions.":view==="global"?"Official global announcements. Singapore availability is not assumed.":view==="singapore"?"Official Singapore listings and pricing. Global-only announcements are excluded.":"Track new releases, limited editions and official Singapore availability across all three brands.";
  const host=$("cards");
  if(!list.length){host.innerHTML='<div class="empty"><b>No watches found</b>Try changing your filters, or save a model to build your watchlist.</div>';return}
  host.innerHTML=list.map(w=>`<article class="watch-card">
