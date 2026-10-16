@@ -575,7 +575,6 @@ def repair_missing_images(items):
             "https://orient-watch.com/en/orient/collection/contemporary/",
             "https://orient-watch.com/en/orient/collection/classic/",
             "https://orient-watch.com/en/orient/collection/sports/",
-            "https://orient-watch.com/en/orient/collection/",
         ],
         "Orient Star": [
             "https://orient-watch.com/en/orientstar/",
@@ -585,7 +584,6 @@ def repair_missing_images(items):
             "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/",
             "https://orient-watch.com/en/orientstar/collection/classic/",
             "https://orient-watch.com/en/orientstar/collection/sports/",
-            "https://orient-watch.com/en/orientstar/collection/",
         ],
     }
     catalogue_cache = {}
