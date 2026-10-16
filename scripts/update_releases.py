@@ -8,7 +8,7 @@ An official global press release never implies Singapore availability.
 from __future__ import annotations
 import json, re, hashlib, os
 from datetime import datetime, timezone
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
@@ -217,6 +217,15 @@ def model_image(soup, base, rec):
     return None
 
 
+
+
+def strip_release_date(title):
+    """Remove a publication-date prefix from a release headline for cleaner cards."""
+    title = clean(title)
+    return re.sub(
+        r"^(?:\\d{1,2}(?:st|nd|rd|th)?\\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\\s+20\\d{2}|20\\d{2}[./-]\\d{1,2}[./-]\\d{1,2})\\s+",
+        "", title, flags=re.I
+    ).strip()
 
 def valid_watch_title(title):
     title = clean(title)
@@ -588,11 +597,11 @@ def repair_missing_images(items):
     for rec in items.values():
         img = rec.get("image")
         duplicate_image = bool(img and len(image_owners.get(img, set())) > 1)
-        reference_conflict = bool(img and image_reference_conflicts(img, record))
+        reference_conflict = bool(img and image_reference_conflicts(img, rec))
         if img and rec.get("image_verified") is True and not image_is_generic(img) and not duplicate_image and not reference_conflict and verify_image_url(img):
             continue
         if reference_conflict:
-            print(f"WARN image reference mismatch for {record.get('ref')}: {img}")
+            print(f"WARN image reference mismatch for {rec.get('ref')}: {img}")
         brand = rec.get("brand")
         ref = clean(rec.get("ref", ""))
         # Prefer images actually discovered on official model pages over guessed URLs.
@@ -787,6 +796,7 @@ def main():
             continue
         if not valid_watch_title(rec.get("name", "")):
             continue
+        rec["name"] = strip_release_date(rec.get("name", ""))
         if rec.get("image") and image_is_generic(rec["image"]):
             rec["image"] = None
             rec["image_verified"] = False
