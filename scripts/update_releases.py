@@ -615,6 +615,8 @@ def repair_missing_images(items):
         # used directly when the page's gallery markup defeats automatic extraction.
         known_official_images = {
             ("citizen", "at8385-55e"): "https://www.citizenwatch-global.com/cms/global/news/2026/20260428/images/260428_02.jpg",
+            # Exact-reference gallery image from Citizen's official US product page.
+            ("citizen", "aq4100-65h"): "https://citizenwatch.widen.net/content/la985dpz33/webp",
         }
         recovered = known_official_images.get((clean(brand).lower(), ref.lower()))
         for source in ([] if recovered else [x for x in sources if x]):
