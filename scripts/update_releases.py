@@ -525,9 +525,32 @@ def repair_missing_images(items):
     # Catalogue pages expose exact model thumbnails even when product pages block
     # automated requests or omit social-image metadata.
     catalogue_urls = {
-        "Citizen": ["https://citizen.com.sg/products/"],
-        "Orient": ["https://orient-watch.com/en/orient/", "https://orient-watch.com/en/orient/collection/contemporary/", "https://orient-watch.com/en/orient/collection/classic/", "https://orient-watch.com/en/orient/collection/sports/", "https://orient-watch.com/en/orient/collection/"],
-        "Orient Star": ["https://orient-watch.com/en/orientstar/", "https://orient-watch.com/en/orientstar/collection/contemporary/", "https://orient-watch.com/en/orientstar/collection/contemporary/three-hand/", "https://orient-watch.com/en/orientstar/collection/contemporary/lp/three-hand-2026aw/", "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/", "https://orient-watch.com/en/orientstar/collection/classic/", "https://orient-watch.com/en/orientstar/collection/sports/", "https://orient-watch.com/en/orientstar/collection/"],
+        "Citizen": [
+            "https://citizen.com.sg/products/",
+            "https://citizen.com.sg/products/the-citizen/",
+            "https://citizen.com.sg/products/eco-drive/",
+            "https://citizenwatch-global.com/the-citizen/lineup/5sec/product/index.html",
+            "https://citizenwatch-global.com/the-citizen/lineup/5sec/AQ4106-26L.html",
+            "https://citizenwatch-global.com/news/2025/20251003/index.html",
+            "https://citizenwatch-global.com/news/2025/20250703/index.html",
+        ],
+        "Orient": [
+            "https://orient-watch.com/en/orient/",
+            "https://orient-watch.com/en/orient/collection/contemporary/",
+            "https://orient-watch.com/en/orient/collection/classic/",
+            "https://orient-watch.com/en/orient/collection/sports/",
+            "https://orient-watch.com/en/orient/collection/",
+        ],
+        "Orient Star": [
+            "https://orient-watch.com/en/orientstar/",
+            "https://orient-watch.com/en/orientstar/collection/contemporary/",
+            "https://orient-watch.com/en/orientstar/collection/contemporary/three-hand/",
+            "https://orient-watch.com/en/orientstar/collection/contemporary/lp/three-hand-2026aw/",
+            "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/",
+            "https://orient-watch.com/en/orientstar/collection/classic/",
+            "https://orient-watch.com/en/orientstar/collection/sports/",
+            "https://orient-watch.com/en/orientstar/collection/",
+        ],
     }
     catalogue_cache = {}
     image_owners = {}
@@ -566,6 +589,23 @@ def repair_missing_images(items):
                 continue
             # Exact-reference image alt text takes precedence on collection pages.
             found = model_image(soup, source, rec)
+            # Announcement records may not have a model reference. Prefer their
+            # official social/structured-data image, then a non-generic editorial
+            # image from that same official announcement page.
+            if not found and not ref:
+                found = meta_image(soup, source)
+                if not found:
+                    for tag in soup.find_all("img"):
+                        candidate = image_url_from_tag(tag, source)
+                        alt = clean(tag.get("alt", ""))
+                        if not candidate or image_is_generic(candidate, alt):
+                            continue
+                        owners = image_owners.get(candidate, set())
+                        ident = (clean(rec.get("brand", "")).lower(), clean(rec.get("ref", "")).lower() or clean(rec.get("name", "")).lower())
+                        if owners and owners != {ident}:
+                            continue
+                        found = candidate
+                        break
             if found:
                 recovered = found
                 if rec.get("ref") and rec["ref"].lower().replace("-", "") in found.lower().replace("-", ""):
