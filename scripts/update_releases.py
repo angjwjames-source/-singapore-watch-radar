@@ -31,7 +31,7 @@ def absurl(src, base):
 
 
 def page(url):
-    r = S.get(url, timeout=30)
+    r = S.get(url, timeout=12)
     r.raise_for_status()
     return BeautifulSoup(r.text, "html.parser")
 
@@ -82,7 +82,7 @@ IMAGE_BAD = re.compile(
     r"menu-push|sprite|banner|icon|arrow|flag|search|avatar|favicon|header_mega|"
     r"gravity=center|history-mobile|zoomincursorwithoutbg|/360[.]svg(?:[?#]|$)|"
     r"gift-finder-mobile|mouse_img_75th|kv_01_sp|sponsorship-footer|"
-    r"timekeeper[-_]NBA|tissot[-_ ]world[-_ ]ambassadors|[.]svg(?:[?#]|$))",
+    r"[.]svg(?:[?#]|$))",
     re.I,
 )
 _IMAGE_CHECK_CACHE = {}
@@ -104,7 +104,7 @@ def verify_image_url(url):
     try:
         origin = re.match(r"^https?://[^/]+", url, re.I)
         headers = {"Referer": origin.group(0) + "/"} if origin else {}
-        with S.get(url, timeout=15, stream=True, headers=headers) as response:
+        with S.get(url, timeout=8, stream=True, headers=headers) as response:
             ctype = response.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
             length = response.headers.get("Content-Length")
             if response.status_code == 200 and ctype.startswith("image/") and "svg" not in ctype:
@@ -165,7 +165,7 @@ def model_image(soup, base, rec):
     name = clean(rec.get("name", ""))
     ref_norm = re.sub(r"[^a-z0-9]", "", ref.lower())
     generic_tokens = {
-        "citizen", "tissot", "orient", "star", "watch", "watches", "timepiece",
+        "citizen", "orient", "star", "watch", "watches", "timepiece",
         "automatic", "quartz", "limited", "edition", "model", "collection",
         "official", "new", "the", "with", "and", "for", "from", "series", "mm",
         "view", "front", "profile", "back", "image", "product", "three", "hand",
@@ -319,7 +319,7 @@ def scrape_citizen_archive(items):
             if href and title and re.search(r"citizenwatch-global\.com/news/20\d{2}/", href) and len(title) >= 10 and title.lower() not in {"image", "read more"}:
                 links.append((title, href))
         # Take newest links first but keep a modest cap to avoid crawling whole archive.
-        for fallback_title, href in links[:35]:
+        for fallback_title, href in links[:24]:
             try:
                 detail = page(href)
                 h = detail.find(["h1", "h2"])
@@ -359,7 +359,7 @@ def scrape_orient_archive(items):
         if href and title and re.search(r"orient-watch\.com/en/news/detail/", href) and len(title) >= 10:
             if href not in [x[1] for x in links]: links.append((title, href))
     # Archive page can feature latest Orient and Orient Star announcements together.
-    for fallback_title, href in links[:40]:
+    for fallback_title, href in links[:24]:
         try:
             detail = page(href)
             h = detail.find(["h1", "h2"])
@@ -381,11 +381,6 @@ def scrape_orient_archive(items):
             print(f"WARN Orient detail {href}: {e}")
 
 
-def scrape_tissot(items):
-    """Tissot is intentionally excluded from Singapore Watch Radar."""
-    return
-
-
 def scrape_orient_catalogues(items):
     """Add individual Orient and Orient Star models from official collection pages."""
     bases = [
@@ -403,6 +398,14 @@ def scrape_orient_catalogues(items):
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/sports/"),
         ("Orient Star", "https://orient-watch.com/en/orientstar/collection/"),
     ]
+    # Search pages expose paginated, reference-labelled model cards; extracting the
+    # exact-reference image from the listing avoids dozens of slow product-page requests.
+    bases.extend([
+        ("Orient Star", "https://orient-watch.com/en/orientstar/search/?rt_bn_products_list_def_skip=0"),
+        ("Orient Star", "https://orient-watch.com/en/orientstar/search/?rt_bn_products_list_def_skip=36"),
+        ("Orient", "https://orient-watch.com/en/orient/search/?rt_bn_products_list_def_skip=0"),
+        ("Orient", "https://orient-watch.com/en/orient/search/?rt_bn_products_list_def_skip=36"),
+    ])
     seen = set()
     for expected_brand, base in bases:
         try:
@@ -412,39 +415,42 @@ def scrape_orient_catalogues(items):
             continue
         for a in soup.select("a[href]"):
             href = absurl(a.get("href"), base)
-            if not href or "orient-watch.com/en/" not in href or href in seen:
+            if not href or "orient-watch.com/en/" not in href:
                 continue
-            # Detail pages end in a model reference, e.g. RE-BQ0001G or RA-BB0201S.
             match = re.search(r"/(RE-[A-Z0-9]{5,}|RA-[A-Z0-9]{5,})/?(?:[?#].*)?$", href, re.I)
             if not match:
                 continue
             ref = match.group(1).upper()
             brand = "Orient Star" if ref.startswith("RE-") else "Orient"
-            if brand != expected_brand:
+            if brand != expected_brand or (brand, ref) in seen:
                 continue
-            seen.add(href)
-            try:
-                detail = page(href)
-                h = detail.find("h1")
-                name = clean(h.get_text(" ", strip=True)) if h else ""
-                if not valid_watch_title(name):
-                    name = f"{brand} {ref}"
-                body = clean(detail.get_text(" ", strip=True))
-                if len(body) < 40:
-                    continue
-                title = name if brand.lower() in name.lower() else f"{brand} {name}"
-                limited = bool(re.search(r"limited edition|limited to\s+[\d,]+\s+pieces", title + " " + body, re.I))
-                image = model_image(detail, href, {"ref": ref, "name": title}) or meta_image(detail, href)
-                add(items, brand, title, href, image, date_iso(body), ref, None, False,
-                    limited, edition_qty(body), release_description(title, brand),
-                    ["Official product catalogue"] + (["Limited edition"] if limited else []))
-            except Exception as e:
-                print(f"WARN {brand} product {href}: {e}")
-    print(f"INFO Orient catalogues: processed {len(seen)} model pages")
+            seen.add((brand, ref))
+            # Prefer the model's own thumbnail from this exact official listing page.
+            title = f"{brand} {ref}"
+            image = model_image(soup, base, {"ref": ref, "name": title})
+            limited = bool(re.search(r"limited", clean(a.parent.get_text(" ", strip=True)) if a.parent else "", re.I))
+            add(items, brand, title, href, image, None, ref, None, False,
+                limited, None, release_description(title, brand),
+                ["Official product catalogue"] + (["Limited edition"] if limited else []))
+    print(f"INFO Orient catalogues: discovered {len(seen)} distinct model references")
 
 def scrape_citizen_singapore(items):
     # Use only explicitly listed official local pages; do not infer local availability from global news.
-    for base in ["https://citizen.com.sg/news/", "https://citizen.com.sg/collections/new-arrivals", "https://citizen.com.sg/products/"]:
+    base_urls = ["https://citizen.com.sg/news/", "https://citizen.com.sg/collections/new-arrivals", "https://citizen.com.sg/products/", "https://citizen.com.sg/products/eco-drive/"]
+    # Discover official collection/category pages from the local product index instead
+    # of guessing category URLs; each page exposes individual reference-labelled models.
+    try:
+        index = page("https://citizen.com.sg/products/")
+        for link in index.select("a[href]"):
+            href = absurl(link.get("href"), "https://citizen.com.sg/products/")
+            label = clean(link.get_text(" ", strip=True))
+            if href and "citizen.com.sg/products/" in href and href.rstrip("/") != "https://citizen.com.sg/products" and len(label) >= 4:
+                if href not in base_urls:
+                    base_urls.append(href)
+    except Exception as e:
+        print(f"WARN Citizen category discovery: {e}")
+    base_urls = list(dict.fromkeys(base_urls))
+    for base in base_urls:
         try: soup = page(base)
         except Exception as e:
             print(f"WARN Citizen Singapore {base}: {e}")
@@ -474,29 +480,6 @@ def scrape_citizen_singapore(items):
                 print(f"WARN Citizen SG detail {href}: {e}")
 
 
-def tissot_product_page_for(rec):
-    """Use the official Singapore Tissot product page for the exact SKU where possible."""
-    ref = clean(rec.get("ref", "")).upper()
-    sku = re.sub(r"[^A-Z0-9]", "", ref)
-    if re.fullmatch(r"T[A-Z0-9]{8,}", sku):
-        return f"https://www.tissotwatches.com/en-sg/{sku}.html"
-    name = clean(rec.get("name", "")).lower()
-    mappings = [
-        (("supersport 42 mm quartz", "supersport 42mm quartz"), "https://www.tissotwatches.com/en-sg/T1254173305100.html"),
-        (("pr100 tour de france 40 mm", "pr100 tour de france 40mm"), "https://www.tissotwatches.com/en-sg/T1504101703700.html"),
-        (("prc 100 solar 34",), "https://www.tissotwatches.com/en-sg/T1518221103100.html"),
-        (("prx 41 mm quartz", "prx 41mm quartz"), "https://www.tissotwatches.com/en-sg/T1374171104100.html"),
-        (("prx 40 mm automatic", "prx 40 automatic"), "https://www.tissotwatches.com/en-sg/T1374071105100.html"),
-        (("pr100 40 mm quartz", "pr100 40mm quartz"), "https://www.tissotwatches.com/en-sg/T1504171109100.html"),
-        (("ballade 30 mm automatic", "ballade 30mm automatic"), "https://www.tissotwatches.com/en-sg/T1562081103300.html"),
-    ]
-    for needles, url in mappings:
-        if any(needle in name for needle in needles):
-            return url
-    return None
-
-
-
 def product_page_for(rec):
     """Return a model-specific official product page when a reference is known."""
     ref = clean(rec.get("ref", ""))
@@ -516,10 +499,6 @@ def product_page_for(rec):
     return None
 
 
-def brand_is_tissot_listing(rec):
-    return rec.get("brand") == "Tissot" and "/collection/selections/novelties.html" in str(rec.get("source", ""))
-
-
 def repair_missing_images(items):
     """Recover actual model/release photography from official product and catalogue pages."""
     fallback = {
@@ -535,7 +514,6 @@ def repair_missing_images(items):
         "Orient Star": ["https://orient-watch.com/en/orientstar/", "https://orient-watch.com/en/orientstar/collection/contemporary/", "https://orient-watch.com/en/orientstar/collection/contemporary/three-hand/", "https://orient-watch.com/en/orientstar/collection/contemporary/lp/three-hand-2026aw/", "https://orient-watch.com/en/orientstar/collection/flagship/orientstar-skeleton/", "https://orient-watch.com/en/orientstar/collection/classic/", "https://orient-watch.com/en/orientstar/collection/sports/", "https://orient-watch.com/en/orientstar/collection/"],
     }
     catalogue_cache = {}
-    tissot_product_cache = {}
     image_owners = {}
     for record in items.values():
         image = record.get("image")
@@ -586,14 +564,13 @@ def repair_missing_images(items):
     for rec in items.values():
         img = rec.get("image")
         bad_image = IMAGE_BAD
-        tissot_listing_record = brand_is_tissot_listing(rec)
         duplicate_image = bool(img and len(image_owners.get(img, set())) > 1)
-        if img and rec.get("image_verified") is True and not image_is_generic(img) and not tissot_listing_record and not duplicate_image and verify_image_url(img):
+        if img and rec.get("image_verified") is True and not image_is_generic(img) and not duplicate_image and verify_image_url(img):
             continue
         brand = rec.get("brand")
         ref = clean(rec.get("ref", ""))
         # Prefer images actually discovered on official model pages over guessed URLs.
-        product = product_page_for(rec) or (tissot_product_page_for(rec) if brand == "Tissot" else None)
+        product = product_page_for(rec)
         sources = [product, rec.get("source")]
         # For model references, the official brand catalogue is a useful alternate
         # when a product detail endpoint is blocked.
@@ -603,20 +580,6 @@ def repair_missing_images(items):
             soup = get_soup(source)
             if soup is None:
                 continue
-            if brand == "Tissot" and source in catalogue_urls["Tissot"]:
-                href = tissot_detail_for(rec, soup)
-                if href:
-                    if href not in tissot_product_cache:
-                        try:
-                            tissot_product_cache[href] = page(href)
-                        except Exception as e:
-                            print(f"WARN Tissot product image {href}: {e}")
-                            tissot_product_cache[href] = None
-                    detail = tissot_product_cache[href]
-                    if detail is not None:
-                        recovered = model_image(detail, href, rec)
-                        if recovered:
-                            break
             # Exact-reference image alt text takes precedence on collection pages.
             found = model_image(soup, source, rec)
             if found:
