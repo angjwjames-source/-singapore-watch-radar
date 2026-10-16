@@ -159,6 +159,21 @@ def meta_image(soup, base):
     return candidates[0] if candidates else None
 
 
+def image_reference_conflicts(url, rec):
+    """Detect a model-specific product-photo filename that names another reference."""
+    ref = re.sub(r"[^a-z0-9]", "", clean(rec.get("ref", "")).lower())
+    if not url or not ref:
+        return False
+    # Restrict this check to recognizable model-code filename patterns, not generic
+    # editorial filenames or shared collection images.
+    filename = url.split("?", 1)[0].rsplit("/", 1)[-1]
+    match = re.search(r"([a-z]{1,4}\\d{4,5}[-_]\\d{2}[a-z]?)", filename, re.I)
+    if not match:
+        return False
+    image_ref = re.sub(r"[^a-z0-9]", "", match.group(1).lower())
+    return len(image_ref) >= 8 and image_ref != ref
+
+
 def model_image(soup, base, rec):
     """Prefer an image whose URL or alt text identifies the requested model."""
     ref = clean(rec.get("ref", ""))
@@ -573,8 +588,11 @@ def repair_missing_images(items):
     for rec in items.values():
         img = rec.get("image")
         duplicate_image = bool(img and len(image_owners.get(img, set())) > 1)
-        if img and rec.get("image_verified") is True and not image_is_generic(img) and not duplicate_image and verify_image_url(img):
+        reference_conflict = bool(img and image_reference_conflicts(img, record))
+        if img and rec.get("image_verified") is True and not image_is_generic(img) and not duplicate_image and not reference_conflict and verify_image_url(img):
             continue
+        if reference_conflict:
+            print(f"WARN image reference mismatch for {record.get('ref')}: {img}")
         brand = rec.get("brand")
         ref = clean(rec.get("ref", ""))
         # Prefer images actually discovered on official model pages over guessed URLs.
