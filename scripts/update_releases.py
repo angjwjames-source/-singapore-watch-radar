@@ -207,6 +207,18 @@ def model_image(soup, base, rec):
             candidates.append((score, url))
     if candidates:
         return sorted(candidates, key=lambda item: item[0], reverse=True)[0][1]
+    # Citizen Singapore product pages use /product/<reference>/ URLs and often
+    # expose the primary product photo only through Open Graph / JSON-LD metadata.
+    # Accept that metadata only when the page slug itself exactly identifies this
+    # record; generic-image and HTTP/raster verification still run downstream.
+    citizen_sg_product = re.search(r"citizen[.]com[.]sg/product/([a-z0-9-]+)/?(?:$|[?#])", base, re.I)
+    if citizen_sg_product:
+        page_ref = re.sub(r"[^a-z0-9]", "", citizen_sg_product.group(1).lower())
+        if ref_norm and page_ref == ref_norm:
+            candidate = meta_image(soup, base)
+            if candidate and not image_is_generic(candidate):
+                return candidate
+        return None
     product_page = bool(re.search(r"/T[A-Z0-9]{8,}[.]html(?:$|[?#])|/(?:RE|RA)-[A-Z0-9]{5,}/?(?:$|[?#])", base, re.I))
     if product_page:
         candidate = meta_image(soup, base)
