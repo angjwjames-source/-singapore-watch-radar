@@ -629,6 +629,64 @@ def repair_missing_images(items):
             rec["image_fallback"] = True
 
 
+
+def enrich_verified_specs(items):
+    """Apply a small, explicitly sourced set of recent model specifications.
+
+    Keep regional launch pricing separate: only prices copied from an official
+    Singapore product listing are stored in the price field.
+    """
+    curated = {
+        "BY1000-69L": {
+            "movement": "Eco-Drive radio-controlled Calibre H874",
+            "dial": "Deep blue gradient, forest-inspired pattern and moon-phase display",
+            "size": "41.5 mm diameter; 10.8 mm thick",
+            "launch_date": "2026-11",
+            "edition": "2,400 pieces worldwide",
+            "description": "ATTESA EVER SINCE limited edition inspired by a snow-covered forest at dawn. Calibre H874 combines light-powered Eco-Drive, radio-controlled timekeeping and a moon-phase display. The Super Titanium case and bracelet measure 41.5 mm across and 10.8 mm thick; sapphire crystal, 100 m water resistance. Planned global launch: November 2026. Singapore price and allocation are not confirmed.",
+            "tags": ["Limited edition", "Eco-Drive", "Radio-controlled", "Moon phase", "2,400 pieces worldwide"]
+        },
+        "NB6092-01E": {
+            "movement": "Automatic Calibre 9054 with GMT",
+            "dial": "Black forged carbon",
+            "size": "41 mm diameter; 13.5 mm thick",
+            "launch_date": "2026-10",
+            "edition": "1,300 pieces worldwide",
+            "description": "Series 8 fifth-anniversary limited edition combining a Damascus-steel case centre with a forged-carbon dial. Automatic Calibre 9054 offers traveller GMT, approximately 50 hours of power reserve and enhanced magnetic resistance. The 41 mm case is 13.5 mm thick, with anti-reflective sapphire crystal, a transparent case back and 100 m water resistance. Planned global launch: October 2026. Singapore price and allocation are not confirmed.",
+            "tags": ["Limited edition", "Series 8", "Automatic GMT", "Damascus steel", "Forged carbon", "1,300 pieces worldwide"]
+        },
+        "AQ4106-00B": {
+            "movement": "Eco-Drive Calibre A060",
+            "dial": "White Tosa Unryushi washi paper with gold fibres",
+            "size": "38.3 mm diameter; 12.2 mm thick",
+            "launch_date": "2026-10",
+            "edition": "350 pieces worldwide",
+            "description": "The CITIZEN limited edition uses a Tosa Unryushi washi-paper dial with swirling fibres and gold accents, a Sakura Pink Super Titanium case and a crocodile-leather strap. Eco-Drive Calibre A060 offers annual accuracy of ±5 seconds and a perpetual calendar. The case measures 38.3 mm by 12.2 mm, with sapphire crystal and 100 m water resistance. The official Singapore product page lists S$4,578; confirm current availability with Citizen Singapore.",
+            "tags": ["Limited edition", "The CITIZEN", "Eco-Drive", "±5 seconds per year", "Washi paper dial", "350 pieces worldwide"]
+        }
+    }
+    for rec in items.values():
+        spec = curated.get(clean(rec.get("ref", "")).upper())
+        if not spec:
+            continue
+        for key, value in spec.items():
+            if value not in (None, "", []):
+                rec[key] = value
+        rec["spec_source"] = {
+            "BY1000-69L": "https://www.citizenwatch-global.com/news/2026/20261013/index.html",
+            "NB6092-01E": "https://www.citizenwatch-global.com/news/2026/20260924/index.html",
+            "AQ4106-00B": "https://citizen.com.sg/product/aq4106-00b/"
+        }[clean(rec.get("ref", "")).upper()]
+        # A Singapore price is attached only to a model with an official SG listing.
+        if clean(rec.get("ref", "")).upper() == "AQ4106-00B":
+            rec["price"] = 4578.0
+            rec["price_currency"] = "SGD"
+            rec["price_source"] = "https://citizen.com.sg/product/aq4106-00b/"
+        else:
+            rec["price"] = None
+            rec.pop("price_currency", None)
+            rec.pop("price_source", None)
+
 def main():
     items = seed_existing()
     successful = 0
@@ -640,6 +698,7 @@ def main():
             print(f"OK {fn.__name__}: {len(items)-before} new/updated records")
         except Exception as e:
             print(f"WARN {fn.__name__}: {e}")
+    enrich_verified_specs(items)
     repair_missing_images(items)
     # Validate scraped records and collapse the same model discovered from multiple links.
     # Broad Orient announcement summaries are not individual watches. Keep the watch
