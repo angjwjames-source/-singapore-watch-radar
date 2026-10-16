@@ -61,7 +61,7 @@ let view="all";
 let saved=new Set();
 try{const stored=JSON.parse(localStorage.getItem("swr-saved")||"[]");if(Array.isArray(stored))saved=new Set(stored.filter(x=>typeof x==="string"));}catch(err){console.warn("Watchlist storage was unreadable; starting with an empty watchlist.",err);}
 const statusText=s=>s==="confirmed"?"SG confirmed":s==="global"?"Global listing":"SG unconfirmed";
-function launchSortKey(w){return /^20\\d{2}-\\d{2}/.test(w.launch_date||"")?w.launch_date.slice(0,7):"9999-99";}
+function launchSortKey(w){return /^20\d{2}-\d{2}/.test(w.launch_date||"")?w.launch_date.slice(0,7):"9999-99";}
 function isNewOrUpcoming(w){const now=new Date(), month=now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0");const cutoff=new Date(now);cutoff.setDate(cutoff.getDate()-120);const announcedRecently=!!w.date&&new Date(w.date+"T12:00:00")>=cutoff;const launch=launchSortKey(w);return announcedRecently||(launch!=="9999-99"&&launch>=month);}
 function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 function imageFailed(img){img.hidden=true;const fallback=img.nextElementSibling;if(fallback&&fallback.classList.contains("photo-missing"))fallback.hidden=false;}
